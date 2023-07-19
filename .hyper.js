@@ -8,10 +8,10 @@ module.exports = {
     // or `'canary'` for less polished but more frequent updates
     updateChannel: "stable",
     // default font size in pixels for all tabs
-    fontSize: 16,
+    fontSize: 15,
     // font family with optional fallbacks
     fontFamily:
-      '"Dank Mono", "Fira Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+      '"JetBrains Mono", "Dank Mono", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
     // default font weight: 'normal' or 'bold'
     fontWeight: "normal",
     // font weight for bold characters: 'normal' or 'bold'
@@ -19,7 +19,7 @@ module.exports = {
     // line height as a relative unit
     lineHeight: 1,
     // letter spacing as a relative unit
-    letterSpacing: 1,
+    letterSpacing: 0.4,
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: "rgba(248,28,229,0.8)",
     // terminal text color under BLOCK cursor
@@ -27,7 +27,7 @@ module.exports = {
     // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
     cursorShape: "BLOCK",
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
     // color of the text
     foregroundColor: "#fff",
     // terminal background color
@@ -45,11 +45,11 @@ module.exports = {
     workingDirectory: "",
     // if you're using a Linux setup which show native menus, set to false
     // default: `true` on Linux, `true` on Windows, ignored on macOS
-    showHamburgerMenu: "",
+    showHamburgerMenu: false,
     // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
     // additionally, set to `'left'` if you want them on the left, like in Ubuntu
     // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
-    showWindowControls: "",
+    showWindowControls: false,
     // custom padding (CSS format, i.e.: `top right bottom left`)
     padding: "12px 14px",
     // the full list. if you're going to provide the full color palette,
@@ -98,7 +98,7 @@ module.exports = {
     // by default `['--login']` will be used
     shellArgs: ["--login"],
     // for environment variables
-    env: {},
+    env: { TERM: "cygwin" },
     // Supported Options:
     //  1. 'SOUND' -> Enables the bell as a sound
     //  2. false: turns off the bell
@@ -106,7 +106,7 @@ module.exports = {
     // An absolute file path to a sound file on the machine.
     // bellSoundURL: '/path/to/sound/file',
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
-    copyOnSelect: false,
+    copyOnSelect: true,
     // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
     defaultSSHApp: true,
     // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
@@ -140,11 +140,12 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     "hyperborder",
-    "hyper-opacity",
-    "hyper-tab-icons",
-    "hyper-search",
     "hyperpower",
     "hyperterm-cyberpunk",
+    "hyper-opacity",
+    "hyper-search",
+    "hyper-tab-icons",
+    "hyper-rename-tab",
     "git-falcon9",
   ],
   // in development, you can create a directory under
