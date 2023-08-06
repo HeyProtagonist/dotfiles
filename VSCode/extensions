@@ -6,6 +6,7 @@ christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
 dotenv.dotenv-vscode
+DotJoshJohnson.xml
 drcika.apc-extension
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
@@ -15,8 +16,10 @@ formulahendry.auto-rename-tag
 jock.svg
 johnpapa.vscode-peacock
 mgmcdermott.vscode-language-babel
+mhutchie.git-graph
 mrmlnc.vscode-duplicate
 ms-dotnettools.csharp
+ms-dotnettools.vscode-dotnet-runtime
 ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
@@ -50,4 +53,5 @@ vscode-icons-team.vscode-icons
 WallabyJs.console-ninja
 WallabyJs.quokka-vscode
 wix.vscode-import-cost
+wmaurer.change-case
 yzhang.markdown-all-in-one

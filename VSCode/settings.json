@@ -93,7 +93,7 @@
   "emmet.includeLanguages": {
     "blade": "html",
     "vue-html": "html",
-    "vue": "html"
+    "vue": "html",
   },
   "files.associations": {
     ".php_cs": "php",
@@ -104,15 +104,14 @@
   /**
    * Prettier
    **/
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.requireConfig": false,
+  "prettier.requireConfig": true,
   "prettier.useEditorConfig": false,
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 80,
+  /**
+   * VSCode Interface Hacking
+   **/
   "apc.font.family": "JetBrains Mono",
   "apc.stylesheet": {
     ".letterpress": "visibility: hidden;",
@@ -247,20 +246,14 @@
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "editor.tokenColorCustomizations": {
-    "textMateRules": [
-        {
-            "scope": "keyword.other.dotenv",
-            "settings": {
-                "foreground": "#FF000000"
-            }
-        }
-    ]
+    "textMateRules": []
 },
-  "vsicons.dontShowNewVersionMessage": true,
-  "workbench.activityBar.visible": false,
-  "terminal.integrated.env.windows": {},
-"workbench.statusBar.visible": false,
+"vsicons.dontShowNewVersionMessage": true,
+"terminal.integrated.env.windows": {},
 "redhat.telemetry.enabled": true,
 "boot-java.rewrite.reconcile": true,
 "git.openRepositoryInParentFolders": "never",
+"workbench.activityBar.visible": false,
+"dotenv.enableAutocloaking": false,
+"workbench.statusBar.visible": false,
 }
