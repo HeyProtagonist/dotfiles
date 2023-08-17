@@ -1,259 +1,319 @@
 {
-  /* Better Defaults */
-  "telemetry.telemetryLevel": "off",
-  "update.showReleaseNotes": true,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "window.menuBarVisibility": "toggle",
-  "editor.copyWithSyntaxHighlighting": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.emptySelectionClipboard": false,
-  "workbench.editor.enablePreview": false,
-  "window.newWindowDimensions": "inherit",
-  "editor.multiCursorModifier": "ctrlCmd",
-  "files.trimTrailingWhitespace": true,
-  "diffEditor.renderSideBySide": false,
-  "editor.detectIndentation": false,
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "zenMode.fullScreen": false,
-  "zenMode.silentNotifications": false,
-  "zenMode.hideLineNumbers": false,
-  "workbench.layoutControl.enabled": false,
-  "window.titleSeparator": " ⚡ ",
-  "window.titleBarStyle": "custom",
-  "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.defaultProfile.linux": "Bash",
-  "workbench.sideBar.location": "right",
-  "workbench.editor.showTabs": false,
-  "editor.minimap.enabled": false,
-  "editor.lineNumbers": "relative",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorBlinking": "expand",
-  "editor.cursorStyle": "block",
-  /* Silence The Noise */
-  "breadcrumbs.enabled": false,
-  "scm.diffDecorations": "none",
-  "editor.matchBrackets": "never",
-  "workbench.tips.enabled": false,
-  "editor.colorDecorators": false,
-  "git.decorations.enabled": false,
-  "workbench.startupEditor": "none",
-  "editor.lightbulb.enabled": false,
-  "editor.selectionHighlight": false,
-  "editor.overviewRulerBorder": false,
-  "editor.renderLineHighlight": "none",
-  "editor.occurrencesHighlight": false,
-  "problems.decorations.enabled": false,
-  "editor.renderControlCharacters": false,
-  "editor.hideCursorInOverviewRuler": true,
-  "editor.gotoLocation.multipleReferences": "goto",
-  "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.gotoLocation.multipleDeclarations": "goto",
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "editor.gotoLocation.multipleImplementations": "goto",
-  "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  /* Typography */
-  "workbench.colorTheme": "Night Owl",
-  "workbench.iconTheme": "vscode-icons",
-  "editor.fontFamily": "Dank Mono",
-  "editor.fontSize": 16,
-  "editor.lineHeight": 28,
-  "editor.suggestFontSize": 15,
-  "editor.suggestLineHeight": 24,
-  "editor.fontLigatures": true,
-  "terminal.integrated.fontFamily": "JetBrains Mono",
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.lineHeight": 1.3,
-  "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "block",
-  "terminal.integrated.fastScrollSensitivity": 4,
-  /* Find */
-  "search.useIgnoreFiles": false,
-  "search.exclude": {
-    // Hide everything in /vendor, except the "laravel" and "livewire" folder.
-    "**/vendor/{[^l],?[^ai]}*": true,
-    // Hide everything in /public, except "index.php"
-    "**/public/{[^i],?[^n]}*": true,
-    "**/node_modules": true,
-    "**/dist": true,
-    "**/_ide_helper.php": true,
-    "**/composer.lock": true,
-    "**/package-lock.json": true,
-    "storage": true,
-    ".phpunit.result.cache": true
-  },
-  /**
-   * Code
-   **/
-  // Include "-" in word selection.
-  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
-  "emmet.includeLanguages": {
-    "blade": "html",
-    "vue-html": "html",
-    "vue": "html",
-  },
-  "files.associations": {
-    ".php_cs": "php",
-    ".php_cs.dist": "php",
-    "*.jsx": "javascriptreact",
-    ".env*": "dotenv"
-},
-  /**
-   * Prettier
-   **/
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.requireConfig": true,
-  "prettier.useEditorConfig": false,
-  "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 80,
-  /**
-   * VSCode Interface Hacking
-   **/
-  "apc.font.family": "JetBrains Mono",
-  "apc.stylesheet": {
-    ".letterpress": "visibility: hidden;",
-    ".window-title": "font-size: 0.8rem !important; font-weight: 600;",
-    ".monaco-workbench .part.titlebar>.window-controls-container": "flex-direction: row-reverse;",
-    ".monaco-workbench .part.titlebar": "flex-direction: row-reverse;",
-    ".monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress": "background-image: none;",
-    ".window-appicon": "display: none;",
-    ".editor .title": "background: transparent !important;",
-    ".editor .title .label-container": "visibility: hidden;",
-    // Hide top-right buttons
-    ".editor .title .actions-container .action-item a": "visibility: hidden;",
-    // Show top-right "settings goto icon"
-    ".editor .title .actions-container .action-item a[title=\"Open Settings (UI)\"]": "visibility: initial;",
-    ".editor .title .actions-container .action-item a[title=\"Open Settings (JSON)\"]": "visibility: initial;",
-    // Make it the "right-most" icon.
-    ".editor .title .actions-container": "flex-direction: row-reverse;",
-    // Only show the scrollbar on hover.
-    ".editor .scrollbar .slider": "visibility: hidden",
-    ".editor .scrollbar:hover .slider": "visibility: initial",
-    // Change cursor color.
-    ".monaco-editor .cursor": "background: linear-gradient(to bottom, #7f00ff, #e100ff) !important; color: #DCF3E5 !important; border-radius: 1.8px;"
-  },
-  /* Miscellaneous */
-  "[jsonc]": {
+    /* Trackers */
+    "gitlens.telemetry.enabled": false,
+    "redhat.telemetry.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "update.mode": "start",
+    "update.showReleaseNotes": true,
+    /* Editor Defaults */
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "block",
+    "editor.detectIndentation": false,
+    "editor.emptySelectionClipboard": false,
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.excludeGitIgnore": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.emptyWindow": false,
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.startupPrompt": "never",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.linux": "Bash",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.menuBarVisibility": "toggle",
+    "window.newWindowDimensions": "inherit",
+    "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
+    "window.titleBarStyle": "custom",
+    "window.titleSeparator": " 🔥 ",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showTabs": true,
+    "workbench.layoutControl.enabled": false,
+    "workbench.sideBar.location": "right",
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": true,
+    "zenMode.silentNotifications": false,
+    "emmet.includeLanguages": {
+        "blade": "html",
+        "vue-html": "html",
+        "vue": "html",
+    },
+    "files.associations": {
+        "*.jsx": "javascriptreact",
+        ".env*": "dotenv"
+    },
+    /* Lo-Fi Ambience */
+    "breadcrumbs.enabled": false,
+    "editor.colorDecorators": false,
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.lightbulb.enabled": false,
+    "editor.matchBrackets": "never",
+    "editor.occurrencesHighlight": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderControlCharacters": false,
+    "editor.renderLineHighlight": "none",
+    "editor.selectionHighlight": false,
+    "git.decorations.enabled": false,
+    "problems.decorations.enabled": false,
+    "scm.diffDecorations": "none",
+    "workbench.activityBar.visible": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "terminal.integrated.env.windows": {},
+    "editor.tokenColorCustomizations": {
+        "textMateRules": []
+    },
+    /* Prettify */
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.wordWrapColumn": 500
-  },
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.linkedEditing": true,
-  "explorer.confirmDelete": false,
-  "git.enableSmartCommit": true,
-  "gitlens.gitCommands.skipConfirmations": [
-    "fetch:command",
-    "switch:command",
-    "stash-push:command"
-  ],
-  "security.workspace.trust.banner": "never",
-  "security.workspace.trust.emptyWindow": false,
-  "security.workspace.trust.enabled": false,
-  "security.workspace.trust.startupPrompt": "never",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "explorer.confirmDragAndDrop": false,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "peacock.favoriteColors": [
-    {
-      "name": "Angular Red",
-      "value": "#dd0531"
+    "editor.fontFamily": "Dank Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 28,
+    "editor.suggestFontSize": 15,
+    "editor.suggestLineHeight": 24,
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?", // Include "-" in word selection
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    "prettier.requireConfig": true,
+    "prettier.useEditorConfig": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.fastScrollSensitivity": 4,
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.lineHeight": 1.3,
+    "workbench.colorTheme": "Night Owl",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#DC143C",
+        "statusBar.noFolderBackground": "#DC143C",
+        "statusBar.debuggingBackground": "#DC143C",
+        "activityBar.activeBackground": "#fa1b49",
+        "activityBar.background": "#fa1b49",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#155e02",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#fa1b49",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#f7df1e",
+        "statusBarItem.remoteBackground": "#f9e64f",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#dd0531",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#dd053199",
+        "titleBar.inactiveForeground": "#e7e7e799"
     },
-    {
-      "name": "Azure Blue",
-      "value": "#007fff"
+    /* Find */
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "**/vendor/{[^l],?[^ai]}*": true, // Hide everything in /vendor, except the "laravel" and "livewire" folder.
+        "**/public/{[^i],?[^n]}*": true, // Hide everything in /public, except "index.php"
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/_ide_helper.php": true,
+        "**/composer.lock": true,
+        "**/package-lock.json": true,
+        "storage": true,
+        ".phpunit.result.cache": true
     },
-    {
-      "name": "JavaScript Yellow",
-      "value": "#f9e64f"
+    /* Language Defaults */
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.wordWrapColumn": 1000,
     },
-    {
-      "name": "Mandalorian Blue",
-      "value": "#1857a4"
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
     },
-    {
-      "name": "Node Green",
-      "value": "#215732"
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
     },
-    {
-      "name": "React Blue",
-      "value": "#61dafb"
+    "[javascript]": {},
+    "[typescript]": {},
+    "[javascriptreact]": {},
+    "[typescriptreact]": {},
+    /* Git */
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "never",
+    /* Gitlens */
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "switch:command",
+        "stash-push:command"
+    ],
+    /* Dotfiles */
+    "dotenv.enableAutocloaking": false,
+    "dotenv.enableSecretpeeking": true,
+    /* Peacock */
+    "peacock.affectStatusBar": true,
+    "peacock.color": "#9bd684",
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#dd0531"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#61dafb"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Svelte Orange",
+            "value": "#ff3d00"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    /* Better Comments */
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    /*APC Configuration */
+    "apc.font.family": "JetBrains Mono",
+    "apc.menubar.compact": true,
+    "apc.electron": {},
+    "apc.header": {
+        "height": 0.00001,
+        "fontSize": 13
     },
-    {
-      "name": "Something Different",
-      "value": "#832561"
+    "apc.parts.font.family": {
+        "sidebar": "JetBrains Mono",
+        "titlebar": "JetBrains Mono",
+        "activityBar": "JetBrains Mono",
+        "panel": "JetBrains Mono",
+        "tabs": "JetBrains Mono",
+        "statusbar": "JetBrains Mono",
+        "settings-body": "JetBrains Mono",
+        "extension-editor": "JetBrains Mono", // Required: Expected font installation on machine and Application restart
+        "monaco-menu": "JetBrains Mono"
     },
-    {
-      "name": "Svelte Orange",
-      "value": "#ff3d00"
+    "apc.stylesheet": {
+        ".letterpress": "visibility: hidden;",
+        ".window-title": "font-size: 0.8rem !important; font-weight: 600;",
+        ".monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress": "background-image: none;",
+        ".window-appicon": "display: none;",
+        // Only show the scrollbar on hover.
+        ".editor .scrollbar .slider": "visibility: hidden",
+        ".editor .scrollbar:hover .slider": "visibility: initial",
+        // Change cursor color.
+        ".monaco-editor .cursor": "background: linear-gradient(to bottom, #7f00ff, #e100ff) !important; color: #DCF3E5 !important; border-radius: 1.8px;"
     },
-    {
-      "name": "Vue Green",
-      "value": "#42b883"
-    }
-  ],
-  "better-comments.tags": [
-    {
-      "tag": "!",
-      "color": "#FF2D00",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": false
-    },
-    {
-      "tag": "?",
-      "color": "#3498DB",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": false
-    },
-    {
-      "tag": "//",
-      "color": "#474747",
-      "strikethrough": true,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": false
-    },
-    {
-      "tag": "todo",
-      "color": "#FF8C00",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": false
-    },
-    {
-      "tag": "*",
-      "color": "#98C379",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": false
-    }
-  ],
-  "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
-  },
-  "editor.tokenColorCustomizations": {
-    "textMateRules": []
-},
-"vsicons.dontShowNewVersionMessage": true,
-"terminal.integrated.env.windows": {},
-"redhat.telemetry.enabled": true,
-"boot-java.rewrite.reconcile": true,
-"git.openRepositoryInParentFolders": "never",
-"workbench.activityBar.visible": false,
-"dotenv.enableAutocloaking": false,
-"workbench.statusBar.visible": false,
+    /* VIM */
+    "vim.cursorStylePerMode.insert": "block-outline",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "line",
+    "vim.cursorStylePerMode.visual": "line-thin",
+    "vim.cursorStylePerMode.visualblock": "block-outline",
+    "vim.cursorStylePerMode.visualline": "underline",
+    "vim.disableExtension": false,
+    "vim.statusBarColorControl": false,
+    "vim.statusBarColors.commandlineinprogress": "#007acc",
+    "vim.statusBarColors.easymotioninputmode": "#007acc",
+    "vim.statusBarColors.easymotionmode": "#007acc",
+    "vim.statusBarColors.insert": "#DC143C",
+    "vim.statusBarColors.normal": "#005f5f",
+    "vim.statusBarColors.replace": "#00000",
+    "vim.statusBarColors.searchinprogressmode": "#007acc",
+    "vim.statusBarColors.surroundinputmode": "#007acc",
+    "vim.statusBarColors.visual": "#5f00af",
+    "vim.statusBarColors.visualblock": "#86592d",
+    "vim.statusBarColors.visualline": "#005f5f",
+    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "c:\\Users\\2420\\.vimrc",
+    /* Miscellanous */
+    "boot-java.rewrite.reconcile": true,
+    "workbench.statusBar.visible": false,
 }
