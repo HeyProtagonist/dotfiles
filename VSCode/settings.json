@@ -3,7 +3,7 @@
     "gitlens.telemetry.enabled": false,
     "redhat.telemetry.enabled": false,
     "telemetry.telemetryLevel": "off",
-    "update.mode": "start",
+    "update.mode": "manual",
     "update.showReleaseNotes": true,
     /* Editor Defaults */
     "diffEditor.ignoreTrimWhitespace": false,
@@ -21,7 +21,7 @@
     "explorer.compactFolders": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "explorer.excludeGitIgnore": true,
+    "explorer.excludeGitIgnore": false,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "files.insertFinalNewline": true,
@@ -35,18 +35,19 @@
     "terminal.integrated.defaultProfile.linux": "Bash",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "vsicons.dontShowNewVersionMessage": true,
-    "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "inherit",
     "window.title": "${dirty}${folderName}${separator}${activeEditorMedium}",
     "window.titleBarStyle": "custom",
     "window.titleSeparator": " 🔥 ",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.showTabs": true,
     "workbench.layoutControl.enabled": false,
     "workbench.sideBar.location": "right",
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
-    "zenMode.hideStatusBar": true,
+    "zenMode.hideStatusBar": false,
     "zenMode.silentNotifications": false,
     "emmet.includeLanguages": {
         "blade": "html",
@@ -76,7 +77,6 @@
     "git.decorations.enabled": false,
     "problems.decorations.enabled": false,
     "scm.diffDecorations": "none",
-    "workbench.activityBar.visible": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.startupEditor": "none",
     "workbench.tips.enabled": false,
@@ -106,8 +106,9 @@
     "terminal.integrated.lineHeight": 1.3,
     "workbench.colorTheme": "Night Owl",
     "workbench.iconTheme": "vscode-icons",
+    "editor.snippetSuggestions": "top",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#DC143C",
+        // "statusBar.background": "#DC143C",
         "statusBar.noFolderBackground": "#DC143C",
         "statusBar.debuggingBackground": "#DC143C",
         "activityBar.activeBackground": "#fa1b49",
@@ -118,7 +119,7 @@
         "activityBarBadge.foreground": "#e7e7e7",
         "commandCenter.border": "#e7e7e799",
         "sash.hoverBorder": "#fa1b49",
-        "statusBar.foreground": "#15202b",
+        // "statusBar.foreground": "#15202b",
         "statusBarItem.hoverBackground": "#f7df1e",
         "statusBarItem.remoteBackground": "#f9e64f",
         "statusBarItem.remoteForeground": "#15202b",
@@ -131,8 +132,8 @@
     "search.useIgnoreFiles": false,
     "search.exclude": {
         "**/vendor/{[^l],?[^ai]}*": true, // Hide everything in /vendor, except the "laravel" and "livewire" folder.
-        "**/public/{[^i],?[^n]}*": true, // Hide everything in /public, except "index.php"
         "**/node_modules": true,
+        "**/build": true,
         "**/dist": true,
         "**/_ide_helper.php": true,
         "**/composer.lock": true,
@@ -146,13 +147,19 @@
         "editor.defaultFormatter": "vscode.json-language-features",
         "editor.wordWrapColumn": 1000,
     },
+    "[csv]": {
+        "editor.defaultFormatter": "phplasma.csv-to-table",
+        "editor.wordWrapColumn": 1000,
+    },
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
     "[shellscript]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
-    "[javascript]": {},
+    "[javascript]": {
+        "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+    },
     "[typescript]": {},
     "[javascriptreact]": {},
     "[typescriptreact]": {},
@@ -171,46 +178,6 @@
     "dotenv.enableAutocloaking": false,
     "dotenv.enableSecretpeeking": true,
     /* Peacock */
-    "peacock.affectStatusBar": true,
-    "peacock.color": "#9bd684",
-    "peacock.favoriteColors": [
-        {
-            "name": "Angular Red",
-            "value": "#dd0531"
-        },
-        {
-            "name": "Azure Blue",
-            "value": "#007fff"
-        },
-        {
-            "name": "JavaScript Yellow",
-            "value": "#f9e64f"
-        },
-        {
-            "name": "Mandalorian Blue",
-            "value": "#1857a4"
-        },
-        {
-            "name": "Node Green",
-            "value": "#215732"
-        },
-        {
-            "name": "React Blue",
-            "value": "#61dafb"
-        },
-        {
-            "name": "Something Different",
-            "value": "#832561"
-        },
-        {
-            "name": "Svelte Orange",
-            "value": "#ff3d00"
-        },
-        {
-            "name": "Vue Green",
-            "value": "#42b883"
-        }
-    ],
     /* Better Comments */
     "better-comments.tags": [
         {
@@ -262,7 +229,6 @@
     /*APC Configuration */
     "apc.font.family": "JetBrains Mono",
     "apc.menubar.compact": true,
-    "apc.electron": {},
     "apc.header": {
         "height": 0.00001,
         "fontSize": 13
@@ -279,6 +245,7 @@
         "monaco-menu": "JetBrains Mono"
     },
     "apc.stylesheet": {
+        "div.title.show-file-icons.title-border-bottom": "display: none;",
         ".letterpress": "visibility: hidden;",
         ".window-title": "font-size: 0.8rem !important; font-weight: 600;",
         ".monaco-workbench .part.editor > .content .editor-group-container.empty .editor-group-letterpress": "background-image: none;",
@@ -315,5 +282,9 @@
     "vim.vimrc.path": "c:\\Users\\2420\\.vimrc",
     /* Miscellanous */
     "boot-java.rewrite.reconcile": true,
-    "workbench.statusBar.visible": false,
+    "console-ninja.featureSet": "Community",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "quokka.showStartViewOnFeatureRelease": false,
 }

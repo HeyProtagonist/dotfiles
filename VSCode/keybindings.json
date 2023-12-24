@@ -278,5 +278,18 @@
     "key": "ctrl+k ctrl+t",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminal.active"
+},
+{
+    "key": "ctrl+d",
+    "command": "-extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+},
+{
+    "key": "ctrl+0",
+    "command": "workbench.action.zoomReset"
+},
+{
+    "key": "ctrl+numpad0",
+    "command": "-workbench.action.zoomReset"
 }
 ]

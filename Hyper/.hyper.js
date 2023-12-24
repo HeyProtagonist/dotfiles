@@ -139,14 +139,14 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyperborder",
+    "hyperborder", // "hyperterm-cyberpunk",
     "hyperpower",
-    "hyperterm-cyberpunk",
     "hyper-opacity",
     "hyper-search",
-    "hyper-tab-icons",
     "hyper-rename-tab",
     "git-falcon9",
+    "hyper-night-owl",
+    "hypercwd",
   ],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
