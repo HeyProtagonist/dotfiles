@@ -1,6 +1,5 @@
 aaron-bond.better-comments
 adpyke.codesnap
-AndenetAlexander.vim-cheatsheet
 bradlc.vscode-tailwindcss
 calebporzio.simple-project-switcher
 christian-kohler.npm-intellisense
@@ -11,11 +10,9 @@ DotJoshJohnson.xml
 drcika.apc-extension
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
-ecmel.vscode-html-css
 esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
-foxundermoon.shell-format
 GrapeCity.gc-excelviewer
 jock.svg
 johnpapa.vscode-peacock
@@ -30,7 +27,6 @@ ms-vscode.cpptools
 ms-vscode.remote-explorer
 ms-vscode.remote-server
 ms-vscode.vscode-typescript-next
-ms-vsliveshare.vsliveshare
 msjsdiag.vscode-react-native
 rebornix.toggle
 redhat.java

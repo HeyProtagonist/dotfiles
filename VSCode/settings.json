@@ -11,7 +11,7 @@
     "editor.copyWithSyntaxHighlighting": false,
     "editor.cursorBlinking": "expand",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorStyle": "block",
+    // "editor.cursorStyle": "block",
     "editor.detectIndentation": false,
     "editor.emptySelectionClipboard": false,
     "editor.lineNumbers": "relative",
@@ -55,8 +55,8 @@
         "vue": "html",
     },
     "files.associations": {
-        "*.jsx": "javascriptreact",
-        ".env*": "dotenv"
+        ".env*": "dotenv",
+        "*.css": "tailwindcss"
     },
     /* Lo-Fi Ambience */
     "breadcrumbs.enabled": false,
@@ -147,18 +147,11 @@
         "editor.defaultFormatter": "vscode.json-language-features",
         "editor.wordWrapColumn": 1000,
     },
-    "[csv]": {
-        "editor.defaultFormatter": "phplasma.csv-to-table",
-        "editor.wordWrapColumn": 1000,
-    },
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
-    },
     "[shellscript]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {},
     "[javascriptreact]": {},
@@ -287,4 +280,11 @@
         "source.fixAll": true
     },
     "quokka.showStartViewOnFeatureRelease": false,
+    "material-ui-snippets.showNotesOnStartup": false,
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "workbench.editorAssociations": {
+        "*.log": "default"
+    },
 }
