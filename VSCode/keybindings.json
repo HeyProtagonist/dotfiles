@@ -267,7 +267,7 @@
     "when": "editorTextFocus && foldingEnabled"
 },
 {
-    "key": "ctrl+k ctrl+.",
+    "key": "ctrl+k oem_period",
     "command": "workbench.action.toggleStatusbarVisibility"
 },
 {
