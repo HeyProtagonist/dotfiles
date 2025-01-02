@@ -1,0 +1,372 @@
+app-certificate 
+ssh maint@192.168.120.108
+app-invisinet 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-vm-console 
+deploy-invisinet-dev-env
+deploy-invisinet-dev-env
+app-certificate 
+yarn dev
+app-invisinet 
+npm run start
+app-certificate 
+git checkout bugfix-error-message-update; git pull --rebase;
+git checkout bugfix-error-message-update; git pull --rebase;
+git checkout develop
+git pull --rebase
+code -n .
+git logline
+npm version v0.2.2-7
+git push
+git push --tags
+git checkout master
+git merge --no-ff develop
+git logline
+deploy-certificate-dev-env
+git push
+deploy-certificate-qa-env 
+git checkout develop
+git status
+git status
+git reflog show master
+node
+wsl
+wsl --list
+wsl list
+wsl --list --online
+wsl --deregist
+wsl --help | grep reg
+wsl --help
+wsl
+exit
+app-invisinet 
+npm run start
+rm -rf *
+ls
+rm -rf .*
+ls
+git clone git@192.168.120.168:bluearmor-ui/bmc .
+git fetch --all
+git checkout develop
+exit
+vim ~/.ssh/config 
+vim ~/.ssh/known_hosts
+ssh admin@192.168.229.102
+ssh-copy-id -i ~/.ssh/id_rsa.pub maint@192.168.229.102
+ssh invisinet-vm-console-maint
+vim ~/.ssh/config 
+ssh invisinet-vm-console-maint
+ssh maint@192.168.229.102
+ssh invisinet-vm-console-maint
+ssh invisinet-vm-console-maint
+ssh-copy-id -i ~/.ssh/id_rsa.pub maint@192.168.229.102
+ssh invisinet-vm-console-maint
+scp -r ~/Downloads/AnguramVM-cert.zip invisinet-vm-console-maint:~/Downloads/
+scp -r ~/Downloads/AnguramVM-cert.zip invisinet-vm-console-maint:~/Downloads
+ssh invisinet-vm-console-maint
+scp -r ~/Downloads/AnguramVM-cert.zip invisinet-vm-console-maint:~/Downloads
+ssh invisinet-vm-console-maint
+zip
+scp -r ~/Downloads/AnguramVM-cert/* invisinet-vm-console-maint:~/Downloads
+ssh invisinet-vm-console-maint
+ssh invisinet-vm-console-maint
+ssh-copy-id -i ~/.ssh/id_rsa.pub maint@192.168.229.103
+ssh invisinet-vm-controller-maint
+unzip --help
+unzip Downloads/AnguramControllerVM-cert.zip .
+unzip Downloads/AnguramControllerVM-cert.zip Downloads/AnguramControllerVM-cert
+unzip Downloads/AnguramControllerVM-cert.zip Downloads/AnguramControllerVM-cert
+ssh invisinet-vm-controller-maint
+unzip Downloads/AnguramControllerVM-cert.zip -d Downloads/
+ls Downloads/
+unzip Downloads/AnguramControllerVM-cert.zip -d Downloads/AnguramControllerVM-cert
+scp -r Downloads/AnguramControllerVM-cert/* invisinet-vm-controller-maint:/home/maint/Downloads
+ssh invisinet-vm-controller-maint
+quit
+ssh-copy-id -i ~/.ssh/id_rsa maint@192.168.229.101
+ssh invisinet-vm-manager-maint
+unzip Downloads/AnguramManagerVM-cert.zip -d Downloads/AnguramManagerVM-cert
+scp -r Downloads/AnguramManagerVM-cert/* invisinet-vm-manager-maint:/home/maint/Downloads
+ssh invisinet-vm-manager-maint
+ssh invisinet-vm-manager-maint
+vim ~/.bashrc
+src-bash
+deploy-invisinet-vm-manager; deploy-invisinet-vm-console; deploy-invisinet-vm-controller;
+vim ~/.bashrc
+deploy-invisinet-vm-manager; deploy-invisinet-vm-console; deploy-invisinet-vm-controller;
+npm run build
+exit
+sh ~/Workspace/designer-scripts/invisinet-web-app.sh
+ls
+pwd
+cd Workspace/
+ls
+designer-scripts/certificate-web-app.sh
+ls
+rm -rf ./~
+designer-scripts/certificate-web-app.sh
+designer-scripts/certificate-web-app.sh
+ls
+app-certificate
+yarn dev
+cd ..
+cd designer-scripts/
+git init
+git push
+git remote add origin git@192.168.120.168:bluearmor-ui/designer-scripts.git
+git push origin
+git push --set-upstream origin master
+git push --set-upstream origin master
+git remote set-url origin git@192.168.120.168:bluearmor-ui/designer-scripts.git
+git push
+git push --set-upstream origin master
+git remote -v
+git push origin master
+rm -rf .git/
+git init -b master
+git add .
+git commit -am "Good First Commit"
+git remote add origin git@192.168.120.168:bluearmor-ui/designer-scripts.git
+git remtoe -v
+git remote -v
+git push origin master
+git push -f origin master
+git push -f origin master
+cd ~
+ls Workspace/
+rm -rf Workspace/certificate-web-app/
+ls Workspace/
+~/Workspace/designer-scripts/certificate-web-app.sh 
+app-certificate 
+git checkout develop
+git pull --rebase
+code-certificate 
+exit
+app-invisinet 
+git status
+git diff CHANGELOG.md
+code-certificate 
+cd ..
+ls
+rm -rf designer-scripts/*
+ls designer-scripts/
+rm -rf designer-scripts/.*
+ls designer-scripts/
+git clone git@192.168.120.168:bluearmor-ui/designer-scripts.git designer-scripts/
+cd designer-scripts/
+ls
+code -n .
+cd ..
+ls
+ls ~/.ssh/
+cat ~/.ssh/gitlab_invisinet_ed25519.pub 
+git clone git@gitlab.com:invisinet/stack-creator.git 
+cd stack-creator/
+git status
+git branch --all
+git checkout -b async-stack-creation
+code -n .
+app-certificate 
+cd ../stack-creator/
+app-certificate 
+code -n .
+cd ..
+cd stack-creator/
+cd ..
+la
+ls
+ls
+cd gemini-cli-tool/
+cd ..
+app-invisinet
+git branch
+git branch -D refactor-craco-configuration 
+git pull --rebase
+git status
+git stash
+git pull --rebase
+git branch --all
+vim ~/.npmrc
+npm list --global
+npm install --global @invisinet/stack-creator
+npm list --global
+@invisinet/stack-creator
+stack-creator
+exit
+@invisinet/stack-creator
+stack-creatir
+stack-creator
+npm list --global
+npm list --global
+@invisinet/stack-creator
+cd Workspace/stack-creator/
+npm @invisinet/stack-creator
+npx @invisinet/stack-creator
+cd ..
+cd stack-creator/
+git branch
+git checkout master
+git branch -D async-stack-creation 
+git branch
+git checkout -b develop
+git branch --all
+git push --set-upstream origin develop
+git push
+git push --set-upstream origin develop
+curl
+curl anguram.dev
+curl
+curl --help
+curl --verbose --output anguram.dev
+curl --verbose --output https://www.anguram.dev
+curl --verbose https://www.anguram.dev
+code -n .
+mv ~/.npmrc ~/.bkp.npmrc
+npm uninstall global @invisinet/stack-creator
+npm link
+npm link --help
+npm link --global
+npm --help
+npm install --global ./
+npm list --global
+npm uninstall --global @invisinet/stack-creator
+npm list --global
+npm link
+npm list --global
+exit
+cd Workspace/aws-cli-tool/
+node build/index.js 
+node build/index.js help
+node build/index.js help
+node build/index.js help
+node build/index.js help
+node build/index.js help
+node build/index.js help
+node build/index.js
+node build/index.js
+node build/index.js
+node build/index.js
+node build/index.js
+node build/index.js
+node build/index.js
+cd Workspace/aws-cli-tool/
+build/index help
+node build/index help
+node build/index help
+node build/index region
+node build/index --region
+node build/index 
+node build/index
+mv Performance\ July\ 2024.txt Performance\ July\ 2024.md
+exit
+invisinet-app 
+ssh maint@192.168.121.137
+ssh maint@192.168.123.137
+deploy_invisinet raj
+ssh maint@192.168.123.137
+ssh maint@192.168.123.137
+npm run build
+npm run build;scp -r build/* maint@192.168.123.137:~/Downloads/;
+npm run build;scp -r build/* maint@192.168.123.137:~/Downloads/;
+npm run build;scp -r build/* maint@192.168.123.137:~/Downloads/;
+npm run build;scp -r build/* maint@192.168.123.137:~/Downloads/;
+ssh maint@192.168.123.13
+ssh maint@192.168.123.137
+npm run start
+git push
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/gitlab168_ed25519
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/gitlab168_ed25519
+git push
+certificate-app 
+git pull --rebase
+git fetch origin
+code -n .
+git checkout cache-sensitive-information; git pull --rebase;
+deploy_certificate dev
+git checkout develop; git pull --rebase;
+git checkout ca-configuration-refactor; git pull --rebase;
+deploy_certificate dev
+code -n .
+code -n .
+code
+code -n .
+code
+yarn build
+start .
+ssh invisinet-dev-console
+invisinet-app 
+npm run build; scp -r build/* maint@192.168.121.182:~/Downloads/; ssh maint@192.168.121.182
+npm run build; scp -r build/* maint@192.168.121.182:~/Downloads/; ssh maint@192.168.121.182
+npm run build; scp -r build/* maint@192.168.121.182:~/Downloads/; ssh maint@192.168.121.182
+npm run start
+npm run build; scp -r build/* maint@192.168.121.182:~/Downloads/; ssh maint@192.168.121.182
+npm run build; scp -r build/* maint@192.168.121.182:~/Downloads/;
+git status
+git push
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/gitlab168_ed25519
+git push
+npm run start
+git stash list
+git stash -m "PUBSUB CHANGES"
+git status
+git stash pop
+git push
+git push --set-upstream origin feat-pub-sub
+git branch
+git status
+git checkout ics-pubsub-change 
+git pull --rebase
+git rebase feat-pub-sub
+git rebase --continue
+git rebase --continue
+git rebase --continue
+git rebase --continue
+git rebase --continue
+git status
+git rebase develop
+git checkout -b feat-publisher-service
+git push
+git checkout feat-publisher-service 
+git push
+git push --set-upstream origin feat-publisher-service
+git rebase develop
+certificate-app 
+yarn dev
+ cd ~
+ls
+cd Scripts/
+ls
+cd ..
+cd Workspace/
+ls
+git clone https://github.com/HeyProtagonist/dotfiles
+cd dotfiles/
+ls
+sh Scripts/backup.sh 
+git status
+git status
+code -n .
+cd ..
+rm -rf dotfiles/
+cd ~
+cd .dotfiles/
+sh Scripts/backup.sh 
+git status
+git add .
+git status
+git commit -am "new backup 14-10-2024"
+exit
