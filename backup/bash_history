@@ -370,3 +370,26 @@ git add .
 git status
 git commit -am "new backup 14-10-2024"
 exit
+invisinet-app 
+git checkout develop
+git pull --rebase
+code -n .
+ssh invisinet-dev-console
+vim ~/.ssh/config 
+ssh invisinet-dev-console
+vim ~/.ssh/known_hosts
+ssh-copy-id 
+ssh-copy-id -i ~/.ssh/id_rsa.pub  maint@192.168.122.182
+ssh invisinet-dev-console
+cd ~
+scp -r ~/Downloads/cloak* invisinet-dev-console:~/Downloads/
+ssh invisinet-dev-consol
+ssh invisinet-dev-console
+ping 192.168.120.198
+cd Workspace/invisinet-app/
+git pull
+git checkout master
+git pull --rebase
+git push
+hyper install
+exit

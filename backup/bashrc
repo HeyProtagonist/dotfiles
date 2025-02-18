@@ -125,6 +125,9 @@ deploy_invisinet() {
 
     # Define hosts and directories based on environment
     case $1 in
+    vm)
+	HOST="invisinet-vm-console"
+	;;
     dev)
         HOST="invisinet-dev-console"
         ;;
@@ -133,7 +136,7 @@ deploy_invisinet() {
         ;;
 
     *)
-        echo "Error: Invalid environment specified. Usage: deploy_invisinet <dev|181> [-s]"
+        echo "Error: Invalid environment specified. Usage: deploy_invisinet <vm|dev|181> [-s]"
         return 1
         ;;
     esac
