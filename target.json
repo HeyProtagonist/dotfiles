@@ -1,11 +1,12 @@
 {
   "files": [
-    "C:\\Users\\Anguram\\AppData\\Roaming\\Code\\User\\keybindings.json",
-    "C:\\Users\\Anguram\\AppData\\Roaming\\Code\\User\\settings.json",
     "C:\\Users\\Anguram\\.bashrc",
     "C:\\Users\\Anguram\\.zshrc",
     "C:\\Users\\Anguram\\.vimrc",
-    "C:\\Users\\Anguram\\.viminfo"
+    "C:\\Users\\Anguram\\.viminfo",
+    "C:\\Users\\Anguram\\AppData\\Roaming\\Hyper\\.hyper.js",
+    "C:\\Users\\Anguram\\AppData\\Roaming\\Code\\User\\keybindings.json",
+    "C:\\Users\\Anguram\\AppData\\Roaming\\Code\\User\\settings.json"
   ],
   "folders": [
     "C:\\Users\\Anguram\\AppData\\Roaming\\Code\\User\\snippets",

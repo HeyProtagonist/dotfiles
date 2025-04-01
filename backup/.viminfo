@@ -11,13 +11,13 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/theme
+~MSle0~/zsh_theme
 
 # Command Line History (newest to oldest):
-:wq
-|2,0,1743489859,,"wq"
 :q
-|2,0,1743486644,,"q"
+|2,0,1743506075,,"q"
+:wq
+|2,0,1743506059,,"wq"
 :%w !pbcopy
 |2,0,1743485861,,"%w !pbcopy"
 :w
@@ -32,8 +32,10 @@
 |2,0,1740888571,,"set relativenumber"
 
 # Search String History (newest to oldest):
+?/zsh_theme
+|2,1,1743506049,47,"zsh_theme"
 ?/theme
-|2,1,1743489846,47,"theme"
+|2,1,1743505840,47,"theme"
 ?/export ZSH_DISABLE_COMPFIX
 |2,1,1743486148,47,"export ZSH_DISABLE_COMPFIX"
 ?/compinit
@@ -165,32 +167,112 @@
 |<"192.168.229.101 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDUyilpXLnw5MA62PLWPJH9+BbIJZrKJ+uP9GS2eftMHvOxWclTr4uamKo2OhbdsX7F10ttXm1CS+nKgYTJ9OEzmm8CZNECfwkuZ99he+vBz+VDiVKWVnrCVgPXKA0pX0SSV3dOaNQ3UfLaK3fxRkuIeXW3yNHQTYRyakHWei2MrBTpH2uU18/ArMjDt8bMUKp+qbg/b6eue8SmamFeTi37ieTJieIJL+5V6tg12VIRh0Lr73WsXAKTS0uNvKvXRmYxk4jwPT91WUHE6Tfg4CLjnh0/vn54OSkBiI4Y1UNmQIR9cXxdC66cH7go7J/wLSyKHuUAC3UzYh3ACczNFE3GScDa5jOJin6xPYxQvdnQJqHvYilMinEPDT7EOU2mAS65gkBJdXNf2Nsab7W//76KSAY7KCmuYUdQLcXHAtmjVaQccS4rDh
 |<CzIKNsehg2GzUz+0YEN3QzM85LmXBqYpIzoFT9J85TEk1Jb9+Yj3/ShXicl2SVIxCujVMBtb7ff6M="
 ""-	CHAR	0
-	robbyrussell
-|3,1,36,0,1,0,1743489855,"robbyrussell"
+	theunraveler
+|3,1,36,0,1,0,1743506053,"theunraveler"
 
 # File marks:
-'0  41  16  ~/.zshrc
-|4,48,41,16,1743489859,"~/.zshrc"
-'1  41  22  ~/.zshrc
-|4,49,41,22,1743489566,"~/.zshrc"
-'2  41  12  ~/.zshrc
-|4,50,41,12,1743489497,"~/.zshrc"
-'3  41  12  ~/.zshrc
-|4,51,41,12,1743489497,"~/.zshrc"
-'4  8  11  ~/.zshrc
-|4,52,8,11,1743489292,"~/.zshrc"
-'5  8  11  ~/.zshrc
-|4,53,8,11,1743489292,"~/.zshrc"
-'6  8  11  ~/.zshrc
-|4,54,8,11,1743489292,"~/.zshrc"
-'7  8  11  ~/.zshrc
-|4,55,8,11,1743489292,"~/.zshrc"
-'8  8  11  ~/.zshrc
-|4,56,8,11,1743489292,"~/.zshrc"
-'9  8  11  ~/.zshrc
-|4,57,8,11,1743489292,"~/.zshrc"
+'0  135  0  ~/.zshrc
+|4,48,135,0,1743506075,"~/.zshrc"
+'1  41  17  ~/.zshrc
+|4,49,41,17,1743506059,"~/.zshrc"
+'2  41  17  ~/.zshrc
+|4,50,41,17,1743506059,"~/.zshrc"
+'3  37  18  ~/.zshrc
+|4,51,37,18,1743505842,"~/.zshrc"
+'4  37  18  ~/.zshrc
+|4,52,37,18,1743505842,"~/.zshrc"
+'5  37  18  ~/.zshrc
+|4,53,37,18,1743505842,"~/.zshrc"
+'6  37  18  ~/.zshrc
+|4,54,37,18,1743505842,"~/.zshrc"
+'7  41  22  ~/.zshrc
+|4,55,41,22,1743505805,"~/.zshrc"
+'8  41  22  ~/.zshrc
+|4,56,41,22,1743505805,"~/.zshrc"
+'9  41  22  ~/.zshrc
+|4,57,41,22,1743505805,"~/.zshrc"
 
 # Jumplist (newest first):
+-'  135  0  ~/.zshrc
+|4,39,135,0,1743506075,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1743506068,"~/.zshrc"
+-'  41  17  ~/.zshrc
+|4,39,41,17,1743506059,"~/.zshrc"
+-'  41  17  ~/.zshrc
+|4,39,41,17,1743506059,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1743506049,"~/.zshrc"
+-'  135  0  ~/.zshrc
+|4,39,135,0,1743506042,"~/.zshrc"
+-'  37  18  ~/.zshrc
+|4,39,37,18,1743505842,"~/.zshrc"
+-'  37  18  ~/.zshrc
+|4,39,37,18,1743505842,"~/.zshrc"
+-'  37  18  ~/.zshrc
+|4,39,37,18,1743505842,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1743505840,"~/.zshrc"
+-'  41  22  ~/.zshrc
+|4,39,41,22,1743505805,"~/.zshrc"
+-'  41  22  ~/.zshrc
+|4,39,41,22,1743505805,"~/.zshrc"
+-'  40  46  ~/.zshrc
+|4,39,40,46,1743505793,"~/.zshrc"
+-'  40  46  ~/.zshrc
+|4,39,40,46,1743505793,"~/.zshrc"
+-'  40  46  ~/.zshrc
+|4,39,40,46,1743505793,"~/.zshrc"
+-'  40  46  ~/.zshrc
+|4,39,40,46,1743505793,"~/.zshrc"
+-'  39  59  ~/.zshrc
+|4,39,39,59,1743505792,"~/.zshrc"
+-'  38  16  ~/.zshrc
+|4,39,38,16,1743505792,"~/.zshrc"
+-'  39  59  ~/.zshrc
+|4,39,39,59,1743505792,"~/.zshrc"
+-'  38  16  ~/.zshrc
+|4,39,38,16,1743505792,"~/.zshrc"
+-'  39  59  ~/.zshrc
+|4,39,39,59,1743505792,"~/.zshrc"
+-'  38  16  ~/.zshrc
+|4,39,38,16,1743505792,"~/.zshrc"
+-'  39  59  ~/.zshrc
+|4,39,39,59,1743505792,"~/.zshrc"
+-'  38  16  ~/.zshrc
+|4,39,38,16,1743505792,"~/.zshrc"
+-'  37  18  ~/.zshrc
+|4,39,37,18,1743505792,"~/.zshrc"
+-'  125  15  ~/.zshrc
+|4,39,125,15,1743505791,"~/.zshrc"
+-'  125  15  ~/.zshrc
+|4,39,125,15,1743505791,"~/.zshrc"
+-'  125  15  ~/.zshrc
+|4,39,125,15,1743505791,"~/.zshrc"
+-'  125  15  ~/.zshrc
+|4,39,125,15,1743505791,"~/.zshrc"
+-'  64  0  ~/.zshrc
+|4,39,64,0,1743505788,"~/.zshrc"
+-'  64  0  ~/.zshrc
+|4,39,64,0,1743505788,"~/.zshrc"
+-'  64  0  ~/.zshrc
+|4,39,64,0,1743505788,"~/.zshrc"
+-'  64  0  ~/.zshrc
+|4,39,64,0,1743505788,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1743505778,"~/.zshrc"
+-'  41  12  ~/.zshrc
+|4,39,41,12,1743505738,"~/.zshrc"
+-'  37  18  ~/.zshrc
+|4,39,37,18,1743505729,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1743505727,"~/.zshrc"
+-'  41  22  ~/.zshrc
+|4,39,41,22,1743505188,"~/.zshrc"
+-'  37  18  ~/.zshrc
+|4,39,37,18,1743505172,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1743505170,"~/.zshrc"
 -'  41  16  ~/.zshrc
 |4,39,41,16,1743489859,"~/.zshrc"
 -'  37  18  ~/.zshrc
@@ -209,6 +291,18 @@
 |4,39,37,18,1743489483,"~/.zshrc"
 -'  1  0  ~/.zshrc
 |4,39,1,0,1743489482,"~/.zshrc"
+-'  8  11  ~/.zshrc
+|4,39,8,11,1743489292,"~/.zshrc"
+-'  8  11  ~/.zshrc
+|4,39,8,11,1743489292,"~/.zshrc"
+-'  8  11  ~/.zshrc
+|4,39,8,11,1743489292,"~/.zshrc"
+-'  8  11  ~/.zshrc
+|4,39,8,11,1743489292,"~/.zshrc"
+-'  8  11  ~/.zshrc
+|4,39,8,11,1743489292,"~/.zshrc"
+-'  8  11  ~/.zshrc
+|4,39,8,11,1743489292,"~/.zshrc"
 -'  8  11  ~/.zshrc
 |4,39,8,11,1743489292,"~/.zshrc"
 -'  8  11  ~/.zshrc
@@ -251,154 +345,62 @@
 |4,39,130,0,1743486644,"~/.bashrc"
 -'  130  0  ~/.bashrc
 |4,39,130,0,1743486644,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1743486637,"~/.bashrc"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  10  ~/.oh-my-zsh/oh-my-zsh.sh
-|4,39,1,10,1743486578,"~/.oh-my-zsh/oh-my-zsh.sh"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743486554,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743486554,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743486554,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743486554,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486440,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743486436,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743486436,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743486436,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743486436,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486165,"~/.zshrc"
--'  3  0  ~/.zshrc
-|4,39,3,0,1743486165,"~/.zshrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
+-'  130  0  ~/.bashrc
+|4,39,130,0,1743486644,"~/.bashrc"
 
 # History of marks within files (newest to oldest):
 
 > ~/.zshrc
-	*	1743489858	0
-	"	41	16
-	^	41	17
-	.	41	16
+	*	1743506074	0
+	"	135	0
+	^	41	18
+	.	41	17
 	+	163	0
 	+	2	0
 	+	14	0
@@ -415,7 +417,7 @@
 	+	2	0
 	+	9	0
 	+	8	11
-	+	41	16
+	+	41	17
 
 > ~/.bashrc
 	*	1743486643	0
