@@ -40,7 +40,7 @@
     "terminal.integrated.defaultProfile.linux": "Bash",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "window.newWindowDimensions": "inherit",
-    "window.title": "🌿 ${activeRepositoryBranchName} 📂 ${activeRepositoryName} ${separator} ${activeEditorMedium}${dirty}",
+    "window.title": "🌿 ${activeRepositoryBranchName} 📂 ${activeRepositoryName} ${separator} ${activeEditorShort}${dirty}",
     "window.titleBarStyle": "custom",
     "window.titleSeparator": " 📄 ",
     "workbench.editor.enablePreview": false,
@@ -132,8 +132,8 @@
     "editor.suggestLineHeight": 24,
     "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100,
-    "prettier.requireConfig": true,
+    "editor.wordWrapColumn": 80,
+    "prettier.requireConfig": false,
     "prettier.useEditorConfig": false,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "block",
@@ -314,5 +314,8 @@
     },
     "remote.SSH.remotePlatform": {
         "invisinet-vm-console": "linux"
-    }
+    },
+    "reactSnippets.settings.prettierEnabled": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "chat.commandCenter.enabled": false
 }

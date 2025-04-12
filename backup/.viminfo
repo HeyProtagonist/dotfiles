@@ -11,13 +11,13 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/zsh_theme
+~MSle0~/alias
 
 # Command Line History (newest to oldest):
-:q
-|2,0,1743506075,,"q"
 :wq
-|2,0,1743506059,,"wq"
+|2,0,1744363464,,"wq"
+:q
+|2,0,1744086869,,"q"
 :%w !pbcopy
 |2,0,1743485861,,"%w !pbcopy"
 :w
@@ -32,10 +32,14 @@
 |2,0,1740888571,,"set relativenumber"
 
 # Search String History (newest to oldest):
+?/alias
+|2,1,1743764847,47,"alias"
+?/101
+|2,1,1743687954,47,"101"
+?/theme
+|2,1,1743596026,47,"theme"
 ?/zsh_theme
 |2,1,1743506049,47,"zsh_theme"
-?/theme
-|2,1,1743505840,47,"theme"
 ?/export ZSH_DISABLE_COMPFIX
 |2,1,1743486148,47,"export ZSH_DISABLE_COMPFIX"
 ?/compinit
@@ -48,8 +52,6 @@
 |2,1,1742973699,,"\\<export\\>"
 ?/d/
 |2,1,1742557980,47,"d/"
-?/alias
-|2,1,1742456311,47,"alias"
 ?/ping
 |2,1,1742382786,47,"ping"
 
@@ -60,356 +62,389 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	# ANSI formatting function (\033[<code>m)
-	# 0: reset, 1: bold, 4: underline, 22: no bold, 24: no underline, 31: red, 33: yellow
-	omz_f() {
-	  [ $# -gt 0 ] || return
-	  IFS=";" printf "\033[%sm" $*
-	}
-	# If stdout is not a terminal ignore all formatting
-	[ -t 1 ] || omz_f() { :; }
-	
-	# Protect against non-zsh execution of Oh My Zsh (use POSIX syntax here)
-	[ -n "$ZSH_VERSION" ] || {
-	  omz_ptree() {
-	    # Get process tree of the current process
-	    pid=$$; pids="$pid"
-	    while [ ${pid-0} -ne 1 ] && ppid=$(ps -e -o pid,ppid | awk "\$1 == $pid { print \$2 }"); do
-	      pids="$pids $pid"; pid=$ppid
-	    done
-	
-	    # Show process tree
-	    case "$(uname)" in
-	    Linux) ps -o ppid,pid,command -f -p $pids 2>/dev/null ;;
-	    Darwin|*) ps -o ppid,pid,command -p $pids 2>/dev/null ;;
-	    esac
-	
-	    # If ps command failed, try Busybox ps
-	    [ $? -eq 0 ] || ps -o ppid,pid,comm | awk "NR == 1 || index(\"$pids\", \$2) != 0"
-	  }
-	
-	  {
-	    shell=$(ps -o pid,comm | awk "\$1 == $$ { print \$2 }")
-	    printf "$(omz_f 1 31)Error:$(omz_f 22) Oh My Zsh can't be loaded from: $(omz_f 1)${shell}$(omz_f 22). "
-	    printf "You need to run $(omz_f 1)zsh$(omz_f 22) instead.$(omz_f 0)\n"
-	    printf "$(omz_f 33)Here's the process tree:$(omz_f 22)\n\n"
-	    omz_ptree
-	    printf "$(omz_f 0)\n"
-	  } >&2
-	
-	  return 1
-	}
-	
-	# Check if in emulation mode, if so early return
-	# https://github.com/ohmyzsh/ohmyzsh/issues/11686
-	[[ "$(emulate)" = zsh ]] || {
-	  printf "$(omz_f 1 31)Error:$(omz_f 22) Oh My Zsh can't be loaded in \`$(emulate)\` emulation mode.$(omz_f 0)\n" >&2
-	  return 1
-	}
-	
-	unset -f omz_f
-	
-	# If ZSH is not defined, use the current script's directory.
-|3,0,0,1,50,0,1743485875,"# ANSI formatting function (\\033[<code>m)","# 0: reset, 1: bold, 4: underline, 22: no bold, 24: no underline, 31: red, 33: yellow","omz_f() {","  [ $# -gt 0 ] || return","  IFS=\";\" printf \"\\033[%sm\" $*","}","# If stdout is not a terminal ignore all formatting","[ -t 1 ] || omz_f() { :; }","","# Protect against non-zsh execution of Oh My Zsh (use POSIX syntax here)","[ -n \"$ZSH_VERSION\" ] || {","  omz_ptree() {",>47
-|<"    # Get process tree of the current process","    pid=$$; pids=\"$pid\"","    while [ ${pid-0} -ne 1 ] && ppid=$(ps -e -o pid,ppid | awk \"\\$1 == $pid { print \\$2 }\"); do","      pids=\"$pids $pid\"; pid=$ppid","    done","","    # Show process tree","    case \"$(uname)\" in","    Linux) ps -o ppid,pid,command -f -p $pids 2>/dev/null ;;","    Darwin|*) ps -o ppid,pid,command -p $pids 2>/dev/null ;;","    esac","","    # If ps command failed, try Busybox ps",>94
-|<"    [ $? -eq 0 ] || ps -o ppid,pid,comm | awk \"NR == 1 || index(\\\"$pids\\\", \\$2) != 0\"","  }","","  {","    shell=$(ps -o pid,comm | awk \"\\$1 == $$ { print \\$2 }\")","    printf \"$(omz_f 1 31)Error:$(omz_f 22) Oh My Zsh can't be loaded from: $(omz_f 1)${shell}$(omz_f 22). \"","    printf \"You need to run $(omz_f 1)zsh$(omz_f 22) instead.$(omz_f 0)\\n\"","    printf \"$(omz_f 33)Here's the process tree:$(omz_f 22)\\n\\n\"","    omz_ptree","    printf \"$(omz_f 0)\\n\"",>9
-|<"  } >&2","","  return 1","}","","# Check if in emulation mode, if so early return","# https://github.com/ohmyzsh/ohmyzsh/issues/11686","[[ \"$(emulate)\" = zsh ]] || {","  printf \"$(omz_f 1 31)Error:$(omz_f 22) Oh My Zsh can't be loaded in \\`$(emulate)\\` emulation mode.$(omz_f 0)\\n\" >&2","  return 1","}","","unset -f omz_f","","# If ZSH is not defined, use the current script's directory."
-"1	LINE	0
-	
-|3,0,1,1,1,0,1743486161,""
+"0	CHAR	0
+	# VM CONSOLE
+	Host invisinet-vm-console
+	  HostName 192.168.229.101
+	  User maint
+	  PreferredAuthentications publickey
+	  IdentityFile ~/.ssh/id_ed25519
+|3,0,0,0,6,0,1744086726,"# VM CONSOLE","Host invisinet-vm-console","  HostName 192.168.229.101","  User maint","  PreferredAuthentications publickey","  IdentityFile ~/.ssh/id_ed25519"
+""1	LINE	0
+	571
+<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDPh+hQr9FPYlvWeJwRiOBmi8I58iWqyFY5st19oRXhUTUWjRZ2lCYmTVZJt1R7Pig30+SHjGH/2+/hMwONx72hiZNf3q/B/MkMPFFQeTD0vlCzKD97pl8ycKXYYNRJCH2dSBJeFq1ZHGtryurpUeMBey0UDIMieYzSt6HPYsKyuJMMbc+H/S70Aofv9tChjPMS3cTjjt39WC24X/qMf0nYb1sS9rUU3zFAw7Gh8CUpiNxVOzjio80NV0bI1myDRdOl9deHtbnGF4GXBTznD7M/76ruMeN3/0l0o690MGSNkPFec/sfB39O3nk8WhNuSb5ChuqP1S4iKf2MQWLJRjqNUBmGbsiKtYZSy9hwFan9tcSPDX6y2RxovUcH7P8dQwFkU/gkmyVwPR/ZDAaj3ouJp87KGVpMo809oK3r1i6HM1laAg92ZoAbxv2q4cFXjjB7hbd8TkWvVc1rwyZxlwnWQTXg1ap6fgn15yGLz2d95WIcixibH8KarXfT7ZbPG8=
+|3,1,1,1,1,0,1744363462,>570
+|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDPh+hQr9FPYlvWeJwRiOBmi8I58iWqyFY5st19oRXhUTUWjRZ2lCYmTVZJt1R7Pig30+SHjGH/2+/hMwONx72hiZNf3q/B/MkMPFFQeTD0vlCzKD97pl8ycKXYYNRJCH2dSBJeFq1ZHGtryurpUeMBey0UDIMieYzSt6HPYsKyuJMMbc+H/S70Aofv9tChjPMS3cTjjt39WC24X/qMf0nYb1sS9rUU3zFAw7Gh8CUpiNxVOzjio80NV0bI1myDRdOl9deHtbnGF4GXBTznD7M/76ruMeN3/0l0o690MGSNkPFec/sfB39O3nk8WhNuSb5ChuqP1S4iKf2MQWLJRjqNUBmGbsiKtYZSy9hwFan9tcSPDX6y2RxovUcH7P8dQwFkU/gkmyVwPR/ZDAaj3ouJp87KGVpMo809oK3r1i6HM1laAg92Z
+|<oAbxv2q4cFXjjB7hbd8TkWvVc1rwyZxlwnWQTXg1ap6fgn15yGLz2d95WIcixibH8KarXfT7ZbPG8="
 "2	LINE	0
-	571
-<192.168.229.101 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC08CXwKx2TIh3Vh3BHIdAgOQ/AGrdV2JGLr+DUZCaxYX6DcX2e8FFPYcyxcSy7mv+IxpkWR4ODqeEWTm40hO9kMIowhRlJAEbDa4VlOMAqWIZ7Np4jaYN2CmGQTlpZ0gdcnjMiJb6GLghJV5ZFJ5PDtLrtncKqQVPf6Da7HxnAXUBPuktTv8iBFUKRxIbC9ggevf4Y8815vgGGiBPK94Qx/kPvpfZm9OJ19rpVW/jKQKEBeXA/cdonOMbL94lLG6PaCvz8ZvFq2tuBr+0aHl65NET6J3maNJDPKc8O6874rRCi44YN192W5mqACCebruBuQ9IYVDxZCvT1XPTQR3UX9p0yoN923VHSBNtZp0rdXDl6jG9bZT5ocZULQX7ymR3fZWgxNzm029ebyuj4CNddTcz8QK43HsR57U69Spu7TXQEIjiLQRlNN9oyVne2Cz5QL0heDhr+5Q5+MUFVt5PQn5/NbZWL4csART7r8aZRlx7I0Fh3aNnAKuACHSbHO0M=
-|3,0,2,1,1,0,1743089976,>570
-|<"192.168.229.101 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC08CXwKx2TIh3Vh3BHIdAgOQ/AGrdV2JGLr+DUZCaxYX6DcX2e8FFPYcyxcSy7mv+IxpkWR4ODqeEWTm40hO9kMIowhRlJAEbDa4VlOMAqWIZ7Np4jaYN2CmGQTlpZ0gdcnjMiJb6GLghJV5ZFJ5PDtLrtncKqQVPf6Da7HxnAXUBPuktTv8iBFUKRxIbC9ggevf4Y8815vgGGiBPK94Qx/kPvpfZm9OJ19rpVW/jKQKEBeXA/cdonOMbL94lLG6PaCvz8ZvFq2tuBr+0aHl65NET6J3maNJDPKc8O6874rRCi44YN192W5mqACCebruBuQ9IYVDxZCvT1XPTQR3UX9p0yoN923VHSBNtZp0rdXDl6jG9bZT5ocZULQX7ymR3fZWgxNzm029ebyuj4CNddTcz8QK43HsR57U69Spu7TXQEIjiLQR
-|<lNN9oyVne2Cz5QL0heDhr+5Q5+MUFVt5PQn5/NbZWL4csART7r8aZRlx7I0Fh3aNnAKuACHSbHO0M="
+	597
+<ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+aQXItcL8IlUETXavfQkrenP7eACV8w76m3itPqQ0WmUzYVhshrdBZwJdUjZYAVNEAg+GksT8Fa13ZcOpx9Q6jCMEGuDrn8PzQ69QuUEGfPWZxVYtbVxTiqhR5MFnaycVy4WdD54yFadezYvvtNhe/FSklH9k//1okWZzScKeSDZn8HEgHnnavwIoOKHH45ySdwBlUHCjRFUhV+Wq8PI9F+nhVDCTRQP1AaMBC4OEUlsvBEiNoH90cpS42hJOT2VQh+0vkgSNsBVYrHoA18D+5cmNaIinYuEqbz1al9WTTc6SrA0NdUUbrNcjsmCTdKQ3Ls6U6ppDpre7/mM7A9/LWGMJf71uaugRc1WAr+65t9GFQeeNz+wF+kTD2noaXLIxetukmsdRq9WccdMB7zHpf5JECFLW/pTJZ8huE3g7DCuS/7VTlZ9lQhRYs1c+LvJnOPzCZzy5tqLHgFADuilk0/8pAtO+RNfcx/TT3/YVbIsuI7PBJHA4wIwm2LF9iTs=
+|3,0,2,1,1,0,1744363458,>596
+|<"ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+aQXItcL8IlUETXavfQkrenP7eACV8w76m3itPqQ0WmUzYVhshrdBZwJdUjZYAVNEAg+GksT8Fa13ZcOpx9Q6jCMEGuDrn8PzQ69QuUEGfPWZxVYtbVxTiqhR5MFnaycVy4WdD54yFadezYvvtNhe/FSklH9k//1okWZzScKeSDZn8HEgHnnavwIoOKHH45ySdwBlUHCjRFUhV+Wq8PI9F+nhVDCTRQP1AaMBC4OEUlsvBEiNoH90cpS42hJOT2VQh+0vkgSNsBVYrHoA18D+5cmNaIinYuEqbz1al9WTTc6SrA0NdUUbrNcjsmCTdKQ3Ls6U6ppDpre7/mM7A9/LWGMJf71uaugRc1WAr+65t9GFQeeNz+wF+kTD2noaXLIxetukmsdRq9WccdMB7zHpf5JE
+|<CFLW/pTJZ8huE3g7DCuS/7VTlZ9lQhRYs1c+LvJnOPzCZzy5tqLHgFADuilk0/8pAtO+RNfcx/TT3/YVbIsuI7PBJHA4wIwm2LF9iTs="
 "3	LINE	0
-	571
-<192.168.122.161 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtEvd+43lCQa7mkyYwbkZRjEA1LQBXb4qLc02YiriqDk7MGqJuqCutknkp6RafZYZ6R1RNlcFcO0a3dxQE01/bWwW0G49Q8R5d+DmclkK1NOKKEjtuj7F0BZQfUNpey8PTMxXRGYfaoj/Y98Auqidgh97MHIUwrVm8isHYoU27sI6EbhfOmYqWue9vJPpuDNdqCI3uRuL6oFpznEK2j8pR7gVarYMiAJDgEToebP+lvp78hNblhpKk3kY+r4ExyYz4tQGif9mmMgJMXQhPcNcHXJx4F7s8oB5NDGdWTRSOIuWZybeEQysQdN//ORTx44IpM5xuDF6Jot/JMyBAlxFMuL2y56JVHl0tX0m05ryimt0oBjxQe7frZcy/5PMvCvoWJoSxn5s2MB6eFreqAL1q/cZAbP3o1qz7528BtlQ8k4nCpxZrjhtYzrEwf9/NNBEFS0DGSCSF5USJLLo87FqY/kzmxOCiF0cEtoe/TQj2eR24AMe/voTFlCcDGwcnT+E=
-|3,0,3,1,1,0,1743089975,>570
-|<"192.168.122.161 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtEvd+43lCQa7mkyYwbkZRjEA1LQBXb4qLc02YiriqDk7MGqJuqCutknkp6RafZYZ6R1RNlcFcO0a3dxQE01/bWwW0G49Q8R5d+DmclkK1NOKKEjtuj7F0BZQfUNpey8PTMxXRGYfaoj/Y98Auqidgh97MHIUwrVm8isHYoU27sI6EbhfOmYqWue9vJPpuDNdqCI3uRuL6oFpznEK2j8pR7gVarYMiAJDgEToebP+lvp78hNblhpKk3kY+r4ExyYz4tQGif9mmMgJMXQhPcNcHXJx4F7s8oB5NDGdWTRSOIuWZybeEQysQdN//ORTx44IpM5xuDF6Jot/JMyBAlxFMuL2y56JVHl0tX0m05ryimt0oBjxQe7frZcy/5PMvCvoWJoSxn5s2MB6eFreqAL1q/cZAbP3o1qz7528BtlQ8k4nCpxZrjh
-|<tYzrEwf9/NNBEFS0DGSCSF5USJLLo87FqY/kzmxOCiF0cEtoe/TQj2eR24AMe/voTFlCcDGwcnT+E="
+	597
+<ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDHuY/W7VxvD2QEwKHDnO+BRMZmWWE+aEx95OVQ+faTF1CSPrmsMiwUlaHq97/v1Ey3BY+F3w+QK0/Oon1TwidRdlhEF+GVkRssPIT4rrItM9O7Rb4JZheErGIZyNBGxeb1D7TqfcTcdIAbU3zkh8AP5msaBUQ7ODU44gbXrMf2H4RWvEXIrFJa3L6YhDKK+L8tvqCaXyBzcKBmBROffxtpEEbU2AortffHCkqHsYjSkumELL/ja3DntKHCuw0EE3N7WM993bnlL7gK84RSJa2a6H7P1oOitLyKMI0smVWoKuwVtNJk7aN9BQIIktBGUGt8Qy/Zp/lG79EhMC4uPPxmMk10c918oPv/dNAnsuYJ8wxqXv9Rnl5Bx+k9I1GVpINAVmLAJzpUHNbCyJlLbBVDpQmBb/nD2iO5McKp0Jtl/kAOwsH8KA/pOZFaaM6gwtzIo/8G8+XhK+kmy3QiR6/mqCk2s+bYP+5q1au5dTkAYvpJ9DXwkS+7BD6UWoutqH8=
+|3,0,3,1,1,0,1744356549,>596
+|<"ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDHuY/W7VxvD2QEwKHDnO+BRMZmWWE+aEx95OVQ+faTF1CSPrmsMiwUlaHq97/v1Ey3BY+F3w+QK0/Oon1TwidRdlhEF+GVkRssPIT4rrItM9O7Rb4JZheErGIZyNBGxeb1D7TqfcTcdIAbU3zkh8AP5msaBUQ7ODU44gbXrMf2H4RWvEXIrFJa3L6YhDKK+L8tvqCaXyBzcKBmBROffxtpEEbU2AortffHCkqHsYjSkumELL/ja3DntKHCuw0EE3N7WM993bnlL7gK84RSJa2a6H7P1oOitLyKMI0smVWoKuwVtNJk7aN9BQIIktBGUGt8Qy/Zp/lG79EhMC4uPPxmMk10c918oPv/dNAnsuYJ8wxqXv9Rnl5Bx+k9I1GVpINAVmLAJzpUHNbCyJlLbBVDpQmB
+|<b/nD2iO5McKp0Jtl/kAOwsH8KA/pOZFaaM6gwtzIo/8G8+XhK+kmy3QiR6/mqCk2s+bYP+5q1au5dTkAYvpJ9DXwkS+7BD6UWoutqH8="
 "4	LINE	0
-	568
-<35.165.35.45 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCk8UGFjJTfI6rcJKbuP/f6UEEjVJJYxpNXpjLUDjfjBqKRyVGabXdoFudKuULiPIaNaX5ZOXSKBZwj31aWiZKXOI2P3sA3mp2EMfpNcZ16x8RXjBEM1QsEy2ijgzQJLIBkPN6IvoC1tx7UeW6opQZhFUcqIBjMCoIEAP9yz0ol9TrPLUGbCUL8lqD3ftqJ1ViwUkY/4SJiTtNCdbVvh+Q7+SHG6oEPA/g0+IOLMb61la+pdrguyBpYu5X1H3pEJo/JzK88jxKEVlH5TXIyI8Zr+OOEe8VFkjkwrM/CnDeIRCHElwEiB5c8loyVi16QKDIM9DJqQ0OrWmURPC+7du/qq6UkhBdSw2qHv4L5iX4G4dvxDrOFyL4C5mrHFxL7LpmLGvtV1K1nd7ST1V2Lpy3dDfdiyuR6fjLY4kgwi0Hqv8DdjbZKGmOA3FD2G1PbD4ehFljuGeBUOdzAuT6ThiVKaWWheBTRDNGiPuaHe/HLCyducVwnU+9AEOKaUNJQTIs=
-|3,0,4,1,1,0,1743089973,>567
-|<"35.165.35.45 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCk8UGFjJTfI6rcJKbuP/f6UEEjVJJYxpNXpjLUDjfjBqKRyVGabXdoFudKuULiPIaNaX5ZOXSKBZwj31aWiZKXOI2P3sA3mp2EMfpNcZ16x8RXjBEM1QsEy2ijgzQJLIBkPN6IvoC1tx7UeW6opQZhFUcqIBjMCoIEAP9yz0ol9TrPLUGbCUL8lqD3ftqJ1ViwUkY/4SJiTtNCdbVvh+Q7+SHG6oEPA/g0+IOLMb61la+pdrguyBpYu5X1H3pEJo/JzK88jxKEVlH5TXIyI8Zr+OOEe8VFkjkwrM/CnDeIRCHElwEiB5c8loyVi16QKDIM9DJqQ0OrWmURPC+7du/qq6UkhBdSw2qHv4L5iX4G4dvxDrOFyL4C5mrHFxL7LpmLGvtV1K1nd7ST1V2Lpy3dDfdiyuR6fjLY4kgwi0Hqv8DdjbZKGmOA3
-|<FD2G1PbD4ehFljuGeBUOdzAuT6ThiVKaWWheBTRDNGiPuaHe/HLCyducVwnU+9AEOKaUNJQTIs="
+	597
+<ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hfqwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E=
+|3,0,4,1,1,0,1744355965,>596
+|<"ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hf
+|<qwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E="
 "5	LINE	0
-	604
-<ec2-35-165-35-45.us-west-2.compute.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCk8UGFjJTfI6rcJKbuP/f6UEEjVJJYxpNXpjLUDjfjBqKRyVGabXdoFudKuULiPIaNaX5ZOXSKBZwj31aWiZKXOI2P3sA3mp2EMfpNcZ16x8RXjBEM1QsEy2ijgzQJLIBkPN6IvoC1tx7UeW6opQZhFUcqIBjMCoIEAP9yz0ol9TrPLUGbCUL8lqD3ftqJ1ViwUkY/4SJiTtNCdbVvh+Q7+SHG6oEPA/g0+IOLMb61la+pdrguyBpYu5X1H3pEJo/JzK88jxKEVlH5TXIyI8Zr+OOEe8VFkjkwrM/CnDeIRCHElwEiB5c8loyVi16QKDIM9DJqQ0OrWmURPC+7du/qq6UkhBdSw2qHv4L5iX4G4dvxDrOFyL4C5mrHFxL7LpmLGvtV1K1nd7ST1V2Lpy3dDfdiyuR6fjLY4kgwi0Hqv8DdjbZKGmOA3FD2G1PbD4ehFljuGeBUOdzAuT6ThiVKaWWheBTRDNGiPuaHe/HLCyducVwnU+9AEOKaUNJQTIs=
-|3,0,5,1,1,0,1743089971,>603
-|<"ec2-35-165-35-45.us-west-2.compute.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCk8UGFjJTfI6rcJKbuP/f6UEEjVJJYxpNXpjLUDjfjBqKRyVGabXdoFudKuULiPIaNaX5ZOXSKBZwj31aWiZKXOI2P3sA3mp2EMfpNcZ16x8RXjBEM1QsEy2ijgzQJLIBkPN6IvoC1tx7UeW6opQZhFUcqIBjMCoIEAP9yz0ol9TrPLUGbCUL8lqD3ftqJ1ViwUkY/4SJiTtNCdbVvh+Q7+SHG6oEPA/g0+IOLMb61la+pdrguyBpYu5X1H3pEJo/JzK88jxKEVlH5TXIyI8Zr+OOEe8VFkjkwrM/CnDeIRCHElwEiB5c8loyVi16QKDIM9DJqQ0OrWmURPC+7du/qq6UkhBdSw2qHv4L5iX4G4dvxDrOFyL4C5mrHFxL7LpmLGvtV1K1nd7ST1V2Lp
-|<y3dDfdiyuR6fjLY4kgwi0Hqv8DdjbZKGmOA3FD2G1PbD4ehFljuGeBUOdzAuT6ThiVKaWWheBTRDNGiPuaHe/HLCyducVwnU+9AEOKaUNJQTIs="
+	
+	Your R-CA.txt is:
+|3,0,5,1,2,0,1744278976,"","Your R-CA.txt is:"
 "6	LINE	0
 	571
-<192.168.229.101 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC3Ev91YZYu8OyOroo0Fm5j0FwYsDvcQeLky/QyI/spkenDo1g6ax4twsftvg3hye3/1iltBK1q9qfk5jYDs/shtl9OvvX6xkvIx4V3A1BKPYAwbfYSrUd5aHmhZhrBsX1aE7/Vg/RxPFQALOW0t5bY5qp/+PgMoca0jQCl44AhTGge5ClDKmS5Q3Tt7yxM2lSUcCfJiod/51E/yc4FmA2FsTn5DGwOjUHYBiwSgIlTYz+fQUB0LWdBNH/Xvq8pUF8I7wxIYpJRFvGfEwUvxu8LM3XRP6AZDe10AuoQMoq1+Wot+0+sz723e4sNKrUX3n4hxhstfFsc6Eqa/HGWAbphyWKY9A9b5s/VW9TsclB7AJImqZeOIrGrAOE/8UxEewFSfP4jrUF4DzAZqIXXhuZT1UR9FiQ0HkR3HgM6lTZgZaX6UTo/kEeJoAmqhPkgZY+B9TbLsgO9RWyoLU4FF4P4aUXokAhF2n4ApJY1/lk40pBQ88b9gIoGWiv3UhI8ZXk=
-|3,0,6,1,1,0,1743085969,>570
-|<"192.168.229.101 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC3Ev91YZYu8OyOroo0Fm5j0FwYsDvcQeLky/QyI/spkenDo1g6ax4twsftvg3hye3/1iltBK1q9qfk5jYDs/shtl9OvvX6xkvIx4V3A1BKPYAwbfYSrUd5aHmhZhrBsX1aE7/Vg/RxPFQALOW0t5bY5qp/+PgMoca0jQCl44AhTGge5ClDKmS5Q3Tt7yxM2lSUcCfJiod/51E/yc4FmA2FsTn5DGwOjUHYBiwSgIlTYz+fQUB0LWdBNH/Xvq8pUF8I7wxIYpJRFvGfEwUvxu8LM3XRP6AZDe10AuoQMoq1+Wot+0+sz723e4sNKrUX3n4hxhstfFsc6Eqa/HGWAbphyWKY9A9b5s/VW9TsclB7AJImqZeOIrGrAOE/8UxEewFSfP4jrUF4DzAZqIXXhuZT1UR9FiQ0HkR3HgM6lTZgZaX6UTo/kE
-|<eJoAmqhPkgZY+B9TbLsgO9RWyoLU4FF4P4aUXokAhF2n4ApJY1/lk40pBQ88b9gIoGWiv3UhI8ZXk="
+<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDVGZzsuPnnzkGuHNgzEJ77cmu5QEYJzSyTfQ6Dyi0SjI38n+RmLHorxtBbq8D4g2siD03msGh+0TJ0gxGfUsqTMxz1MQ0d5F1UZROV5BGuYGWChvcKxfMCA8aoagoOqdjUhDXtw1G9R6cF58Mn7bPR+s+fE5naECQ1QUFVQ+JbHTODUoUb+q6hZT2IDdeQ+NuiuWQDifQ8RMMBMFh/RPcRy4XfeAnSZbzJbuLwevuCf0QSnP5318yZus8zF88l70PnfelugZTpFRLXEM0uzBn/43AgmnOQkbA2l4DhJwTg7voF0pUMLToWDnRdg/VHXIdSBJ1zD6MTLl1+BYBCQLBDBSJcgAxTUm9P8Q7vFQEZsluv2Gvil5hAvmHgdl/gTxX/h1JFFOW/EiuRBkEjNW6bpHQBvIea1pxDJnMrgJSAaKO3IFxOqV9fKupif7wGbkAw463sq5sLAL3q1TVNJ3h0Dc+gDqURlzXPfoXk7r8VMDrjOk1C0yPpEr38SR7/698=
+|3,0,6,1,1,0,1744278166,>570
+|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDVGZzsuPnnzkGuHNgzEJ77cmu5QEYJzSyTfQ6Dyi0SjI38n+RmLHorxtBbq8D4g2siD03msGh+0TJ0gxGfUsqTMxz1MQ0d5F1UZROV5BGuYGWChvcKxfMCA8aoagoOqdjUhDXtw1G9R6cF58Mn7bPR+s+fE5naECQ1QUFVQ+JbHTODUoUb+q6hZT2IDdeQ+NuiuWQDifQ8RMMBMFh/RPcRy4XfeAnSZbzJbuLwevuCf0QSnP5318yZus8zF88l70PnfelugZTpFRLXEM0uzBn/43AgmnOQkbA2l4DhJwTg7voF0pUMLToWDnRdg/VHXIdSBJ1zD6MTLl1+BYBCQLBDBSJcgAxTUm9P8Q7vFQEZsluv2Gvil5hAvmHgdl/gTxX/h1JFFOW/EiuRBkEjNW6bpHQBvIea1pxDJnMrgJSAaKO3IFxOqV
+|<9fKupif7wGbkAw463sq5sLAL3q1TVNJ3h0Dc+gDqURlzXPfoXk7r8VMDrjOk1C0yPpEr38SR7/698="
 "7	LINE	0
 	571
-<192.168.229.101 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC08CXwKx2TIh3Vh3BHIdAgOQ/AGrdV2JGLr+DUZCaxYX6DcX2e8FFPYcyxcSy7mv+IxpkWR4ODqeEWTm40hO9kMIowhRlJAEbDa4VlOMAqWIZ7Np4jaYN2CmGQTlpZ0gdcnjMiJb6GLghJV5ZFJ5PDtLrtncKqQVPf6Da7HxnAXUBPuktTv8iBFUKRxIbC9ggevf4Y8815vgGGiBPK94Qx/kPvpfZm9OJ19rpVW/jKQKEBeXA/cdonOMbL94lLG6PaCvz8ZvFq2tuBr+0aHl65NET6J3maNJDPKc8O6874rRCi44YN192W5mqACCebruBuQ9IYVDxZCvT1XPTQR3UX9p0yoN923VHSBNtZp0rdXDl6jG9bZT5ocZULQX7ymR3fZWgxNzm029ebyuj4CNddTcz8QK43HsR57U69Spu7TXQEIjiLQRlNN9oyVne2Cz5QL0heDhr+5Q5+MUFVt5PQn5/NbZWL4csART7r8aZRlx7I0Fh3aNnAKuACHSbHO0M=
-|3,0,7,1,1,0,1743085300,>570
-|<"192.168.229.101 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC08CXwKx2TIh3Vh3BHIdAgOQ/AGrdV2JGLr+DUZCaxYX6DcX2e8FFPYcyxcSy7mv+IxpkWR4ODqeEWTm40hO9kMIowhRlJAEbDa4VlOMAqWIZ7Np4jaYN2CmGQTlpZ0gdcnjMiJb6GLghJV5ZFJ5PDtLrtncKqQVPf6Da7HxnAXUBPuktTv8iBFUKRxIbC9ggevf4Y8815vgGGiBPK94Qx/kPvpfZm9OJ19rpVW/jKQKEBeXA/cdonOMbL94lLG6PaCvz8ZvFq2tuBr+0aHl65NET6J3maNJDPKc8O6874rRCi44YN192W5mqACCebruBuQ9IYVDxZCvT1XPTQR3UX9p0yoN923VHSBNtZp0rdXDl6jG9bZT5ocZULQX7ymR3fZWgxNzm029ebyuj4CNddTcz8QK43HsR57U69Spu7TXQEIjiLQR
-|<lNN9oyVne2Cz5QL0heDhr+5Q5+MUFVt5PQn5/NbZWL4csART7r8aZRlx7I0Fh3aNnAKuACHSbHO0M="
+<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyPq0272p0+1PEusdjYaY6M9me80NxQuMtZV/Auqe6ErYPv3D22t04JPgZx2WHpt8qx4UGIjujpMj1qz3UE/ChOxebbCTeJKINT8oybHtgcyZVHLPGdbfER6g3KJuJFbZAlZzX7zSUseKBMWoA64zPS/GrkX120IsVMeYyen0uguiFsCEJhzxfsgbI4YshRABWfUMTuOwkMB+2GmteFtBKiS28UGK/EZRczsdtHEYjrYqRS5HKZj9OjIAyLIAV/jpqvkFRmFD4aVvL7rjh+hbWMiZOOAkMQdxIsvoiTu9S8SfeLe6VBccwaW50UCp8AUkVY0DMXQUhe5swsS6+z4c5J4aZzvcePXB5/DtwTGfHzY7kc5cqcrLGSZ0SwzfemLaaimnMKm8pkNEUZytVFM4V8fv3ggldOzlafvqYQvwTAvcVB+a2pa+STom37qJoFv/2fw4zWqb7EAipsjGISqBBA8GsVSSlHEfvVEJbYdtZtQ8qYN9VbyDTCC5qU0DHJ3s=
+|3,0,7,1,1,0,1744277377,>570
+|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyPq0272p0+1PEusdjYaY6M9me80NxQuMtZV/Auqe6ErYPv3D22t04JPgZx2WHpt8qx4UGIjujpMj1qz3UE/ChOxebbCTeJKINT8oybHtgcyZVHLPGdbfER6g3KJuJFbZAlZzX7zSUseKBMWoA64zPS/GrkX120IsVMeYyen0uguiFsCEJhzxfsgbI4YshRABWfUMTuOwkMB+2GmteFtBKiS28UGK/EZRczsdtHEYjrYqRS5HKZj9OjIAyLIAV/jpqvkFRmFD4aVvL7rjh+hbWMiZOOAkMQdxIsvoiTu9S8SfeLe6VBccwaW50UCp8AUkVY0DMXQUhe5swsS6+z4c5J4aZzvcePXB5/DtwTGfHzY7kc5cqcrLGSZ0SwzfemLaaimnMKm8pkNEUZytVFM4V8fv3ggldOzlafvqYQvwTAvcVB+a2pa
+|<+STom37qJoFv/2fw4zWqb7EAipsjGISqBBA8GsVSSlHEfvVEJbYdtZtQ8qYN9VbyDTCC5qU0DHJ3s="
 "8	LINE	0
 	571
-<192.168.122.182 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9uQoyCb/R9okWUTSZ9xwtJHYN6gvSr7mlJd6YbvqBrffVNOaQcclY2neDB20d3lIifZZMfeiABXeCvAJhAzJEBbnj4NxZ2p/wU+nTRY5tUEEkDpsAG+gfTt3ZTUeEvKlkCFI/ubI+n48zYb2UjRZ/UcgHjbfJpYe9ufzQUz1L9sJ/reJ6lCAV3wmHCvn5w+J53UeXJJFcELt24XoMv0vpD34Cn3SdEkExlpILMa6gaFYK9b/eyijMJbuDlX/Zm9rf+CCjp/XoyEbfgXUWdY3SfdTX61riBCd1ORG2iWn37gL1Nx5msqo8R4UWg0m6VW9J+2XPIGaZ1RMAPRt5AozjoQl/czvUXekrZwQeR8vpALei0DudNgfEtak6Z7SIqLEV9gNIVeDtdbj3CvWRwKphOPySBfVQXFkl9+hU+UIWZUUbQk0WZNoaH/FIUcYHjEPBrWzwgKLbDm16t7I3+IuOAljEBfjJGO+jU2gmbF5RX/aqh0G1xssWkHGkVWTLS7E=
-|3,0,8,1,1,0,1743083864,>570
-|<"192.168.122.182 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9uQoyCb/R9okWUTSZ9xwtJHYN6gvSr7mlJd6YbvqBrffVNOaQcclY2neDB20d3lIifZZMfeiABXeCvAJhAzJEBbnj4NxZ2p/wU+nTRY5tUEEkDpsAG+gfTt3ZTUeEvKlkCFI/ubI+n48zYb2UjRZ/UcgHjbfJpYe9ufzQUz1L9sJ/reJ6lCAV3wmHCvn5w+J53UeXJJFcELt24XoMv0vpD34Cn3SdEkExlpILMa6gaFYK9b/eyijMJbuDlX/Zm9rf+CCjp/XoyEbfgXUWdY3SfdTX61riBCd1ORG2iWn37gL1Nx5msqo8R4UWg0m6VW9J+2XPIGaZ1RMAPRt5AozjoQl/czvUXekrZwQeR8vpALei0DudNgfEtak6Z7SIqLEV9gNIVeDtdbj3CvWRwKphOPySBfVQXFkl9+hU+UIWZUUbQk0WZN
-|<oaH/FIUcYHjEPBrWzwgKLbDm16t7I3+IuOAljEBfjJGO+jU2gmbF5RX/aqh0G1xssWkHGkVWTLS7E="
+<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDaJxcZZyIG/HDt39n0YAyaGwguIJN5bYNaC0WZRlZl2sVHS+2ckaqLQeTfU5NOVUeLvnXDqk+velVzvyCWlfrSkV5i74vmCpxAQIFyF4hyEuHwQCA8zozO1h2ZRm4pMsbRy+cbDAf95pQ8gYatjK//TsfamK4Ped8DQ9Q1mLHx8prOuULG/pa3CsgIjrBgklmr/H8YMnlCxQ2aZUzNhrRmtaTfqoREgge1PVepTdkFwUYU6SIUfqjd/5R3DpW+RYZugTYfcde1UCdCfhr+SC1GmwLtaRYqRxoZ6esnwmjq9Gu5YU8hkMUQOiRvwUYnsWd//O5gALWlaQDYW7nBS3xSBOv9gU+U27WdQ7316tGf2/z1aMSECqvqZNky1mSl9mssXQWBZJr/4XaZnlN0hpNqZC2lhYl/Iy6ZBQ4unTPsFhX6FHdQ8o/DTZhE0J6Ktqdd5Yv5GvpEbKVs8aZFyUNqGY2XJmPqRMGnL/hjzpwY2/uCVE+mlW4/ywW3R6HSSKU=
+|3,0,8,1,1,0,1744264480,>570
+|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDaJxcZZyIG/HDt39n0YAyaGwguIJN5bYNaC0WZRlZl2sVHS+2ckaqLQeTfU5NOVUeLvnXDqk+velVzvyCWlfrSkV5i74vmCpxAQIFyF4hyEuHwQCA8zozO1h2ZRm4pMsbRy+cbDAf95pQ8gYatjK//TsfamK4Ped8DQ9Q1mLHx8prOuULG/pa3CsgIjrBgklmr/H8YMnlCxQ2aZUzNhrRmtaTfqoREgge1PVepTdkFwUYU6SIUfqjd/5R3DpW+RYZugTYfcde1UCdCfhr+SC1GmwLtaRYqRxoZ6esnwmjq9Gu5YU8hkMUQOiRvwUYnsWd//O5gALWlaQDYW7nBS3xSBOv9gU+U27WdQ7316tGf2/z1aMSECqvqZNky1mSl9mssXQWBZJr/4XaZnlN0hpNqZC2lhYl/Iy6ZBQ4unTPsFhX6FHdQ8o
+|</DTZhE0J6Ktqdd5Yv5GvpEbKVs8aZFyUNqGY2XJmPqRMGnL/hjzpwY2/uCVE+mlW4/ywW3R6HSSKU="
 "9	LINE	0
 	571
-<192.168.229.101 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDUyilpXLnw5MA62PLWPJH9+BbIJZrKJ+uP9GS2eftMHvOxWclTr4uamKo2OhbdsX7F10ttXm1CS+nKgYTJ9OEzmm8CZNECfwkuZ99he+vBz+VDiVKWVnrCVgPXKA0pX0SSV3dOaNQ3UfLaK3fxRkuIeXW3yNHQTYRyakHWei2MrBTpH2uU18/ArMjDt8bMUKp+qbg/b6eue8SmamFeTi37ieTJieIJL+5V6tg12VIRh0Lr73WsXAKTS0uNvKvXRmYxk4jwPT91WUHE6Tfg4CLjnh0/vn54OSkBiI4Y1UNmQIR9cXxdC66cH7go7J/wLSyKHuUAC3UzYh3ACczNFE3GScDa5jOJin6xPYxQvdnQJqHvYilMinEPDT7EOU2mAS65gkBJdXNf2Nsab7W//76KSAY7KCmuYUdQLcXHAtmjVaQccS4rDhCzIKNsehg2GzUz+0YEN3QzM85LmXBqYpIzoFT9J85TEk1Jb9+Yj3/ShXicl2SVIxCujVMBtb7ff6M=
-|3,0,9,1,1,0,1743083863,>570
-|<"192.168.229.101 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDUyilpXLnw5MA62PLWPJH9+BbIJZrKJ+uP9GS2eftMHvOxWclTr4uamKo2OhbdsX7F10ttXm1CS+nKgYTJ9OEzmm8CZNECfwkuZ99he+vBz+VDiVKWVnrCVgPXKA0pX0SSV3dOaNQ3UfLaK3fxRkuIeXW3yNHQTYRyakHWei2MrBTpH2uU18/ArMjDt8bMUKp+qbg/b6eue8SmamFeTi37ieTJieIJL+5V6tg12VIRh0Lr73WsXAKTS0uNvKvXRmYxk4jwPT91WUHE6Tfg4CLjnh0/vn54OSkBiI4Y1UNmQIR9cXxdC66cH7go7J/wLSyKHuUAC3UzYh3ACczNFE3GScDa5jOJin6xPYxQvdnQJqHvYilMinEPDT7EOU2mAS65gkBJdXNf2Nsab7W//76KSAY7KCmuYUdQLcXHAtmjVaQccS4rDh
-|<CzIKNsehg2GzUz+0YEN3QzM85LmXBqYpIzoFT9J85TEk1Jb9+Yj3/ShXicl2SVIxCujVMBtb7ff6M="
-""-	CHAR	0
-	theunraveler
-|3,1,36,0,1,0,1743506053,"theunraveler"
+<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC62CUuu5bosfQUw1KI3bpdH/BzNwPyl3QXI0gZ+MLfhr70vO2+l7SuzOowA962Mh3V6MExsf4CgCCtdGc4NLkYeFNk5gQH0rOy23biKlUMY0QE68zIAZlpxyLYiMGKUp8ACn12GxM3ZNXqtjGuPNztE07r46w9Lr4q1PxvlP5dxEkPVGMTz75aN5/A1Sh8JMT0lwKOSdIpqzPDKnc6bEtrPlz5ySmJTPl937pxFgIDpx+0+aIpRuijTlAbG1SVZbeDpKwrenC2YNcRDgYzofwt9qKMUu0IgvpLOu6f3oeim5QZVbwudY4g0SsrhMlaCNmQ6IyASBk1YWGdBAy5fbRlSqzwYSTHZBTppun49cY4RmpOZjYcAEZRvpGSKlbrcXAkEek4uThynG71oiINnBxH12CAg6QSAPVGbup1Hcc5kXvTp9K2sjmoBMPc/1MtqpIJHUnNJqDuqPyUGI23hUb/UbipYpKVe7BYlOjMAaM1U03ikZqy48Af6mAt3J9xms=
+|3,0,9,1,1,0,1744199647,>570
+|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC62CUuu5bosfQUw1KI3bpdH/BzNwPyl3QXI0gZ+MLfhr70vO2+l7SuzOowA962Mh3V6MExsf4CgCCtdGc4NLkYeFNk5gQH0rOy23biKlUMY0QE68zIAZlpxyLYiMGKUp8ACn12GxM3ZNXqtjGuPNztE07r46w9Lr4q1PxvlP5dxEkPVGMTz75aN5/A1Sh8JMT0lwKOSdIpqzPDKnc6bEtrPlz5ySmJTPl937pxFgIDpx+0+aIpRuijTlAbG1SVZbeDpKwrenC2YNcRDgYzofwt9qKMUu0IgvpLOu6f3oeim5QZVbwudY4g0SsrhMlaCNmQ6IyASBk1YWGdBAy5fbRlSqzwYSTHZBTppun49cY4RmpOZjYcAEZRvpGSKlbrcXAkEek4uThynG71oiINnBxH12CAg6QSAPVGbup1Hcc5kXvTp9K2s
+|<jmoBMPc/1MtqpIJHUnNJqDuqPyUGI23hUb/UbipYpKVe7BYlOjMAaM1U03ikZqy48Af6mAt3J9xms="
+"-	CHAR	0
+	s
+|3,0,36,0,1,0,1744086747,"s"
 
 # File marks:
-'0  135  0  ~/.zshrc
-|4,48,135,0,1743506075,"~/.zshrc"
-'1  41  17  ~/.zshrc
-|4,49,41,17,1743506059,"~/.zshrc"
-'2  41  17  ~/.zshrc
-|4,50,41,17,1743506059,"~/.zshrc"
-'3  37  18  ~/.zshrc
-|4,51,37,18,1743505842,"~/.zshrc"
-'4  37  18  ~/.zshrc
-|4,52,37,18,1743505842,"~/.zshrc"
-'5  37  18  ~/.zshrc
-|4,53,37,18,1743505842,"~/.zshrc"
-'6  37  18  ~/.zshrc
-|4,54,37,18,1743505842,"~/.zshrc"
-'7  41  22  ~/.zshrc
-|4,55,41,22,1743505805,"~/.zshrc"
-'8  41  22  ~/.zshrc
-|4,56,41,22,1743505805,"~/.zshrc"
-'9  41  22  ~/.zshrc
-|4,57,41,22,1743505805,"~/.zshrc"
+'0  13  0  ~/.ssh/known_hosts
+|4,48,13,0,1744363464,"~/.ssh/known_hosts"
+'1  13  0  ~/.ssh/known_hosts
+|4,49,13,0,1744356550,"~/.ssh/known_hosts"
+'2  13  0  ~/.ssh/known_hosts
+|4,50,13,0,1744355967,"~/.ssh/known_hosts"
+'3  13  0  ~/.ssh/known_hosts
+|4,51,13,0,1744355967,"~/.ssh/known_hosts"
+'4  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,52,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+'5  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,53,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+'6  12  1  ~/.ssh/known_hosts
+|4,54,12,1,1744278169,"~/.ssh/known_hosts"
+'7  12  1  ~/.ssh/known_hosts
+|4,55,12,1,1744278169,"~/.ssh/known_hosts"
+'8  12  1  ~/.ssh/known_hosts
+|4,56,12,1,1744278169,"~/.ssh/known_hosts"
+'9  12  1  ~/.ssh/known_hosts
+|4,57,12,1,1744278169,"~/.ssh/known_hosts"
 
 # Jumplist (newest first):
--'  135  0  ~/.zshrc
-|4,39,135,0,1743506075,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743506068,"~/.zshrc"
--'  41  17  ~/.zshrc
-|4,39,41,17,1743506059,"~/.zshrc"
--'  41  17  ~/.zshrc
-|4,39,41,17,1743506059,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743506049,"~/.zshrc"
--'  135  0  ~/.zshrc
-|4,39,135,0,1743506042,"~/.zshrc"
--'  37  18  ~/.zshrc
-|4,39,37,18,1743505842,"~/.zshrc"
--'  37  18  ~/.zshrc
-|4,39,37,18,1743505842,"~/.zshrc"
--'  37  18  ~/.zshrc
-|4,39,37,18,1743505842,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743505840,"~/.zshrc"
--'  41  22  ~/.zshrc
-|4,39,41,22,1743505805,"~/.zshrc"
--'  41  22  ~/.zshrc
-|4,39,41,22,1743505805,"~/.zshrc"
--'  40  46  ~/.zshrc
-|4,39,40,46,1743505793,"~/.zshrc"
--'  40  46  ~/.zshrc
-|4,39,40,46,1743505793,"~/.zshrc"
--'  40  46  ~/.zshrc
-|4,39,40,46,1743505793,"~/.zshrc"
--'  40  46  ~/.zshrc
-|4,39,40,46,1743505793,"~/.zshrc"
--'  39  59  ~/.zshrc
-|4,39,39,59,1743505792,"~/.zshrc"
--'  38  16  ~/.zshrc
-|4,39,38,16,1743505792,"~/.zshrc"
--'  39  59  ~/.zshrc
-|4,39,39,59,1743505792,"~/.zshrc"
--'  38  16  ~/.zshrc
-|4,39,38,16,1743505792,"~/.zshrc"
--'  39  59  ~/.zshrc
-|4,39,39,59,1743505792,"~/.zshrc"
--'  38  16  ~/.zshrc
-|4,39,38,16,1743505792,"~/.zshrc"
--'  39  59  ~/.zshrc
-|4,39,39,59,1743505792,"~/.zshrc"
--'  38  16  ~/.zshrc
-|4,39,38,16,1743505792,"~/.zshrc"
--'  37  18  ~/.zshrc
-|4,39,37,18,1743505792,"~/.zshrc"
--'  125  15  ~/.zshrc
-|4,39,125,15,1743505791,"~/.zshrc"
--'  125  15  ~/.zshrc
-|4,39,125,15,1743505791,"~/.zshrc"
--'  125  15  ~/.zshrc
-|4,39,125,15,1743505791,"~/.zshrc"
--'  125  15  ~/.zshrc
-|4,39,125,15,1743505791,"~/.zshrc"
--'  64  0  ~/.zshrc
-|4,39,64,0,1743505788,"~/.zshrc"
--'  64  0  ~/.zshrc
-|4,39,64,0,1743505788,"~/.zshrc"
--'  64  0  ~/.zshrc
-|4,39,64,0,1743505788,"~/.zshrc"
--'  64  0  ~/.zshrc
-|4,39,64,0,1743505788,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743505778,"~/.zshrc"
--'  41  12  ~/.zshrc
-|4,39,41,12,1743505738,"~/.zshrc"
--'  37  18  ~/.zshrc
-|4,39,37,18,1743505729,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743505727,"~/.zshrc"
--'  41  22  ~/.zshrc
-|4,39,41,22,1743505188,"~/.zshrc"
--'  37  18  ~/.zshrc
-|4,39,37,18,1743505172,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743505170,"~/.zshrc"
--'  41  16  ~/.zshrc
-|4,39,41,16,1743489859,"~/.zshrc"
--'  37  18  ~/.zshrc
-|4,39,37,18,1743489847,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743489846,"~/.zshrc"
--'  41  22  ~/.zshrc
-|4,39,41,22,1743489566,"~/.zshrc"
--'  37  18  ~/.zshrc
-|4,39,37,18,1743489550,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743489549,"~/.zshrc"
--'  41  12  ~/.zshrc
-|4,39,41,12,1743489497,"~/.zshrc"
--'  37  18  ~/.zshrc
-|4,39,37,18,1743489483,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743489482,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  8  11  ~/.zshrc
-|4,39,8,11,1743489292,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1743489285,"~/.zshrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
--'  130  0  ~/.bashrc
-|4,39,130,0,1743486644,"~/.bashrc"
+-'  13  0  ~/.ssh/known_hosts
+|4,39,13,0,1744363464,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744363457,"~/.ssh/known_hosts"
+-'  13  0  ~/.ssh/known_hosts
+|4,39,13,0,1744356550,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744356548,"~/.ssh/known_hosts"
+-'  13  0  ~/.ssh/known_hosts
+|4,39,13,0,1744355967,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744355964,"~/.ssh/known_hosts"
+-'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
+-'  12  1  ~/.ssh/known_hosts
+|4,39,12,1,1744278169,"~/.ssh/known_hosts"
+-'  12  1  ~/.ssh/known_hosts
+|4,39,12,1,1744278169,"~/.ssh/known_hosts"
+-'  12  1  ~/.ssh/known_hosts
+|4,39,12,1,1744278169,"~/.ssh/known_hosts"
+-'  12  1  ~/.ssh/known_hosts
+|4,39,12,1,1744278169,"~/.ssh/known_hosts"
+-'  12  1  ~/.ssh/known_hosts
+|4,39,12,1,1744278169,"~/.ssh/known_hosts"
+-'  12  1  ~/.ssh/known_hosts
+|4,39,12,1,1744278169,"~/.ssh/known_hosts"
+-'  12  1  ~/.ssh/known_hosts
+|4,39,12,1,1744278169,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744278165,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744278165,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744278165,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744278165,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744277378,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744277378,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744277378,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744277378,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744277376,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744277376,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744277376,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744277376,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744264481,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744264481,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744264481,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744264481,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744264479,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744264479,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744264479,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744264479,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744199648,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744199648,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744199648,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744199648,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744199646,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744199646,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744199646,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744199646,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744196137,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744196137,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744196137,"~/.ssh/known_hosts"
+-'  12  0  ~/.ssh/known_hosts
+|4,39,12,0,1744196137,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744196134,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744196134,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744196134,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1744196134,"~/.ssh/known_hosts"
+-'  31  33  ~/.ssh/config
+|4,39,31,33,1744096078,"~/.ssh/config"
+-'  31  33  ~/.ssh/config
+|4,39,31,33,1744096078,"~/.ssh/config"
+-'  31  33  ~/.ssh/config
+|4,39,31,33,1744096078,"~/.ssh/config"
 
 # History of marks within files (newest to oldest):
 
+> ~/.ssh/known_hosts
+	*	1744363462	0
+	"	13	0
+	.	13	0
+	+	6	0
+	+	7	0
+	+	8	0
+	+	6	0
+	+	8	0
+	+	9	0
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	13	0
+
+> /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
+	*	1744278976	0
+	"	21	0
+	^	40	25
+	.	21	0
+	+	40	24
+	+	21	0
+
+> /d/Workspace/sneak-peak-stackhub/signed_cert.txt
+	*	1744278947	0
+	"	22	24
+	^	22	25
+	.	22	24
+	+	22	24
+
+> ~/.ssh/config
+	*	1744096076	0
+	"	31	33
+	^	31	34
+	.	31	34
+	+	5	34
+	+	39	0
+	+	8	10
+	+	9	17
+	+	7	7
+	+	39	0
+	+	16	38
+	+	17	35
+	+	24	31
+	+	23	7
+	+	39	11
+	+	19	2
+	+	39	0
+	+	39	12
+	+	39	25
+	+	39	36
+	+	39	29
+	+	39	0
+	+	39	2
+	+	39	11
+	+	39	25
+	+	39	36
+	+	39	0
+	+	28	25
+	+	22	11
+	+	21	2
+	+	29	11
+	+	28	2
+	+	31	31
+	+	33	0
+	+	26	5
+	+	27	2
+	+	26	8
+	+	27	8
+	+	28	25
+	+	29	10
+	+	17	0
+	+	31	35
+	+	17	35
+	+	31	35
+	+	30	3
+	+	31	34
+
 > ~/.zshrc
-	*	1743506074	0
-	"	135	0
-	^	41	18
-	.	41	17
-	+	163	0
+	*	1743764865	0
+	"	28	31
+	^	28	32
+	.	28	31
+	+	165	0
 	+	2	0
 	+	14	0
-	+	27	1
-	+	134	0
-	+	135	0
-	+	134	19
-	+	135	32
-	+	136	30
+	+	29	1
+	+	136	0
+	+	137	0
+	+	136	19
+	+	137	32
+	+	138	30
 	+	9	58
 	+	9	28
 	+	9	70
@@ -417,11 +452,34 @@
 	+	2	0
 	+	9	0
 	+	8	11
-	+	41	17
+	+	43	22
+	+	27	46
+	+	28	31
+
+> ~/Scripts/stackhub-exe.sh
+	*	1743756269	0
+	"	6	78
+	^	6	79
+	.	6	78
+	+	6	78
+
+> ~/Downloads/csr-config.json
+	*	1743665487	0
+	"	14	0
+	^	14	1
+	.	14	0
+	+	14	0
+
+> /etc/nsswitch.conf
+	*	1743524792	0
+	"	1	0
+	^	8	20
+	.	8	19
+	+	8	19
 
 > ~/.bashrc
-	*	1743486643	0
-	"	130	0
+	*	1743524095	0
+	"	1	0
 	^	12	32
 	.	12	31
 	+	39	0
@@ -442,47 +500,6 @@
 	.	1	10
 	+	1	10
 
-> ~/.ssh/known_hosts
-	*	1743089978	0
-	"	5	0
-	.	6	0
-	+	6	0
-
-> ~/.ssh/config
-	*	1743083764	0
-	"	31	31
-	^	31	32
-	.	31	31
-	+	5	34
-	+	32	0
-	+	8	10
-	+	9	17
-	+	7	7
-	+	32	0
-	+	16	38
-	+	17	35
-	+	24	31
-	+	23	7
-	+	32	11
-	+	19	2
-	+	32	0
-	+	32	12
-	+	32	25
-	+	32	36
-	+	32	29
-	+	32	0
-	+	32	2
-	+	32	11
-	+	32	25
-	+	32	36
-	+	32	0
-	+	28	25
-	+	22	11
-	+	21	2
-	+	29	11
-	+	28	2
-	+	31	31
-
 > /etc/profile
 	*	1742974425	0
 	"	149	0
@@ -496,23 +513,9 @@
 	+	149	151
 	+	149	89
 
-> ~/Scripts/stackhub-exe.sh
-	*	1742806809	0
-	"	6	41
-	^	6	83
-	.	6	41
-	+	6	41
-
 > ~/.npmrc
 	*	1741247259	0
 	"	3	0
 	^	11	71
 	.	11	71
 	+	11	71
-
-> /etc/nsswitch.conf
-	*	1740983743	0
-	"	8	19
-	^	8	20
-	.	8	19
-	+	8	19

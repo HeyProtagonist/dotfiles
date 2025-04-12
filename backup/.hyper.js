@@ -18,7 +18,7 @@ module.exports = {
     selectionColor: "rgba(248,28,229,0.3)",
     borderColor: "#444", // Thin hyper border
     css: /*css*/ `
-        * {
+      * {
         font-family: "JetBrains Mono", monospace !important;
       }
 
@@ -35,11 +35,7 @@ module.exports = {
       }
 
       .terms_termsNotShifted {
-        margin-top: 8px;
-      }
-
-      .header_header > div {
-        display: none !important;
+        margin-top: 1rem;
       }
 
       .line {
@@ -50,7 +46,6 @@ module.exports = {
       }
     `,
     termCSS: "",
-    workingDirectory: "D:\\Workspace",
     showHamburgerMenu: false,
     showWindowControls: false,
     padding: "12px 14px",
