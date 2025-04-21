@@ -18,7 +18,7 @@ module.exports = {
     selectionColor: "rgba(248,28,229,0.3)",
     borderColor: "#444", // Thin hyper border
     css: /*css*/ `
-      * {
+        * {
         font-family: "JetBrains Mono", monospace !important;
       }
 
@@ -69,9 +69,21 @@ module.exports = {
       limeGreen: "#32CD32",
       lightCoral: "#F08080",
     },
-    shell: "C:\\msys64\\usr\\bin\\zsh.exe",
-    shellArgs: ["--login", "-i"],
-    env: {},
+    shell: "C:\\msys64\\msys2_shell.cmd",
+    shellArgs: [
+      "-defterm",
+      "-mingw64",
+      "-no-start",
+      "-use-full-path",
+      "-here",
+      "-ucrt64",
+      "-shell",
+      "zsh",
+    ],
+    env: {
+      HOME: "C:\\Users\\angu",
+      MSYS2_PATH_TYPE: "inherit",
+    },
     bell: false,
     copyOnSelect: true,
     defaultSSHApp: true,

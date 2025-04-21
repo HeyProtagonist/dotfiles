@@ -1,37 +1,10 @@
-# Set terminal type to enable 256 colors in Hyper Terminal on Windows
-export TERM="xterm-256color"
-export ZSH_DISABLE_COMPFIX=true
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # complete hard drives in msys2
 drives=$(mount | sed -rn 's#^[A-Z]: on /([a-z]).*#\1#p' | tr '\n' ' ')
 zstyle ':completion:*' fake-files /: "/:$drives"
 unset drives
-
-# -----------------------------------------------------------------------------
-# History & Editing
-# -----------------------------------------------------------------------------
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory     # Append history instead of overwriting it
-setopt histignorealldups # Skip duplicate entries in history
-
-# Enable vim-like keybindings (optional)
-bindkey -v
-
-# -----------------------------------------------------------------------------
-# Environment & Aliases
-# -----------------------------------------------------------------------------
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-alias create-stack='~/Scripts/stackhub-exe.sh'
-alias ipme='curl api64.ipify.org'
-
-# -----------------------------------------------------------------------------
-# Colors & Prompt
-# -----------------------------------------------------------------------------
-# Load built-in color definitions
-autoload -U colors && colors
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -57,7 +30,7 @@ ZSH_THEME="theunraveler"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -102,7 +75,7 @@ ZSH_THEME="theunraveler"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -134,4 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias ls='ls -lAFh --color=auto'
+alias src="source ~/.zshrc"
+alias ls="ls -lAFh --color=auto"
+
+# Alias for ping with default -n 3 and always resolving address
+alias ping='ping -n 3 -a'

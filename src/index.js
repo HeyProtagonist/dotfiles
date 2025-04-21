@@ -14,7 +14,7 @@ const targetFilePath = path.join(rootDir, "target.json");
 const toPosixPath = (filePath) => {
   if (!filePath) return null;
 
-  let absolutePath = filePath.replace("$HOME", homeDir); // Replace placeholder
+  let absolutePath = filePath.replace("$USER", homeDir); // Replace $USER with home directory
   absolutePath = path.isAbsolute(absolutePath)
     ? absolutePath
     : path.join(homeDir, absolutePath); // Ensure absolute path
@@ -104,7 +104,7 @@ await fs.mkdir(backupDir, { recursive: true });
       // Execute shell backup scripts
       for (const shellTask of config.shell) {
         const outputFile = toPosixPath(shellTask.outputFile);
-        const script = shellTask["backup-script"].replace("$HOME", homeDir);
+        const script = shellTask["backup-script"].replace("$USER", homeDir);
 
         if (!dryRun) {
           await executeShellCommand(
@@ -143,7 +143,7 @@ await fs.mkdir(backupDir, { recursive: true });
 
       // Execute shell restore scripts
       for (const shellTask of config.shell) {
-        const script = shellTask["restore-script"].replace("$HOME", homeDir);
+        const script = shellTask["restore-script"].replace("$USER", homeDir);
 
         if (!dryRun) {
           await executeShellCommand(script, null); // No file output on restore

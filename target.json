@@ -1,16 +1,16 @@
 {
   "files": [
-    "C:\\Users\\Anguram\\.bashrc",
-    "C:\\Users\\Anguram\\.zshrc",
-    "C:\\Users\\Anguram\\.vimrc",
-    "C:\\Users\\Anguram\\.viminfo",
-    "C:\\Users\\Anguram\\AppData\\Roaming\\Hyper\\.hyper.js",
-    "C:\\Users\\Anguram\\AppData\\Roaming\\Code\\User\\keybindings.json",
-    "C:\\Users\\Anguram\\AppData\\Roaming\\Code\\User\\settings.json"
+    "$USER/.bashrc",
+    "$USER/.zshrc",
+    "$USER/.vimrc",
+    "$USER/.viminfo",
+    "$USER/AppData/Roaming/Hyper/.hyper.js",
+    "$USER/AppData/Roaming/Code/User/keybindings.json",
+    "$USER/AppData/Roaming/Code/User/settings.json"
   ],
   "folders": [
-    "C:\\Users\\Anguram\\AppData\\Roaming\\Code\\User\\snippets",
-    "C:\\Users\\Anguram\\.config"
+    "$USER/AppData/Roaming/Code/User/snippets",
+    "$USER/.config"
   ],
   "shell": [
     {

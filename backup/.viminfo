@@ -13,47 +13,78 @@
 # Last Search Pattern:
 ~MSle0~/alias
 
+# Last Substitute String:
+$
+
 # Command Line History (newest to oldest):
-:wq
-|2,0,1744363464,,"wq"
 :q
-|2,0,1744086869,,"q"
-:%w !pbcopy
-|2,0,1743485861,,"%w !pbcopy"
+|2,0,1745151617,,"q"
+:wq
+|2,0,1745147345,,"wq"
 :w
-|2,0,1742973686,,"w"
+|2,0,1745116630,,"w"
+:reg
+|2,0,1745079022,,"reg"
 :q!
-|2,0,1742969326,,"q!"
-:! dos2unix ~/Scripts/
-|2,0,1742456265,,"! dos2unix ~/Scripts/"
-:set ff=unix
-|2,0,1742456240,,"set ff=unix"
-:set relativenumber
-|2,0,1740888571,,"set relativenumber"
+|2,0,1743871004,,"q!"
+:reg f
+|2,0,1743862875,,"reg f"
+:reg j
+|2,0,1743862860,,"reg j"
+:reg 1z
+|2,0,1743862440,,"reg 1z"
+:reg z
+|2,0,1743862430,,"reg z"
+:h :reg
+|2,0,1743861846,,"h :reg"
+:h
+|2,0,1743861088,,"h"
+:
+|2,0,1743861059,,""
+:f
+|2,0,1743861049,,"f"
+:e
+|2,0,1743861037,,"e"
+:h ^f
+|2,0,1743860890,,"h ^f"
+:h Ctrl-f
+|2,0,1743860885,,"h Ctrl-f"
+:'<,'>q
+|2,0,1743860819,,"'<,'>q"
+:vimtutor
+|2,0,1743860814,,"vimtutor"
+:h usr_01.txt
+|2,0,1743860799,,"h usr_01.txt"
+:help
+|2,0,1743860778,,"help"
+:h ^g
+|2,0,1743860627,,"h ^g"
+:h w
+|2,0,1743860602,,"h w"
+:h Ctrl-b
+|2,0,1743860578,,"h Ctrl-b"
+:h Ctrl+f
+|2,0,1743860561,,"h Ctrl+f"
+:h :wq
+|2,0,1743860542,,"h :wq"
+:h i
+|2,0,1743860536,,"h i"
+:h 'wildmenu'
+|2,0,1743860392,,"h 'wildmenu'"
 
 # Search String History (newest to oldest):
 ?/alias
-|2,1,1743764847,47,"alias"
-?/101
-|2,1,1743687954,47,"101"
-?/theme
-|2,1,1743596026,47,"theme"
-?/zsh_theme
-|2,1,1743506049,47,"zsh_theme"
-?/export ZSH_DISABLE_COMPFIX
-|2,1,1743486148,47,"export ZSH_DISABLE_COMPFIX"
-?/compinit
-|2,1,1743485784,47,"compinit"
-?/certificate
-|2,1,1743080342,47,"certificate"
-?/deploy_inv
-|2,1,1743080194,47,"deploy_inv"
-? \<export\>
-|2,1,1742973699,,"\\<export\\>"
-?/d/
-|2,1,1742557980,47,"d/"
-?/ping
-|2,1,1742382786,47,"ping"
+|2,1,1745077836,47,"alias"
+?/hola
+|2,1,1743866581,47,"hola"
+?/PS1
+|2,1,1743842721,47,"PS1"
+?/ps1
+|2,1,1743842429,47,"ps1"
+?/plugins
+|2,1,1743840864,47,"plugins"
+? \<db_home\>
+|2,1,1743840399,,"\\<db_home\\>"
 
 # Expression History (newest to oldest):
 
@@ -63,459 +94,541 @@
 
 # Registers:
 "0	CHAR	0
-	# VM CONSOLE
-	Host invisinet-vm-console
-	  HostName 192.168.229.101
-	  User maint
+	# Personal GitHub
+	Host github.com
 	  PreferredAuthentications publickey
-	  IdentityFile ~/.ssh/id_ed25519
-|3,0,0,0,6,0,1744086726,"# VM CONSOLE","Host invisinet-vm-console","  HostName 192.168.229.101","  User maint","  PreferredAuthentications publickey","  IdentityFile ~/.ssh/id_ed25519"
-""1	LINE	0
-	571
-<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDPh+hQr9FPYlvWeJwRiOBmi8I58iWqyFY5st19oRXhUTUWjRZ2lCYmTVZJt1R7Pig30+SHjGH/2+/hMwONx72hiZNf3q/B/MkMPFFQeTD0vlCzKD97pl8ycKXYYNRJCH2dSBJeFq1ZHGtryurpUeMBey0UDIMieYzSt6HPYsKyuJMMbc+H/S70Aofv9tChjPMS3cTjjt39WC24X/qMf0nYb1sS9rUU3zFAw7Gh8CUpiNxVOzjio80NV0bI1myDRdOl9deHtbnGF4GXBTznD7M/76ruMeN3/0l0o690MGSNkPFec/sfB39O3nk8WhNuSb5ChuqP1S4iKf2MQWLJRjqNUBmGbsiKtYZSy9hwFan9tcSPDX6y2RxovUcH7P8dQwFkU/gkmyVwPR/ZDAaj3ouJp87KGVpMo809oK3r1i6HM1laAg92ZoAbxv2q4cFXjjB7hbd8TkWvVc1rwyZxlwnWQTXg1ap6fgn15yGLz2d95WIcixibH8KarXfT7ZbPG8=
-|3,1,1,1,1,0,1744363462,>570
-|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDPh+hQr9FPYlvWeJwRiOBmi8I58iWqyFY5st19oRXhUTUWjRZ2lCYmTVZJt1R7Pig30+SHjGH/2+/hMwONx72hiZNf3q/B/MkMPFFQeTD0vlCzKD97pl8ycKXYYNRJCH2dSBJeFq1ZHGtryurpUeMBey0UDIMieYzSt6HPYsKyuJMMbc+H/S70Aofv9tChjPMS3cTjjt39WC24X/qMf0nYb1sS9rUU3zFAw7Gh8CUpiNxVOzjio80NV0bI1myDRdOl9deHtbnGF4GXBTznD7M/76ruMeN3/0l0o690MGSNkPFec/sfB39O3nk8WhNuSb5ChuqP1S4iKf2MQWLJRjqNUBmGbsiKtYZSy9hwFan9tcSPDX6y2RxovUcH7P8dQwFkU/gkmyVwPR/ZDAaj3ouJp87KGVpMo809oK3r1i6HM1laAg92Z
-|<oAbxv2q4cFXjjB7hbd8TkWvVc1rwyZxlwnWQTXg1ap6fgn15yGLz2d95WIcixibH8KarXfT7ZbPG8="
-"2	LINE	0
-	597
-<ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+aQXItcL8IlUETXavfQkrenP7eACV8w76m3itPqQ0WmUzYVhshrdBZwJdUjZYAVNEAg+GksT8Fa13ZcOpx9Q6jCMEGuDrn8PzQ69QuUEGfPWZxVYtbVxTiqhR5MFnaycVy4WdD54yFadezYvvtNhe/FSklH9k//1okWZzScKeSDZn8HEgHnnavwIoOKHH45ySdwBlUHCjRFUhV+Wq8PI9F+nhVDCTRQP1AaMBC4OEUlsvBEiNoH90cpS42hJOT2VQh+0vkgSNsBVYrHoA18D+5cmNaIinYuEqbz1al9WTTc6SrA0NdUUbrNcjsmCTdKQ3Ls6U6ppDpre7/mM7A9/LWGMJf71uaugRc1WAr+65t9GFQeeNz+wF+kTD2noaXLIxetukmsdRq9WccdMB7zHpf5JECFLW/pTJZ8huE3g7DCuS/7VTlZ9lQhRYs1c+LvJnOPzCZzy5tqLHgFADuilk0/8pAtO+RNfcx/TT3/YVbIsuI7PBJHA4wIwm2LF9iTs=
-|3,0,2,1,1,0,1744363458,>596
-|<"ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+aQXItcL8IlUETXavfQkrenP7eACV8w76m3itPqQ0WmUzYVhshrdBZwJdUjZYAVNEAg+GksT8Fa13ZcOpx9Q6jCMEGuDrn8PzQ69QuUEGfPWZxVYtbVxTiqhR5MFnaycVy4WdD54yFadezYvvtNhe/FSklH9k//1okWZzScKeSDZn8HEgHnnavwIoOKHH45ySdwBlUHCjRFUhV+Wq8PI9F+nhVDCTRQP1AaMBC4OEUlsvBEiNoH90cpS42hJOT2VQh+0vkgSNsBVYrHoA18D+5cmNaIinYuEqbz1al9WTTc6SrA0NdUUbrNcjsmCTdKQ3Ls6U6ppDpre7/mM7A9/LWGMJf71uaugRc1WAr+65t9GFQeeNz+wF+kTD2noaXLIxetukmsdRq9WccdMB7zHpf5JE
-|<CFLW/pTJZ8huE3g7DCuS/7VTlZ9lQhRYs1c+LvJnOPzCZzy5tqLHgFADuilk0/8pAtO+RNfcx/TT3/YVbIsuI7PBJHA4wIwm2LF9iTs="
-"3	LINE	0
-	597
-<ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDHuY/W7VxvD2QEwKHDnO+BRMZmWWE+aEx95OVQ+faTF1CSPrmsMiwUlaHq97/v1Ey3BY+F3w+QK0/Oon1TwidRdlhEF+GVkRssPIT4rrItM9O7Rb4JZheErGIZyNBGxeb1D7TqfcTcdIAbU3zkh8AP5msaBUQ7ODU44gbXrMf2H4RWvEXIrFJa3L6YhDKK+L8tvqCaXyBzcKBmBROffxtpEEbU2AortffHCkqHsYjSkumELL/ja3DntKHCuw0EE3N7WM993bnlL7gK84RSJa2a6H7P1oOitLyKMI0smVWoKuwVtNJk7aN9BQIIktBGUGt8Qy/Zp/lG79EhMC4uPPxmMk10c918oPv/dNAnsuYJ8wxqXv9Rnl5Bx+k9I1GVpINAVmLAJzpUHNbCyJlLbBVDpQmBb/nD2iO5McKp0Jtl/kAOwsH8KA/pOZFaaM6gwtzIo/8G8+XhK+kmy3QiR6/mqCk2s+bYP+5q1au5dTkAYvpJ9DXwkS+7BD6UWoutqH8=
-|3,0,3,1,1,0,1744356549,>596
-|<"ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDHuY/W7VxvD2QEwKHDnO+BRMZmWWE+aEx95OVQ+faTF1CSPrmsMiwUlaHq97/v1Ey3BY+F3w+QK0/Oon1TwidRdlhEF+GVkRssPIT4rrItM9O7Rb4JZheErGIZyNBGxeb1D7TqfcTcdIAbU3zkh8AP5msaBUQ7ODU44gbXrMf2H4RWvEXIrFJa3L6YhDKK+L8tvqCaXyBzcKBmBROffxtpEEbU2AortffHCkqHsYjSkumELL/ja3DntKHCuw0EE3N7WM993bnlL7gK84RSJa2a6H7P1oOitLyKMI0smVWoKuwVtNJk7aN9BQIIktBGUGt8Qy/Zp/lG79EhMC4uPPxmMk10c918oPv/dNAnsuYJ8wxqXv9Rnl5Bx+k9I1GVpINAVmLAJzpUHNbCyJlLbBVDpQmB
-|<b/nD2iO5McKp0Jtl/kAOwsH8KA/pOZFaaM6gwtzIo/8G8+XhK+kmy3QiR6/mqCk2s+bYP+5q1au5dTkAYvpJ9DXwkS+7BD6UWoutqH8="
-"4	LINE	0
-	597
-<ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hfqwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E=
-|3,0,4,1,1,0,1744355965,>596
-|<"ec2-44-199-83-172.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hf
-|<qwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E="
-"5	LINE	0
+	  IdentityFile ~/.ssh/GITHUB_ed25519
 	
-	Your R-CA.txt is:
-|3,0,5,1,2,0,1744278976,"","Your R-CA.txt is:"
+|3,0,0,0,5,0,1744993819,"# Personal GitHub","Host github.com","  PreferredAuthentications publickey","  IdentityFile ~/.ssh/GITHUB_ed25519",""
+""1	LINE	0
+	  PreferredAuthentications publickey
+|3,1,1,1,1,0,1745116670,"  PreferredAuthentications publickey"
+"2	LINE	0
+	ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOoRiI04xcrnxVuP6ZPCQ6yPcE05Cc9SY0Qy7acy9oPJ anguram-tuf
+|3,0,2,1,1,0,1745115980,"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOoRiI04xcrnxVuP6ZPCQ6yPcE05Cc9SY0Qy7acy9oPJ anguram-tuf"
+"3	LINE	0
+	#!/usr/bin/env bash
+	
+	echo -e "IP Address\t\tMAC Address\t\tHost Name"
+	echo "-------------------------------------------------------------"
+	
+	# Grab Windows ARP table and parse
+	/c/Windows/System32/arp.exe -a | grep -E "([0-9]+\.){3}[0-9]+" | while read -r line; do
+	    ip=$(echo "$line" | awk '{print $1}')
+	    mac=$(echo "$line" | awk '{print $2}')
+	    hostname=$(python -c "import socket; print(socket.getfqdn('$ip'))" 2>/dev/null)
+	    [ -z "$hostname" ] && hostname="Unknown"
+	    printf "%-16s\t%-17s\t%s\n" "$ip" "$mac" "$hostname"
+	dggdoned13k
+|3,0,3,1,13,0,1745079500,"#!/usr/bin/env bash","","echo -e \"IP Address\\t\\tMAC Address\\t\\tHost Name\"","echo \"-------------------------------------------------------------\"","","# Grab Windows ARP table and parse","/c/Windows/System32/arp.exe -a | grep -E \"([0-9]+\\.){3}[0-9]+\" | while read -r line; do","    ip=$(echo \"$line\" | awk '{print $1}')","    mac=$(echo \"$line\" | awk '{print $2}')",>87
+|<"    hostname=$(python -c \"import socket; print(socket.getfqdn('$ip'))\" 2>/dev/null)","    [ -z \"$hostname\" ] && hostname=\"Unknown\"","    printf \"%-16s\\t%-17s\\t%s\\n\" \"$ip\" \"$mac\" \"$hostname\"","dggdoned13k"
+"4	LINE	0
+	#!/usr/bin/env bash
+	
+	# Define the subnet prefix (change based on your LAN)
+	subnet="192.168.1"
+	
+	# Ping sweep + fill ARP cache
+	for i in {1..254}; do
+	    ping -c 1 -W 1 $subnet.$i > /dev/null &
+	done
+	wait
+	
+	# Show results from ARP table
+	echo -e "\nIP Address\t\tMAC Address\t\tHost Name"
+	echo "-------------------------------------------------------------"
+	
+	arp -n | grep "$subnet" | while read -r ip hwtype mac rest; do
+	    hostname=$(getent hosts "$ip" | awk '{print $2}')
+	    [ -z "$hostname" ] && hostname="Unknown"
+	    printf "%-16s\t%-17s\t%s\n" "$ip" "$mac" "$hostname"
+	done
+	
+|3,0,4,1,21,0,1745079014,"#!/usr/bin/env bash","","# Define the subnet prefix (change based on your LAN)","subnet=\"192.168.1\"","","# Ping sweep + fill ARP cache","for i in {1..254}; do","    ping -c 1 -W 1 $subnet.$i > /dev/null &","done","wait","","# Show results from ARP table","echo -e \"\\nIP Address\\t\\tMAC Address\\t\\tHost Name\"","echo \"-------------------------------------------------------------\"","",>66
+|<"arp -n | grep \"$subnet\" | while read -r ip hwtype mac rest; do","    hostname=$(getent hosts \"$ip\" | awk '{print $2}')","    [ -z \"$hostname\" ] && hostname=\"Unknown\"","    printf \"%-16s\\t%-17s\\t%s\\n\" \"$ip\" \"$mac\" \"$hostname\"","done",""
+"5	LINE	0
+	598
+<ec2-54-224-244-159.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hfqwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E=
+|3,0,5,1,1,0,1744379316,>597
+|<"ec2-54-224-244-159.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0h
+|<fqwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E="
 "6	LINE	0
-	571
-<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDVGZzsuPnnzkGuHNgzEJ77cmu5QEYJzSyTfQ6Dyi0SjI38n+RmLHorxtBbq8D4g2siD03msGh+0TJ0gxGfUsqTMxz1MQ0d5F1UZROV5BGuYGWChvcKxfMCA8aoagoOqdjUhDXtw1G9R6cF58Mn7bPR+s+fE5naECQ1QUFVQ+JbHTODUoUb+q6hZT2IDdeQ+NuiuWQDifQ8RMMBMFh/RPcRy4XfeAnSZbzJbuLwevuCf0QSnP5318yZus8zF88l70PnfelugZTpFRLXEM0uzBn/43AgmnOQkbA2l4DhJwTg7voF0pUMLToWDnRdg/VHXIdSBJ1zD6MTLl1+BYBCQLBDBSJcgAxTUm9P8Q7vFQEZsluv2Gvil5hAvmHgdl/gTxX/h1JFFOW/EiuRBkEjNW6bpHQBvIea1pxDJnMrgJSAaKO3IFxOqV9fKupif7wGbkAw463sq5sLAL3q1TVNJ3h0Dc+gDqURlzXPfoXk7r8VMDrjOk1C0yPpEr38SR7/698=
-|3,0,6,1,1,0,1744278166,>570
-|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDVGZzsuPnnzkGuHNgzEJ77cmu5QEYJzSyTfQ6Dyi0SjI38n+RmLHorxtBbq8D4g2siD03msGh+0TJ0gxGfUsqTMxz1MQ0d5F1UZROV5BGuYGWChvcKxfMCA8aoagoOqdjUhDXtw1G9R6cF58Mn7bPR+s+fE5naECQ1QUFVQ+JbHTODUoUb+q6hZT2IDdeQ+NuiuWQDifQ8RMMBMFh/RPcRy4XfeAnSZbzJbuLwevuCf0QSnP5318yZus8zF88l70PnfelugZTpFRLXEM0uzBn/43AgmnOQkbA2l4DhJwTg7voF0pUMLToWDnRdg/VHXIdSBJ1zD6MTLl1+BYBCQLBDBSJcgAxTUm9P8Q7vFQEZsluv2Gvil5hAvmHgdl/gTxX/h1JFFOW/EiuRBkEjNW6bpHQBvIea1pxDJnMrgJSAaKO3IFxOqV
-|<9fKupif7wGbkAw463sq5sLAL3q1TVNJ3h0Dc+gDqURlzXPfoXk7r8VMDrjOk1C0yPpEr38SR7/698="
+	Delete this
+	Delete this
+|3,0,6,1,2,0,1743862804,"Delete this","Delete this"
 "7	LINE	0
-	571
-<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyPq0272p0+1PEusdjYaY6M9me80NxQuMtZV/Auqe6ErYPv3D22t04JPgZx2WHpt8qx4UGIjujpMj1qz3UE/ChOxebbCTeJKINT8oybHtgcyZVHLPGdbfER6g3KJuJFbZAlZzX7zSUseKBMWoA64zPS/GrkX120IsVMeYyen0uguiFsCEJhzxfsgbI4YshRABWfUMTuOwkMB+2GmteFtBKiS28UGK/EZRczsdtHEYjrYqRS5HKZj9OjIAyLIAV/jpqvkFRmFD4aVvL7rjh+hbWMiZOOAkMQdxIsvoiTu9S8SfeLe6VBccwaW50UCp8AUkVY0DMXQUhe5swsS6+z4c5J4aZzvcePXB5/DtwTGfHzY7kc5cqcrLGSZ0SwzfemLaaimnMKm8pkNEUZytVFM4V8fv3ggldOzlafvqYQvwTAvcVB+a2pa+STom37qJoFv/2fw4zWqb7EAipsjGISqBBA8GsVSSlHEfvVEJbYdtZtQ8qYN9VbyDTCC5qU0DHJ3s=
-|3,0,7,1,1,0,1744277377,>570
-|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyPq0272p0+1PEusdjYaY6M9me80NxQuMtZV/Auqe6ErYPv3D22t04JPgZx2WHpt8qx4UGIjujpMj1qz3UE/ChOxebbCTeJKINT8oybHtgcyZVHLPGdbfER6g3KJuJFbZAlZzX7zSUseKBMWoA64zPS/GrkX120IsVMeYyen0uguiFsCEJhzxfsgbI4YshRABWfUMTuOwkMB+2GmteFtBKiS28UGK/EZRczsdtHEYjrYqRS5HKZj9OjIAyLIAV/jpqvkFRmFD4aVvL7rjh+hbWMiZOOAkMQdxIsvoiTu9S8SfeLe6VBccwaW50UCp8AUkVY0DMXQUhe5swsS6+z4c5J4aZzvcePXB5/DtwTGfHzY7kc5cqcrLGSZ0SwzfemLaaimnMKm8pkNEUZytVFM4V8fv3ggldOzlafvqYQvwTAvcVB+a2pa
-|<+STom37qJoFv/2fw4zWqb7EAipsjGISqBBA8GsVSSlHEfvVEJbYdtZtQ8qYN9VbyDTCC5qU0DHJ3s="
+	Delete this
+	Delete this
+	Delete this
+|3,0,7,1,3,0,1743862801,"Delete this","Delete this","Delete this"
 "8	LINE	0
-	571
-<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDaJxcZZyIG/HDt39n0YAyaGwguIJN5bYNaC0WZRlZl2sVHS+2ckaqLQeTfU5NOVUeLvnXDqk+velVzvyCWlfrSkV5i74vmCpxAQIFyF4hyEuHwQCA8zozO1h2ZRm4pMsbRy+cbDAf95pQ8gYatjK//TsfamK4Ped8DQ9Q1mLHx8prOuULG/pa3CsgIjrBgklmr/H8YMnlCxQ2aZUzNhrRmtaTfqoREgge1PVepTdkFwUYU6SIUfqjd/5R3DpW+RYZugTYfcde1UCdCfhr+SC1GmwLtaRYqRxoZ6esnwmjq9Gu5YU8hkMUQOiRvwUYnsWd//O5gALWlaQDYW7nBS3xSBOv9gU+U27WdQ7316tGf2/z1aMSECqvqZNky1mSl9mssXQWBZJr/4XaZnlN0hpNqZC2lhYl/Iy6ZBQ4unTPsFhX6FHdQ8o/DTZhE0J6Ktqdd5Yv5GvpEbKVs8aZFyUNqGY2XJmPqRMGnL/hjzpwY2/uCVE+mlW4/ywW3R6HSSKU=
-|3,0,8,1,1,0,1744264480,>570
-|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDaJxcZZyIG/HDt39n0YAyaGwguIJN5bYNaC0WZRlZl2sVHS+2ckaqLQeTfU5NOVUeLvnXDqk+velVzvyCWlfrSkV5i74vmCpxAQIFyF4hyEuHwQCA8zozO1h2ZRm4pMsbRy+cbDAf95pQ8gYatjK//TsfamK4Ped8DQ9Q1mLHx8prOuULG/pa3CsgIjrBgklmr/H8YMnlCxQ2aZUzNhrRmtaTfqoREgge1PVepTdkFwUYU6SIUfqjd/5R3DpW+RYZugTYfcde1UCdCfhr+SC1GmwLtaRYqRxoZ6esnwmjq9Gu5YU8hkMUQOiRvwUYnsWd//O5gALWlaQDYW7nBS3xSBOv9gU+U27WdQ7316tGf2/z1aMSECqvqZNky1mSl9mssXQWBZJr/4XaZnlN0hpNqZC2lhYl/Iy6ZBQ4unTPsFhX6FHdQ8o
-|</DTZhE0J6Ktqdd5Yv5GvpEbKVs8aZFyUNqGY2XJmPqRMGnL/hjzpwY2/uCVE+mlW4/ywW3R6HSSKU="
+	Delete this
+	Delete this
+|3,0,8,1,2,0,1743862798,"Delete this","Delete this"
 "9	LINE	0
-	571
-<192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC62CUuu5bosfQUw1KI3bpdH/BzNwPyl3QXI0gZ+MLfhr70vO2+l7SuzOowA962Mh3V6MExsf4CgCCtdGc4NLkYeFNk5gQH0rOy23biKlUMY0QE68zIAZlpxyLYiMGKUp8ACn12GxM3ZNXqtjGuPNztE07r46w9Lr4q1PxvlP5dxEkPVGMTz75aN5/A1Sh8JMT0lwKOSdIpqzPDKnc6bEtrPlz5ySmJTPl937pxFgIDpx+0+aIpRuijTlAbG1SVZbeDpKwrenC2YNcRDgYzofwt9qKMUu0IgvpLOu6f3oeim5QZVbwudY4g0SsrhMlaCNmQ6IyASBk1YWGdBAy5fbRlSqzwYSTHZBTppun49cY4RmpOZjYcAEZRvpGSKlbrcXAkEek4uThynG71oiINnBxH12CAg6QSAPVGbup1Hcc5kXvTp9K2sjmoBMPc/1MtqpIJHUnNJqDuqPyUGI23hUb/UbipYpKVe7BYlOjMAaM1U03ikZqy48Af6mAt3J9xms=
-|3,0,9,1,1,0,1744199647,>570
-|<"192.168.229.131 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC62CUuu5bosfQUw1KI3bpdH/BzNwPyl3QXI0gZ+MLfhr70vO2+l7SuzOowA962Mh3V6MExsf4CgCCtdGc4NLkYeFNk5gQH0rOy23biKlUMY0QE68zIAZlpxyLYiMGKUp8ACn12GxM3ZNXqtjGuPNztE07r46w9Lr4q1PxvlP5dxEkPVGMTz75aN5/A1Sh8JMT0lwKOSdIpqzPDKnc6bEtrPlz5ySmJTPl937pxFgIDpx+0+aIpRuijTlAbG1SVZbeDpKwrenC2YNcRDgYzofwt9qKMUu0IgvpLOu6f3oeim5QZVbwudY4g0SsrhMlaCNmQ6IyASBk1YWGdBAy5fbRlSqzwYSTHZBTppun49cY4RmpOZjYcAEZRvpGSKlbrcXAkEek4uThynG71oiINnBxH12CAg6QSAPVGbup1Hcc5kXvTp9K2s
-|<jmoBMPc/1MtqpIJHUnNJqDuqPyUGI23hUb/UbipYpKVe7BYlOjMAaM1U03ikZqy48Af6mAt3J9xms="
+	Delete this
+	Delete this
+	Delete this
+|3,0,9,1,3,0,1743862793,"Delete this","Delete this","Delete this"
+"a	LINE	0
+	Put this line in the a register.
+	Append this line to the a register.
+|3,0,10,1,2,0,1743862380,"Put this line in the a register.","Append this line to the a register."
+"b	LINE	0
+	Put this one in the b register.
+	Append this line to the b register.
+|3,0,11,1,2,0,1743862400,"Put this one in the b register.","Append this line to the b register."
+"f	LINE	0
+	Yank this line into the "f register.
+	Append this line to the "f register.
+|3,0,15,1,2,0,1743862905,"Yank this line into the \"f register.","Append this line to the \"f register."
+"h	LINE	0
+	--------------------------------------------------------------------------------
+|3,0,17,1,1,0,1743862469,"--------------------------------------------------------------------------------"
+"j	LINE	0
+	Yank this line into the "j register.
+	Append this line to the "j register.
+|3,0,19,1,2,0,1743862898,"Yank this line into the \"j register.","Append this line to the \"j register."
+"z	CHAR	0
+	Zebra 
+|3,0,35,0,1,0,1743862419,"Zebra "
 "-	CHAR	0
-	s
-|3,0,36,0,1,0,1744086747,"s"
+	e
+|3,0,36,0,1,0,1745116594,"e"
 
 # File marks:
-'0  13  0  ~/.ssh/known_hosts
-|4,48,13,0,1744363464,"~/.ssh/known_hosts"
-'1  13  0  ~/.ssh/known_hosts
-|4,49,13,0,1744356550,"~/.ssh/known_hosts"
-'2  13  0  ~/.ssh/known_hosts
-|4,50,13,0,1744355967,"~/.ssh/known_hosts"
-'3  13  0  ~/.ssh/known_hosts
-|4,51,13,0,1744355967,"~/.ssh/known_hosts"
-'4  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,52,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
-'5  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,53,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
-'6  12  1  ~/.ssh/known_hosts
-|4,54,12,1,1744278169,"~/.ssh/known_hosts"
-'7  12  1  ~/.ssh/known_hosts
-|4,55,12,1,1744278169,"~/.ssh/known_hosts"
-'8  12  1  ~/.ssh/known_hosts
-|4,56,12,1,1744278169,"~/.ssh/known_hosts"
-'9  12  1  ~/.ssh/known_hosts
-|4,57,12,1,1744278169,"~/.ssh/known_hosts"
+'0  1  0  /d/Workspace/server.js
+|4,48,1,0,1745151617,"/d/Workspace/server.js"
+'1  3  0  ~/.ssh/authorized_keys
+|4,49,3,0,1745147345,"~/.ssh/authorized_keys"
+'2  5  8  ~/.ssh/config
+|4,50,5,8,1745116676,"~/.ssh/config"
+'3  1  0  ~/.ssh/config
+|4,51,1,0,1745115982,"~/.ssh/config"
+'4  1  0  ~/.ssh/config
+|4,52,1,0,1745115982,"~/.ssh/config"
+'5  1  0  ~/.ssh/config
+|4,53,1,0,1745115964,"~/.ssh/config"
+'6  1  0  ~/.ssh/config
+|4,54,1,0,1745115964,"~/.ssh/config"
+'7  6  30  ~/Scripts/Wi-Fi.sh
+|4,55,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+'8  1  0  ~/Scripts/Wi-Fi.sh
+|4,56,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+'9  1  0  ~/Scripts/Wi-Fi.sh
+|4,57,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
 
 # Jumplist (newest first):
--'  13  0  ~/.ssh/known_hosts
-|4,39,13,0,1744363464,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744363457,"~/.ssh/known_hosts"
--'  13  0  ~/.ssh/known_hosts
-|4,39,13,0,1744356550,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744356548,"~/.ssh/known_hosts"
--'  13  0  ~/.ssh/known_hosts
-|4,39,13,0,1744355967,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744355964,"~/.ssh/known_hosts"
--'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  21  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,21,0,1744278978,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-|4,39,1,0,1744278960,"/d/Workspace/sneak-peak-stackhub/ca_bundle.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  22  24  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,22,24,1744278951,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  1  0  /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-|4,39,1,0,1744278945,"/d/Workspace/sneak-peak-stackhub/signed_cert.txt"
--'  12  1  ~/.ssh/known_hosts
-|4,39,12,1,1744278169,"~/.ssh/known_hosts"
--'  12  1  ~/.ssh/known_hosts
-|4,39,12,1,1744278169,"~/.ssh/known_hosts"
--'  12  1  ~/.ssh/known_hosts
-|4,39,12,1,1744278169,"~/.ssh/known_hosts"
--'  12  1  ~/.ssh/known_hosts
-|4,39,12,1,1744278169,"~/.ssh/known_hosts"
--'  12  1  ~/.ssh/known_hosts
-|4,39,12,1,1744278169,"~/.ssh/known_hosts"
--'  12  1  ~/.ssh/known_hosts
-|4,39,12,1,1744278169,"~/.ssh/known_hosts"
--'  12  1  ~/.ssh/known_hosts
-|4,39,12,1,1744278169,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744278165,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744278165,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744278165,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744278165,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744277378,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744277378,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744277378,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744277378,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744277376,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744277376,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744277376,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744277376,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744264481,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744264481,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744264481,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744264481,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744264479,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744264479,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744264479,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744264479,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744199648,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744199648,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744199648,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744199648,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744199646,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744199646,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744199646,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744199646,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744196137,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744196137,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744196137,"~/.ssh/known_hosts"
--'  12  0  ~/.ssh/known_hosts
-|4,39,12,0,1744196137,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744196134,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744196134,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744196134,"~/.ssh/known_hosts"
--'  1  0  ~/.ssh/known_hosts
-|4,39,1,0,1744196134,"~/.ssh/known_hosts"
--'  31  33  ~/.ssh/config
-|4,39,31,33,1744096078,"~/.ssh/config"
--'  31  33  ~/.ssh/config
-|4,39,31,33,1744096078,"~/.ssh/config"
--'  31  33  ~/.ssh/config
-|4,39,31,33,1744096078,"~/.ssh/config"
+-'  1  0  /d/Workspace/server.js
+|4,39,1,0,1745151617,"/d/Workspace/server.js"
+-'  3  0  ~/.ssh/authorized_keys
+|4,39,3,0,1745147345,"~/.ssh/authorized_keys"
+-'  3  0  ~/.ssh/authorized_keys
+|4,39,3,0,1745147345,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1745147339,"~/.ssh/authorized_keys"
+-'  1  0  ~/.ssh/authorized_keys
+|4,39,1,0,1745147339,"~/.ssh/authorized_keys"
+-'  5  8  ~/.ssh/config
+|4,39,5,8,1745116676,"~/.ssh/config"
+-'  5  8  ~/.ssh/config
+|4,39,5,8,1745116676,"~/.ssh/config"
+-'  5  8  ~/.ssh/config
+|4,39,5,8,1745116676,"~/.ssh/config"
+-'  5  8  ~/.ssh/config
+|4,39,5,8,1745116676,"~/.ssh/config"
+-'  6  6  ~/.ssh/config
+|4,39,6,6,1745116631,"~/.ssh/config"
+-'  6  6  ~/.ssh/config
+|4,39,6,6,1745116631,"~/.ssh/config"
+-'  6  6  ~/.ssh/config
+|4,39,6,6,1745116631,"~/.ssh/config"
+-'  6  6  ~/.ssh/config
+|4,39,6,6,1745116631,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745116534,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745116534,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745116534,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745116534,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745115982,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745115982,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745115982,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745115982,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745115964,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745115964,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745115964,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1745115964,"~/.ssh/config"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  6  30  ~/Scripts/Wi-Fi.sh
+|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+-'  1  0  ~/Scripts/Wi-Fi.sh
+|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
 
 # History of marks within files (newest to oldest):
 
-> ~/.ssh/known_hosts
-	*	1744363462	0
-	"	13	0
-	.	13	0
-	+	6	0
-	+	7	0
-	+	8	0
-	+	6	0
-	+	8	0
-	+	9	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	13	0
+> /d/Workspace/server.js
+	*	1745151614	0
+	"	1	0
 
-> /d/Workspace/sneak-peak-stackhub/ca_bundle.txt
-	*	1744278976	0
-	"	21	0
-	^	40	25
-	.	21	0
-	+	40	24
-	+	21	0
-
-> /d/Workspace/sneak-peak-stackhub/signed_cert.txt
-	*	1744278947	0
-	"	22	24
-	^	22	25
-	.	22	24
-	+	22	24
+> ~/.ssh/authorized_keys
+	*	1745147344	0
+	"	3	0
+	^	3	0
+	.	2	90
+	+	2	90
 
 > ~/.ssh/config
-	*	1744096076	0
-	"	31	33
-	^	31	34
-	.	31	34
-	+	5	34
-	+	39	0
-	+	8	10
-	+	9	17
-	+	7	7
-	+	39	0
-	+	16	38
-	+	17	35
-	+	24	31
-	+	23	7
-	+	39	11
-	+	19	2
-	+	39	0
-	+	39	12
-	+	39	25
-	+	39	36
-	+	39	29
-	+	39	0
-	+	39	2
-	+	39	11
-	+	39	25
-	+	39	36
-	+	39	0
-	+	28	25
-	+	22	11
-	+	21	2
-	+	29	11
-	+	28	2
-	+	31	31
-	+	33	0
-	+	26	5
-	+	27	2
-	+	26	8
-	+	27	8
-	+	28	25
-	+	29	10
-	+	17	0
-	+	31	35
-	+	17	35
-	+	31	35
-	+	30	3
-	+	31	34
+	*	1745116674	0
+	"	5	8
+	^	5	9
+	.	5	9
+	+	1	11
+	+	6	31
+	+	4	6
+	+	3	22
+	+	6	0
+	+	5	9
+
+> ~/Scripts/Wi-Fi.sh
+	*	1745079573	0
+	"	6	30
+	^	6	31
+	.	6	30
+	+	1	19
+	+	1	4
+	+	10	4
+	+	1	0
+	+	6	30
 
 > ~/.zshrc
-	*	1743764865	0
-	"	28	31
-	^	28	32
-	.	28	31
-	+	165	0
-	+	2	0
-	+	14	0
-	+	29	1
-	+	136	0
-	+	137	0
-	+	136	19
-	+	137	32
-	+	138	30
-	+	9	58
-	+	9	28
-	+	9	70
-	+	9	0
-	+	2	0
-	+	9	0
-	+	8	11
-	+	43	22
-	+	27	46
-	+	28	31
+	*	1745077856	0
+	"	111	30
+	^	111	31
+	.	111	30
+	+	1	0
+	+	16	23
+	+	108	0
+	+	109	0
+	+	108	19
+	+	109	17
+	+	16	21
+	+	9	84
+	+	10	0
+	+	7	12
+	+	110	25
+	+	33	0
+	+	78	20
+	+	111	30
 
-> ~/Scripts/stackhub-exe.sh
-	*	1743756269	0
-	"	6	78
-	^	6	79
-	.	6	78
-	+	6	78
+> ~/.ssh/known_hosts
+	*	1744379316	0
+	"	10	0
+	.	11	0
+	+	11	0
 
-> ~/Downloads/csr-config.json
-	*	1743665487	0
-	"	14	0
-	^	14	1
-	.	14	0
-	+	14	0
-
-> /etc/nsswitch.conf
-	*	1743524792	0
+> /d/Workspace/stackhub/scripts/build.js
+	*	1744339611	0
 	"	1	0
-	^	8	20
-	.	8	19
-	+	8	19
 
-> ~/.bashrc
-	*	1743524095	0
+> /d/Workspace/vimclass/searching.txt
+	*	1743866676	0
 	"	1	0
-	^	12	32
-	.	12	31
+	^	1	33
+	.	1	0
+	+	1	0
+
+> /d/Workspace/vimclass/inserting.txt
+	*	1743866546	0
+	"	1	0
+	^	4	5
+	.	4	0
+	+	2	0
+	+	4	0
+
+> /d/Workspace/vimclass/dyp.txt
+	*	1743862943	0
+	"	63	0
+	.	63	0
+	+	1	0
+	+	2	0
+	+	5	0
+	+	7	0
+	+	11	2
+	+	12	1
+	+	13	2
+	+	14	1
+	+	15	1
+	+	17	6
+	+	20	0
+	+	26	0
+	+	28	0
+	+	30	0
+	+	32	0
+	+	34	0
+	+	36	0
 	+	39	0
-	+	157	1
-	+	160	0
-	+	162	57
-	+	11	44
-	+	15	26
-	+	16	28
-	+	15	40
-	+	16	42
-	+	12	31
+	+	42	0
+	+	48	0
+	+	52	0
+	+	56	0
+	+	59	0
+	+	63	0
+
+> /d/Workspace/vimclass/cutcopypaste.txt
+	*	1743862489	0
+	"	61	0
+	.	58	0
+	+	22	13
+	+	24	8
+	+	26	8
+	+	30	0
+	+	29	0
+	+	32	0
+	+	44	0
+	+	42	0
+	+	44	0
+	+	46	0
+	+	44	0
+	+	43	0
+	+	45	0
+	+	52	0
+	+	51	0
+	+	54	0
+	+	55	0
+	+	58	0
+
+> /usr/share/vim/vim91/doc/change.txt
+	*	1743861861	0
+	"	1108	3
+
+> /d/Workspace/vimclass/help.txt
+	*	1743861096	0
+	"	5	0
+
+> /usr/share/vim/vim91/doc/help.txt
+	*	1743861094	0
+	"	1	0
+
+> /usr/share/vim/vim91/doc/insert.txt
+	*	1743861016	0
+	"	49	17
+
+> /usr/share/vim/vim91/doc/cmdline.txt
+	*	1743861008	0
+	"	121	7
+
+> /usr/share/vim/vim91/doc/scroll.txt
+	*	1743860935	0
+	"	120	3
+
+> /tmp/tutorYvl2QE
+	*	1743860854	0
+	"	949	0
+	^	79	6
+	.	79	0
+	+	79	0
+
+> /usr/share/vim/vim91/doc/usr_01.txt
+	*	1743860810	0
+	"	145	0
+
+> /d/Workspace/vimclass/Exercise-04-GettingHelp.pdf
+	*	1743860757	0
+	"	1	0
+
+> ~/Downloads/Exercise-04-GettingHelp.pdf
+	*	1743860717	0
+	"	1	0
+
+> /usr/share/vim/vim91/doc/editing.txt
+	*	1743860644	0
+	"	57	14
+
+> /usr/share/vim/vim91/doc/motion.txt
+	*	1743860615	0
+	"	407	0
+
+> /usr/share/vim/vim91/doc/options.txt
+	*	1743860393	0
+	"	9461	4
+
+> ~/.oh-my-zsh/themes/theunraveler.zsh-theme
+	*	1743843293	0
+	"	5	96
+	^	5	97
+	.	5	96
+	+	3	45
+	+	5	96
 
 > ~/.oh-my-zsh/oh-my-zsh.sh
-	*	1743486569	0
-	"	1	10
-	^	1	11
-	.	1	10
-	+	1	10
+	*	1743842721	0
+	"	1	0
 
-> /etc/profile
-	*	1742974425	0
-	"	149	0
-	^	149	89
-	.	149	89
-	+	151	0
-	+	150	41
-	+	149	1
-	+	150	0
-	+	149	0
-	+	149	151
-	+	149	89
+> /d/Workspace/stackhub/src/index.ts
+	*	1743840915	0
+	"	128	0
 
-> ~/.npmrc
-	*	1741247259	0
-	"	3	0
-	^	11	71
-	.	11	71
-	+	11	71
+> /etc/nsswitch.conf
+	*	1743840432	0
+	"	9	26
+	^	9	27
+	.	9	27
+	+	8	1
+	+	9	1
+	+	9	27

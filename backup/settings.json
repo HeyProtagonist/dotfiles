@@ -6,7 +6,7 @@
     "telemetry.telemetryLevel": "off",
     "editor.experimental.treeSitterTelemetry": false,
     "update.enableWindowsBackgroundUpdates": true,
-    "update.mode": "default",
+    "update.mode": "manual",
     "update.showReleaseNotes": true,
     /* -------------------------------------------------------------------------- */
     /*                               Editor Defaults                              */
@@ -40,7 +40,7 @@
     "terminal.integrated.defaultProfile.linux": "Bash",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "window.newWindowDimensions": "inherit",
-    "window.title": "🌿 ${activeRepositoryBranchName} 📂 ${activeRepositoryName} ${separator} ${activeEditorShort}${dirty}",
+    "window.title": "🌿 ${activeRepositoryBranchName} 📂 ${activeRepositoryName} ${separator} ${activeEditorMedium}${dirty}",
     "window.titleBarStyle": "custom",
     "window.titleSeparator": " 📄 ",
     "workbench.editor.enablePreview": false,
@@ -114,7 +114,14 @@
                 }
             ]
         },
-        "textMateRules": []
+        "textMateRules": [
+            {
+                "scope": "keyword.other.dotenv",
+                "settings": {
+                    "foreground": "#FF000000"
+                }
+            }
+        ]
     },
     /* -------------------------------------------------------------------------- */
     /*                                 Prettify                                   */
@@ -132,7 +139,7 @@
     "editor.suggestLineHeight": 24,
     "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
     "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 80,
+    "editor.wordWrapColumn": 100,
     "prettier.requireConfig": false,
     "prettier.useEditorConfig": false,
     "terminal.integrated.cursorBlinking": true,
@@ -142,7 +149,6 @@
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontWeight": "normal",
     "terminal.integrated.lineHeight": 1.3,
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {},
     /* -------------------------------------------------------------------------- */
     /*                                   Find                                     */
@@ -183,7 +189,7 @@
     /* -------------------------------------------------------------------------- */
     /*                                  Dotfiles                                  */
     /* -------------------------------------------------------------------------- */
-    "dotenv.enableAutocloaking": false,
+    "dotenv.enableAutocloaking": true,
     "dotenv.enableSecretpeeking": true,
     /* -------------------------------------------------------------------------- */
     /*                              Better Comments                               */
@@ -315,7 +321,13 @@
     "remote.SSH.remotePlatform": {
         "invisinet-vm-console": "linux"
     },
-    "reactSnippets.settings.prettierEnabled": true,
+    "chat.commandCenter.enabled": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "chat.commandCenter.enabled": false
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:claude-3.5-sonnet",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.iconTheme": "material-icon-theme",
+    "[plaintext]": {
+        "editor.defaultFormatter": "lkrms.inifmt"
+    }
 }
