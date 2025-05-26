@@ -1,3 +1,6 @@
+# Suppress the annoying '%' when output has no newline
+PROMPT_EOL_MARK=""
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -112,3 +115,6 @@ alias ls="ls -lAFh --color=auto"
 
 # Alias for ping with default -n 3 and always resolving address
 alias ping='ping -n 3 -a'
+
+# Alias for Getting Public IP
+alias ipme='curl -S api64.ipify.org'

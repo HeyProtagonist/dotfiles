@@ -11,22 +11,26 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/alias
+~Msle0~/\<invisinet\>
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:q
-|2,0,1745151617,,"q"
 :wq
-|2,0,1745147345,,"wq"
+|2,0,1748014438,,"wq"
+:q
+|2,0,1747900527,,"q"
+:q!
+|2,0,1747838234,,"q!"
+:weq
+|2,0,1747814918,,"weq"
+:!touch create-stack.sh
+|2,0,1747723105,,"!touch create-stack.sh"
 :w
 |2,0,1745116630,,"w"
 :reg
 |2,0,1745079022,,"reg"
-:q!
-|2,0,1743871004,,"q!"
 :reg f
 |2,0,1743862875,,"reg f"
 :reg j
@@ -73,6 +77,16 @@ $
 |2,0,1743860392,,"h 'wildmenu'"
 
 # Search String History (newest to oldest):
+? \<invisinet\>
+|2,1,1747807433,,"\\<invisinet\\>"
+?/d/
+|2,1,1746010601,47,"d/"
+?/122.
+|2,1,1745935220,47,"122."
+?/aliases
+|2,1,1745470722,47,"aliases"
+?/ipme
+|2,1,1745470718,47,"ipme"
 ?/alias
 |2,1,1745077836,47,"alias"
 ?/hola
@@ -94,82 +108,61 @@ $
 
 # Registers:
 "0	CHAR	0
-	# Personal GitHub
-	Host github.com
-	  PreferredAuthentications publickey
-	  IdentityFile ~/.ssh/GITHUB_ed25519
-	
-|3,0,0,0,5,0,1744993819,"# Personal GitHub","Host github.com","  PreferredAuthentications publickey","  IdentityFile ~/.ssh/GITHUB_ed25519",""
+	# BAGLEY-PI
+	Host bagleypi
+	    HostName bagleypi
+	    User bagleypi
+	    PreferredAuthentications publickey
+	    IdentityFile ~/.ssh/bagleypi
+|3,0,0,0,6,0,1747838302,"# BAGLEY-PI","Host bagleypi","    HostName bagleypi","    User bagleypi","    PreferredAuthentications publickey","    IdentityFile ~/.ssh/bagleypi"
 ""1	LINE	0
-	  PreferredAuthentications publickey
-|3,1,1,1,1,0,1745116670,"  PreferredAuthentications publickey"
+	597
+<ec2-52-54-161-203.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDmy5P3YbjR3RfUY5DjysYKhXKSfxHp+Q7Zoa43DiBCZge8eVY3EsRpxBm4cDC7W76m2eamP44MVrtBnzVLs4nWTVJtT1gRBdJpPS+cudzRyJiNyFwEVGX/RqliFldel4OvOM4L353xXI9hCRqu8XMWPcWw3wIr8ZdcLt5s8nz04DDz53BRSZdKmTvg818AeBByMFOn5OAOs9xPsY3DgbH4I7vEgCHt3ixz9t4FwNnkNilOLVRZBJYN+IRqsOEHrPUHTWOD3MwhjWLD+oTMc5Mh1xaT9nAANdAkiHKjRxnk23qaIx05vLb9Fj5ijjJKYmaucAawnEuyCYN7Knj8/umj8Eim8MO5k19rJEFII2iOqwU/bUehycrUiSKKXheiDPSPAULYEGDGh1iqMXqDcfc1/8zR9wPO/kqV27hY8Ynl99gBBsuotUI71JGUloACFCv+9/R1Mv6MbuYZ7zYmuysFEJGLzOu2Vw37F8W0T6WB4bVusB8uGF0lHuX5jW/WTCc=
+|3,1,1,1,1,0,1748014437,>596
+|<"ec2-52-54-161-203.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDmy5P3YbjR3RfUY5DjysYKhXKSfxHp+Q7Zoa43DiBCZge8eVY3EsRpxBm4cDC7W76m2eamP44MVrtBnzVLs4nWTVJtT1gRBdJpPS+cudzRyJiNyFwEVGX/RqliFldel4OvOM4L353xXI9hCRqu8XMWPcWw3wIr8ZdcLt5s8nz04DDz53BRSZdKmTvg818AeBByMFOn5OAOs9xPsY3DgbH4I7vEgCHt3ixz9t4FwNnkNilOLVRZBJYN+IRqsOEHrPUHTWOD3MwhjWLD+oTMc5Mh1xaT9nAANdAkiHKjRxnk23qaIx05vLb9Fj5ijjJKYmaucAawnEuyCYN7Knj8/umj8Eim8MO5k19rJEFII2iOqwU/bUehycrUiSKKXheiDPSPAULYEGDGh1iqMXqDcfc1/8zR
+|<9wPO/kqV27hY8Ynl99gBBsuotUI71JGUloACFCv+9/R1Mv6MbuYZ7zYmuysFEJGLzOu2Vw37F8W0T6WB4bVusB8uGF0lHuX5jW/WTCc="
 "2	LINE	0
-	ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOoRiI04xcrnxVuP6ZPCQ6yPcE05Cc9SY0Qy7acy9oPJ anguram-tuf
-|3,0,2,1,1,0,1745115980,"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOoRiI04xcrnxVuP6ZPCQ6yPcE05Cc9SY0Qy7acy9oPJ anguram-tuf"
+	569
+<44.219.40.252 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqhtLeQ6EGrC58/GXZTLMHbcbsL+Mw0wEFees5rtr+tY6/bC6cpwCPmevmMYugyLmpGHo100RrCU4UbMhPvku82ZtFkImLLfhvhMy3HefWMcKVeYTQBCaRb4Tn0AAf+yZBFNw8rMY8GxF6RyxtrN25qHn5LYKJMHDVwaPo+lm5ZOmUwT6DUBPfQXBLmfNskUNHpYZzW009zekMfozyUaz09yFDqpPjy/CPJxo0Xy0u9316PVJLqRGC6Avfke02nxWQ9RcUlpvINrfhsoVTSoXZqoI46v9Md+2AV8v/EtTSiUbG/vS+L/URt0B05iKfViOvyGdGfypqJQBhE93dD4vi5Da2mA8lFEROAzBX9VKx+AAXH+O4L0Rq4XMwfFWfLs/OA/tzkxgfhXjFRmxch6GVahDTPqkyOK1ydVrOjrNy/NQsvooaVLHOll6ncuHdcaLx16nXqAbjljolHh5AVSEMZsqyPcvVyKQ7t2YglObKKdYd0scf+ZQDewK3nsWxMc0=
+|3,0,2,1,1,0,1748014435,>568
+|<"44.219.40.252 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqhtLeQ6EGrC58/GXZTLMHbcbsL+Mw0wEFees5rtr+tY6/bC6cpwCPmevmMYugyLmpGHo100RrCU4UbMhPvku82ZtFkImLLfhvhMy3HefWMcKVeYTQBCaRb4Tn0AAf+yZBFNw8rMY8GxF6RyxtrN25qHn5LYKJMHDVwaPo+lm5ZOmUwT6DUBPfQXBLmfNskUNHpYZzW009zekMfozyUaz09yFDqpPjy/CPJxo0Xy0u9316PVJLqRGC6Avfke02nxWQ9RcUlpvINrfhsoVTSoXZqoI46v9Md+2AV8v/EtTSiUbG/vS+L/URt0B05iKfViOvyGdGfypqJQBhE93dD4vi5Da2mA8lFEROAzBX9VKx+AAXH+O4L0Rq4XMwfFWfLs/OA/tzkxgfhXjFRmxch6GVahDTPqkyOK1ydVrOjrNy/NQsvooaVLHO
+|<ll6ncuHdcaLx16nXqAbjljolHh5AVSEMZsqyPcvVyKQ7t2YglObKKdYd0scf+ZQDewK3nsWxMc0="
 "3	LINE	0
-	#!/usr/bin/env bash
-	
-	echo -e "IP Address\t\tMAC Address\t\tHost Name"
-	echo "-------------------------------------------------------------"
-	
-	# Grab Windows ARP table and parse
-	/c/Windows/System32/arp.exe -a | grep -E "([0-9]+\.){3}[0-9]+" | while read -r line; do
-	    ip=$(echo "$line" | awk '{print $1}')
-	    mac=$(echo "$line" | awk '{print $2}')
-	    hostname=$(python -c "import socket; print(socket.getfqdn('$ip'))" 2>/dev/null)
-	    [ -z "$hostname" ] && hostname="Unknown"
-	    printf "%-16s\t%-17s\t%s\n" "$ip" "$mac" "$hostname"
-	dggdoned13k
-|3,0,3,1,13,0,1745079500,"#!/usr/bin/env bash","","echo -e \"IP Address\\t\\tMAC Address\\t\\tHost Name\"","echo \"-------------------------------------------------------------\"","","# Grab Windows ARP table and parse","/c/Windows/System32/arp.exe -a | grep -E \"([0-9]+\\.){3}[0-9]+\" | while read -r line; do","    ip=$(echo \"$line\" | awk '{print $1}')","    mac=$(echo \"$line\" | awk '{print $2}')",>87
-|<"    hostname=$(python -c \"import socket; print(socket.getfqdn('$ip'))\" 2>/dev/null)","    [ -z \"$hostname\" ] && hostname=\"Unknown\"","    printf \"%-16s\\t%-17s\\t%s\\n\" \"$ip\" \"$mac\" \"$hostname\"","dggdoned13k"
+	568
+<13.219.48.76 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hfqwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E=
+|3,0,3,1,1,0,1748014434,>567
+|<"13.219.48.76 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hfqwnjVDR0aH3fd1l5KqO+IozjmXj1X
+|<pKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E="
 "4	LINE	0
-	#!/usr/bin/env bash
-	
-	# Define the subnet prefix (change based on your LAN)
-	subnet="192.168.1"
-	
-	# Ping sweep + fill ARP cache
-	for i in {1..254}; do
-	    ping -c 1 -W 1 $subnet.$i > /dev/null &
-	done
-	wait
-	
-	# Show results from ARP table
-	echo -e "\nIP Address\t\tMAC Address\t\tHost Name"
-	echo "-------------------------------------------------------------"
-	
-	arp -n | grep "$subnet" | while read -r ip hwtype mac rest; do
-	    hostname=$(getent hosts "$ip" | awk '{print $2}')
-	    [ -z "$hostname" ] && hostname="Unknown"
-	    printf "%-16s\t%-17s\t%s\n" "$ip" "$mac" "$hostname"
-	done
-	
-|3,0,4,1,21,0,1745079014,"#!/usr/bin/env bash","","# Define the subnet prefix (change based on your LAN)","subnet=\"192.168.1\"","","# Ping sweep + fill ARP cache","for i in {1..254}; do","    ping -c 1 -W 1 $subnet.$i > /dev/null &","done","wait","","# Show results from ARP table","echo -e \"\\nIP Address\\t\\tMAC Address\\t\\tHost Name\"","echo \"-------------------------------------------------------------\"","",>66
-|<"arp -n | grep \"$subnet\" | while read -r ip hwtype mac rest; do","    hostname=$(getent hosts \"$ip\" | awk '{print $2}')","    [ -z \"$hostname\" ] && hostname=\"Unknown\"","    printf \"%-16s\\t%-17s\\t%s\\n\" \"$ip\" \"$mac\" \"$hostname\"","done",""
+	596
+<ec2-52-72-154-22.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9PF0dBhAiLNYCoG+YNZGgvUI+O2JhOhG6ipd+Hu217657+lUi2S2/I2+W2pv05p5j0Cy9J1LTremo+EFFGz4yvlFDA5e6yVx+nEpmonMsH3fhKgvUv8PFfs/KjpR2UWmQfVF6NFGpOx3kdDXx3r/0YNbZBNooehLmTIMDo2rI9bAcEQEE+LD29F37rFIg+cKQxjRKVxD2HA3jwYyy1YQfm9+C9lvcsZQqHp6ywT7tCe3ovugBajLVOlXj6f0VAgBlBvLodBtp7k4cPV12rL2HD9kTF1DeJ5M+P2gMduLz4jldYjpd2SW30n9bADEkMe2PWJbKZ9yfuz7F4FZlFb8bkMH1xkWLdRzK5OE/RnEF/4sUwCu7aUxAmHwxoL7MvrgBoMEKTBsArtGGrOuqioZRQnusgwaxUqpD45hjVFkTDgmKZQn0NUTvzoKa57ixossR6gfRDaFwNrieULs1sC5Dblj6Etp7+WmVzgXDh79TmM8lNjgQQqeMugN9//6vVp8=
+|3,0,4,1,1,0,1748005155,>595
+|<"ec2-52-72-154-22.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9PF0dBhAiLNYCoG+YNZGgvUI+O2JhOhG6ipd+Hu217657+lUi2S2/I2+W2pv05p5j0Cy9J1LTremo+EFFGz4yvlFDA5e6yVx+nEpmonMsH3fhKgvUv8PFfs/KjpR2UWmQfVF6NFGpOx3kdDXx3r/0YNbZBNooehLmTIMDo2rI9bAcEQEE+LD29F37rFIg+cKQxjRKVxD2HA3jwYyy1YQfm9+C9lvcsZQqHp6ywT7tCe3ovugBajLVOlXj6f0VAgBlBvLodBtp7k4cPV12rL2HD9kTF1DeJ5M+P2gMduLz4jldYjpd2SW30n9bADEkMe2PWJbKZ9yfuz7F4FZlFb8bkMH1xkWLdRzK5OE/RnEF/4sUwCu7aUxAmHwxoL7MvrgBoMEKTBsArtGGrOuqioZRQnusg
+|<waxUqpD45hjVFkTDgmKZQn0NUTvzoKa57ixossR6gfRDaFwNrieULs1sC5Dblj6Etp7+WmVzgXDh79TmM8lNjgQQqeMugN9//6vVp8="
 "5	LINE	0
-	598
-<ec2-54-224-244-159.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hfqwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E=
-|3,0,5,1,1,0,1744379316,>597
-|<"ec2-54-224-244-159.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0h
-|<fqwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E="
+	597
+<ec2-52-54-161-203.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hfqwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E=
+|3,0,5,1,1,0,1748005154,>596
+|<"ec2-52-54-161-203.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hf
+|<qwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E="
 "6	LINE	0
-	Delete this
-	Delete this
-|3,0,6,1,2,0,1743862804,"Delete this","Delete this"
+	595
+<ec2-3-93-109-94.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hfqwnjVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E=
+|3,0,6,1,1,0,1747848716,>594
+|<"ec2-3-93-109-94.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCd0OYpqIDzwxGOwEfw+8dY+nHTMwSmtumWfvxYhAxkpM5FdJqSCJWqtxGV7tuF/pzznupV05dOOhZxADU4obLudnO8njL15oJY80JXqtXihJ6E+z/LjkrgbmoCEDiXmdsCFRvLrxv8yT6agSMwwMkhY7qUDmHecabUNZYThqdo5+w1VihIrv8Pi787WKPhiGVwSrSHJ1bu1q0Ts7Lk+uzZsEKhzvzDIRJF4USnOKZ5Wy1s6wIVqzD5Smuubs9DCAPKjgO724IF0AG5+TVZsgwai4gNc4QOEk/qF4keQ8QLT2bKRC0O1UYYi5Xg7crjn9RPYl0Mx/GJbw2bQI9wEwLFZDk/lS5jZe8AMISbfYgMyier9Xmbqx5I50O93g/tC/tCx42ZP41s1ScQVrZguqG4Q0hfqw
+|<njVDR0aH3fd1l5KqO+IozjmXj1XpKdSSroKLpZKrLnbvXFjW0hqsN+6OldqtxSQR9aasBPEHgBJQQ6OoWJthrn28P4GUL2o4VDq8E="
 "7	LINE	0
-	Delete this
-	Delete this
-	Delete this
-|3,0,7,1,3,0,1743862801,"Delete this","Delete this","Delete this"
+	workvm ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKjc0+G9jvdkIcAAfn+D0+3DnRcLDO3bhoosDj3h3GphgbT76RRvUa4JnnF8hH8T3GMq5+0ZDkA7/eQ4XyjeURk=
+|3,0,7,1,1,0,1747848485,"workvm ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKjc0+G9jvdkIcAAfn+D0+3DnRcLDO3bhoosDj3h3GphgbT76RRvUa4JnnF8hH8T3GMq5+0ZDkA7/eQ4XyjeURk="
 "8	LINE	0
-	Delete this
-	Delete this
-|3,0,8,1,2,0,1743862798,"Delete this","Delete this"
+	workvm ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPlk0Pz77PAZ1NYU1NBh/6uR1YY0mvUAFhp4LZs/XeEw
+|3,0,8,1,1,0,1747848485,"workvm ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPlk0Pz77PAZ1NYU1NBh/6uR1YY0mvUAFhp4LZs/XeEw"
 "9	LINE	0
-	Delete this
-	Delete this
-	Delete this
-|3,0,9,1,3,0,1743862793,"Delete this","Delete this","Delete this"
+	598
+<ec2-34-192-149-236.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQClM6U7Nodi8HaWjHLoeNuPyocq6QJQXhyCBlyCM30RqY7OpMqvQehqdTYNBbQbxWKFfLSCo83mrI73iOkLZsLWCW9Cw5s59x76OFTJXNOUeOzX4yPcHb2a+Fcq0Z00O/TM65UNRB97CTTgvF9lkJAgte4OFAA5F9qSqJDIUOxeKMsES2jZBlyg7KmBw1dT7G/1/MEoEKsq300vH0/ojswoG2g9wkPGshIsX1oHf0kPnMFAQGGFCGWP56N8dQFW94kdVhaCyGjncoguRQgyyawTjG4p/0+fo/ypbcMvkYj7HxcwP6ypYKPOTqhqGt9Wlvy8EtMKEnKmV8uJJQTfftnKUzHEgt85MKllQtfvBBEweYauUe4PCKTZU7OQIGpqCt2lv2jGV4LKtBJqlwkSErBfpyFFQCuoE9+d45SgED0ETGFhUGg7eh11STVVe8KiesoDxJ1frFe16CbcbW0hBjGk+pfYbxcDd79mVEtDjNmZuSnYWfGyBGJaOW8KGCyzuW0=
+|3,0,9,1,1,0,1747848484,>597
+|<"ec2-34-192-149-236.compute-1.amazonaws.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQClM6U7Nodi8HaWjHLoeNuPyocq6QJQXhyCBlyCM30RqY7OpMqvQehqdTYNBbQbxWKFfLSCo83mrI73iOkLZsLWCW9Cw5s59x76OFTJXNOUeOzX4yPcHb2a+Fcq0Z00O/TM65UNRB97CTTgvF9lkJAgte4OFAA5F9qSqJDIUOxeKMsES2jZBlyg7KmBw1dT7G/1/MEoEKsq300vH0/ojswoG2g9wkPGshIsX1oHf0kPnMFAQGGFCGWP56N8dQFW94kdVhaCyGjncoguRQgyyawTjG4p/0+fo/ypbcMvkYj7HxcwP6ypYKPOTqhqGt9Wlvy8EtMKEnKmV8uJJQTfftnKUzHEgt85MKllQtfvBBEweYauUe4PCKTZU7OQIGpqCt2lv2jGV4LKtBJqlwkSErBfpyF
+|<FQCuoE9+d45SgED0ETGFhUGg7eh11STVVe8KiesoDxJ1frFe16CbcbW0hBjGk+pfYbxcDd79mVEtDjNmZuSnYWfGyBGJaOW8KGCyzuW0="
 "a	LINE	0
 	Put this line in the a register.
 	Append this line to the a register.
@@ -193,274 +186,381 @@ $
 	Zebra 
 |3,0,35,0,1,0,1743862419,"Zebra "
 "-	CHAR	0
-	e
-|3,0,36,0,1,0,1745116594,"e"
+	 
+|3,0,36,0,1,0,1747897916," "
 
 # File marks:
-'0  1  0  /d/Workspace/server.js
-|4,48,1,0,1745151617,"/d/Workspace/server.js"
-'1  3  0  ~/.ssh/authorized_keys
-|4,49,3,0,1745147345,"~/.ssh/authorized_keys"
-'2  5  8  ~/.ssh/config
-|4,50,5,8,1745116676,"~/.ssh/config"
-'3  1  0  ~/.ssh/config
-|4,51,1,0,1745115982,"~/.ssh/config"
-'4  1  0  ~/.ssh/config
-|4,52,1,0,1745115982,"~/.ssh/config"
-'5  1  0  ~/.ssh/config
-|4,53,1,0,1745115964,"~/.ssh/config"
-'6  1  0  ~/.ssh/config
-|4,54,1,0,1745115964,"~/.ssh/config"
-'7  6  30  ~/Scripts/Wi-Fi.sh
-|4,55,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
-'8  1  0  ~/Scripts/Wi-Fi.sh
-|4,56,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
-'9  1  0  ~/Scripts/Wi-Fi.sh
-|4,57,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+'0  13  0  ~/.ssh/known_hosts
+|4,48,13,0,1748014438,"~/.ssh/known_hosts"
+'1  13  0  ~/.ssh/known_hosts
+|4,49,13,0,1748005156,"~/.ssh/known_hosts"
+'2  1  0  ~/.ssh/config
+|4,50,1,0,1747900527,"~/.ssh/config"
+'3  31  9  ~/.ssh/config
+|4,51,31,9,1747900494,"~/.ssh/config"
+'4  31  9  ~/.ssh/config
+|4,52,31,9,1747900494,"~/.ssh/config"
+'5  25  27  ~/.ssh/config
+|4,53,25,27,1747898245,"~/.ssh/config"
+'6  25  27  ~/.ssh/config
+|4,54,25,27,1747898245,"~/.ssh/config"
+'7  25  27  ~/.ssh/config
+|4,55,25,27,1747898245,"~/.ssh/config"
+'8  25  27  ~/.ssh/config
+|4,56,25,27,1747898245,"~/.ssh/config"
+'9  25  37  ~/.ssh/config
+|4,57,25,37,1747898219,"~/.ssh/config"
 
 # Jumplist (newest first):
--'  1  0  /d/Workspace/server.js
-|4,39,1,0,1745151617,"/d/Workspace/server.js"
--'  3  0  ~/.ssh/authorized_keys
-|4,39,3,0,1745147345,"~/.ssh/authorized_keys"
--'  3  0  ~/.ssh/authorized_keys
-|4,39,3,0,1745147345,"~/.ssh/authorized_keys"
--'  1  0  ~/.ssh/authorized_keys
-|4,39,1,0,1745147339,"~/.ssh/authorized_keys"
--'  1  0  ~/.ssh/authorized_keys
-|4,39,1,0,1745147339,"~/.ssh/authorized_keys"
--'  5  8  ~/.ssh/config
-|4,39,5,8,1745116676,"~/.ssh/config"
--'  5  8  ~/.ssh/config
-|4,39,5,8,1745116676,"~/.ssh/config"
--'  5  8  ~/.ssh/config
-|4,39,5,8,1745116676,"~/.ssh/config"
--'  5  8  ~/.ssh/config
-|4,39,5,8,1745116676,"~/.ssh/config"
--'  6  6  ~/.ssh/config
-|4,39,6,6,1745116631,"~/.ssh/config"
--'  6  6  ~/.ssh/config
-|4,39,6,6,1745116631,"~/.ssh/config"
--'  6  6  ~/.ssh/config
-|4,39,6,6,1745116631,"~/.ssh/config"
--'  6  6  ~/.ssh/config
-|4,39,6,6,1745116631,"~/.ssh/config"
+-'  13  0  ~/.ssh/known_hosts
+|4,39,13,0,1748014438,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1748014433,"~/.ssh/known_hosts"
+-'  13  0  ~/.ssh/known_hosts
+|4,39,13,0,1748005156,"~/.ssh/known_hosts"
+-'  1  0  ~/.ssh/known_hosts
+|4,39,1,0,1748005154,"~/.ssh/known_hosts"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745116534,"~/.ssh/config"
+|4,39,1,0,1747900527,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745116534,"~/.ssh/config"
+|4,39,1,0,1747900527,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745116534,"~/.ssh/config"
+|4,39,1,0,1747900527,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745116534,"~/.ssh/config"
+|4,39,1,0,1747900527,"~/.ssh/config"
+-'  31  9  ~/.ssh/config
+|4,39,31,9,1747900494,"~/.ssh/config"
+-'  31  9  ~/.ssh/config
+|4,39,31,9,1747900494,"~/.ssh/config"
+-'  31  9  ~/.ssh/config
+|4,39,31,9,1747900494,"~/.ssh/config"
+-'  31  9  ~/.ssh/config
+|4,39,31,9,1747900494,"~/.ssh/config"
+-'  31  9  ~/.ssh/config
+|4,39,31,9,1747900494,"~/.ssh/config"
+-'  31  9  ~/.ssh/config
+|4,39,31,9,1747900494,"~/.ssh/config"
+-'  31  9  ~/.ssh/config
+|4,39,31,9,1747900494,"~/.ssh/config"
+-'  31  9  ~/.ssh/config
+|4,39,31,9,1747900494,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745115982,"~/.ssh/config"
+|4,39,1,0,1747900464,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745115982,"~/.ssh/config"
+|4,39,1,0,1747900464,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745115982,"~/.ssh/config"
+|4,39,1,0,1747900464,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745115982,"~/.ssh/config"
+|4,39,1,0,1747900464,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
+-'  25  27  ~/.ssh/config
+|4,39,25,27,1747898245,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745115964,"~/.ssh/config"
+|4,39,1,0,1747898238,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745115964,"~/.ssh/config"
+|4,39,1,0,1747898238,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745115964,"~/.ssh/config"
+|4,39,1,0,1747898238,"~/.ssh/config"
 -'  1  0  ~/.ssh/config
-|4,39,1,0,1745115964,"~/.ssh/config"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  6  30  ~/Scripts/Wi-Fi.sh
-|4,39,6,30,1745079575,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079553,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
--'  1  0  ~/Scripts/Wi-Fi.sh
-|4,39,1,0,1745079502,"~/Scripts/Wi-Fi.sh"
+|4,39,1,0,1747898238,"~/.ssh/config"
+-'  25  37  ~/.ssh/config
+|4,39,25,37,1747898219,"~/.ssh/config"
+-'  25  37  ~/.ssh/config
+|4,39,25,37,1747898219,"~/.ssh/config"
+-'  25  37  ~/.ssh/config
+|4,39,25,37,1747898219,"~/.ssh/config"
+-'  25  37  ~/.ssh/config
+|4,39,25,37,1747898219,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747898213,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747898213,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747898213,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747898213,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  21  1  ~/.ssh/config
+|4,39,21,1,1747897961,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747897949,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747897949,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747897949,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747897949,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  25  23  ~/.ssh/config
+|4,39,25,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  25  23  ~/.ssh/config
+|4,39,25,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  25  23  ~/.ssh/config
+|4,39,25,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  25  23  ~/.ssh/config
+|4,39,25,23,1747897948,"~/.ssh/config"
+-'  24  23  ~/.ssh/config
+|4,39,24,23,1747897948,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747897911,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747897911,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747897911,"~/.ssh/config"
+-'  1  0  ~/.ssh/config
+|4,39,1,0,1747897911,"~/.ssh/config"
+-'  7  0  ~/.ssh/known_hosts
+|4,39,7,0,1747848718,"~/.ssh/known_hosts"
+-'  7  0  ~/.ssh/known_hosts
+|4,39,7,0,1747848718,"~/.ssh/known_hosts"
+-'  7  0  ~/.ssh/known_hosts
+|4,39,7,0,1747848718,"~/.ssh/known_hosts"
+-'  7  0  ~/.ssh/known_hosts
+|4,39,7,0,1747848718,"~/.ssh/known_hosts"
 
 # History of marks within files (newest to oldest):
 
-> /d/Workspace/server.js
-	*	1745151614	0
-	"	1	0
-
-> ~/.ssh/authorized_keys
-	*	1745147344	0
-	"	3	0
-	^	3	0
-	.	2	90
-	+	2	90
+> ~/.ssh/known_hosts
+	*	1748014437	0
+	"	13	0
+	.	14	0
+	+	6	0
+	+	7	0
+	+	6	0
+	+	8	0
+	+	7	0
+	+	8	0
+	+	14	0
 
 > ~/.ssh/config
-	*	1745116674	0
-	"	5	8
-	^	5	9
-	.	5	9
+	*	1747900525	0
+	"	1	0
+	^	31	10
+	.	32	0
 	+	1	11
 	+	6	31
 	+	4	6
 	+	3	22
 	+	6	0
 	+	5	9
+	+	33	27
+	+	33	0
+	+	15	0
+	+	16	0
+	+	17	0
+	+	16	0
+	+	15	0
+	+	11	0
+	+	10	0
+	+	9	0
+	+	5	0
+	+	3	0
+	+	4	0
+	+	33	1
+	+	33	0
+	+	33	35
+	+	23	16
+	+	33	0
+	+	25	32
+	+	33	0
+	+	32	7
+	+	32	10
+	+	32	18
+	+	32	11
+	+	32	29
+	+	32	1
+	+	32	0
+	+	21	2
+	+	23	2
+	+	24	2
+	+	25	2
+	+	21	26
+	+	22	2
+	+	21	2
+	+	25	36
+	+	32	0
 
-> ~/Scripts/Wi-Fi.sh
-	*	1745079573	0
-	"	6	30
-	^	6	31
-	.	6	30
-	+	1	19
-	+	1	4
-	+	10	4
-	+	1	0
-	+	6	30
+> ~/.npmrc
+	*	1747839004	0
+	"	10	1
+	^	10	2
+	.	10	1
+	+	2	1
+	+	3	1
+	+	2	0
+	+	3	0
+	+	2	0
+	+	3	0
+	+	2	0
+	+	3	70
+	+	4	24
+	+	4	0
+	+	9	0
+	+	8	0
+	+	3	0
+	+	2	1
+	+	3	1
+	+	6	0
+	+	7	0
+	+	6	1
+	+	7	1
+	+	3	0
+	+	2	0
+	+	3	18
+	+	2	1
+	+	3	1
+	+	10	0
+	+	11	0
+	+	10	0
+	+	11	0
+	+	10	1
+	+	11	1
+	+	6	0
+	+	7	0
+	+	6	1
+	+	7	1
+	+	3	0
+	+	2	1
+	+	3	1
+	+	10	0
+	+	11	1
+	+	10	1
+
+> ~/.npmrv
+	*	1747822896	0
+	"	1	0
+
+> /d/Workspace/stackhub-tutor/scripts/sh.sh
+	*	1747726842	0
+	"	26	0
+
+> /d/Workspace/stackhub-tutor/scripts/create-stack.sh
+	*	1747723226	0
+	"	1	10
+	^	1	11
+	.	2	0
+	+	1	11
+	+	2	0
+
+> /d/Workspace/stackhub/tsconfig.json
+	*	1747719127	0
+	"	1	0
+
+> ~/.vimrc
+	*	1747719096	0
+	"	8	0
+	^	35	13
+	.	8	0
+	+	9	1
+	+	9	0
+	+	8	0
+
+> ~/Downloads/typer.html
+	*	1747208187	0
+	"	182	0
+	^	182	0
+	.	181	7
+	+	181	7
 
 > ~/.zshrc
-	*	1745077856	0
-	"	111	30
-	^	111	31
-	.	111	30
+	*	1747199622	0
+	"	120	0
+	.	121	0
 	+	1	0
 	+	16	23
 	+	108	0
@@ -475,12 +575,73 @@ $
 	+	33	0
 	+	78	20
 	+	111	30
+	+	117	34
+	+	3	0
+	+	1	0
+	+	121	0
 
-> ~/.ssh/known_hosts
-	*	1744379316	0
-	"	10	0
-	.	11	0
-	+	11	0
+> /etc/env
+	*	1747199574	0
+	"	1	0
+
+> ~/.bashrc
+	*	1747199567	0
+	"	1	0
+	^	11	26
+	.	11	25
+	+	12	0
+	+	11	52
+	+	12	28
+	+	11	25
+
+> ~/.oh-my-zsh/themes/theunraveler.zsh-theme
+	*	1746629807	0
+	"	16	36
+	^	5	97
+	.	5	96
+	+	3	45
+	+	5	96
+
+> /d/Workspace/stackhub-tutor/resources/reverseSshConfig.json
+	*	1746602658	0
+	"	2	20
+	^	2	21
+	.	2	20
+	+	1	1
+	+	2	20
+
+> /d/Workspace/stackhub/package.json
+	*	1746339586	0
+	"	4	7
+
+> /d/Workspace/web-invisinet-app/.git/COMMIT_EDITMSG
+	*	1745248467	0
+	"	1	0
+	^	1	20
+	.	1	19
+	+	1	19
+
+> /d/Workspace/server.js
+	*	1745151614	0
+	"	1	0
+
+> ~/.ssh/authorized_keys
+	*	1745147344	0
+	"	3	0
+	^	3	0
+	.	2	90
+	+	2	90
+
+> ~/Scripts/Wi-Fi.sh
+	*	1745079573	0
+	"	6	30
+	^	6	31
+	.	6	30
+	+	1	19
+	+	1	4
+	+	10	4
+	+	1	0
+	+	6	30
 
 > /d/Workspace/stackhub/scripts/build.js
 	*	1744339611	0
@@ -607,14 +768,6 @@ $
 > /usr/share/vim/vim91/doc/options.txt
 	*	1743860393	0
 	"	9461	4
-
-> ~/.oh-my-zsh/themes/theunraveler.zsh-theme
-	*	1743843293	0
-	"	5	96
-	^	5	97
-	.	5	96
-	+	3	45
-	+	5	96
 
 > ~/.oh-my-zsh/oh-my-zsh.sh
 	*	1743842721	0

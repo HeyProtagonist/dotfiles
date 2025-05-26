@@ -1,11 +1,11 @@
 " Enable relative line numbers
 set relativenumber
 
+
 " Enable syntax highlighting
 syntax on
 
 " Set color scheme to a Night Owl friendly theme
-" colorscheme gruvbox
 colorscheme default
 
 " Enable line numbers
