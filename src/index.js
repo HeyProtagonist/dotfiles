@@ -1,157 +1,174 @@
-#!/usr/bin/env node
+import os from "node:os";
+import fs from "node:fs";
+import path from "node:path";
+import { parse } from "jsonc-parser";
+import { execSync } from "node:child_process";
 
-import { promises as fs } from "fs";
-import path from "path";
-import { exec } from "child_process";
-import os from "os";
+const backupDir = path.normalize(`${path.resolve(process.cwd())}/backup`);
+const BACKUP = "backup";
+const RESTORE = "restore";
+const platform = os.platform();
+const type = os.type();
+const release = os.release();
+const arch = os.arch();
+const isDryRun = process.argv[3] === "dry-run";
 
-const homeDir = os.homedir();
-const rootDir = process.cwd(); // Root project directory (for backup)
-const backupDir = path.join(rootDir, "backup");
-const targetFilePath = path.join(rootDir, "target.json");
-
-// Function to convert paths to absolute POSIX format
-const toPosixPath = (filePath) => {
-  if (!filePath) return null;
-
-  let absolutePath = filePath.replace("$USER", homeDir); // Replace $USER with home directory
-  absolutePath = path.isAbsolute(absolutePath)
-    ? absolutePath
-    : path.join(homeDir, absolutePath); // Ensure absolute path
-
-  return path.posix.normalize(absolutePath.replace(/\\/g, "/")); // Convert to POSIX format
+const colorize = {
+  error: (msg) => `\x1b[31m${msg}\x1b[0m`, // Red
+  success: (msg) => `\x1b[32m${msg}\x1b[0m`, // Green
+  info: (msg) => `\x1b[34m${msg}\x1b[0m`, // Blue
+  warning: (msg) => `\x1b[33m${msg}\x1b[0m`, // Yellow
 };
 
-// Function to check if a file/folder exists
-async function exists(path) {
+(() => {
   try {
-    await fs.access(path);
-    return true;
-  } catch {
-    return false;
-  }
-}
+    const content = fs.readFileSync("config.jsonc", "utf-8");
+    const config = parse(content);
 
-// Helper function to execute shell commands and save output to backup dir
-function executeShellCommand(command, outputFile) {
-  return new Promise((resolve, reject) => {
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`❌ Command failed: ${command}`, stderr);
-        reject(error);
-      } else {
-        if (outputFile) {
-          const backupFilePath = path.join(backupDir, outputFile);
-          fs.writeFile(backupFilePath, stdout, "utf-8")
-            .then(() => {
-              console.log(`✅ Command output saved to: ${backupFilePath}`);
-              resolve(stdout);
-            })
-            .catch((err) => {
-              console.error("❌ Failed to save output to file:", err);
-              reject(err);
-            });
+    if (process.argv[2] === BACKUP) {
+      config[platform].paths.forEach((pathname) => {
+        const normalizedPath = path.normalize(pathname);
+        const resolvedPath = path.resolve(normalizedPath);
+
+        if (!fs.existsSync(resolvedPath)) {
+          console.error(colorize.error(`Path does not exist: ${resolvedPath}`));
+          return; // Skip to the next path
+        }
+
+        const destination = path.join(backupDir, path.basename(resolvedPath));
+
+        const stats = fs.statSync(resolvedPath);
+        if (stats.isDirectory()) {
+          if (isDryRun) {
+            console.log(
+              colorize.info(
+                `[Dry-run] Directory would be backed up to: ${destination}`,
+              ),
+            );
+          } else {
+            fs.mkdirSync(backupDir, { recursive: true }); // Ensure backup directory exists
+            fs.rmSync(destination, { recursive: true, force: true }); // Remove existing directory
+            fs.cpSync(resolvedPath, destination, { recursive: true });
+            console.log(
+              colorize.success(`Directory backed up to: ${destination}`),
+            );
+          }
         } else {
-          console.log(stdout);
-          resolve(stdout);
-        }
-      }
-    });
-  });
-}
-
-// Retrieve command line arguments
-const args = process.argv.slice(2);
-const isBackup = args[0] === "backup";
-const dryRun = args.includes("--dry-run");
-
-// Ensure backup directory exists
-await fs.mkdir(backupDir, { recursive: true });
-
-(async () => {
-  try {
-    // Read the target.json configuration
-    const rawData = await fs.readFile(targetFilePath, "utf-8");
-    const config = JSON.parse(rawData);
-
-    if (isBackup) {
-      console.log("Backing up files and folders...");
-
-      // Backup files
-      for (const file of config.files) {
-        const src = toPosixPath(file);
-        if (await exists(src)) {
-          const dest = path.join(backupDir, path.basename(src));
-          if (!dryRun) {
-            await fs.copyFile(src, dest);
+          if (isDryRun) {
+            console.log(
+              colorize.info(
+                `[Dry-run] File would be backed up to: ${destination}`,
+              ),
+            );
+          } else {
+            fs.mkdirSync(backupDir, { recursive: true }); // Ensure backup directory exists
+            fs.rmSync(destination, { force: true }); // Remove existing file
+            fs.copyFileSync(resolvedPath, destination);
+            console.log(colorize.success(`File backed up to: ${destination}`));
           }
-          console.log(`✅ Backed up: ${src} → ${dest}`);
         }
-      }
+      });
 
-      // Backup folders
-      for (const folder of config.folders) {
-        const src = toPosixPath(folder);
-        if (await exists(src)) {
-          const dest = path.join(backupDir, path.basename(src));
-          if (!dryRun) {
-            await fs.cp(src, dest, { recursive: true });
-          }
-          console.log(`✅ Backed up: ${src} → ${dest}`);
-        }
-      }
-
-      // Execute shell backup scripts
-      for (const shellTask of config.shell) {
-        const outputFile = toPosixPath(shellTask.outputFile);
-        const script = shellTask["backup-script"].replace("$USER", homeDir);
-
-        if (!dryRun) {
-          await executeShellCommand(
-            script,
-            outputFile ? path.basename(outputFile) : null,
+      config[platform].commands.forEach((command) => {
+        if (isDryRun) {
+          console.log(
+            colorize.info(
+              `[Dry-run] Command would be executed: ${command.backup}`,
+            ),
           );
-        }
-        console.log(`✅ Executed backup script: ${script}`);
-      }
-    } else {
-      console.log("Restoring files and folders...");
-
-      // Restore files
-      for (const file of config.files) {
-        const dest = toPosixPath(file);
-        const src = path.join(backupDir, path.basename(dest));
-        if (await exists(src)) {
-          if (!dryRun) {
-            await fs.copyFile(src, dest);
+        } else {
+          try {
+            execSync(command.backup, {
+              stdio: "inherit",
+              shell: platform === "win32" ? "powershell.exe" : undefined,
+            });
+            console.log(
+              colorize.success(`Command executed: ${command.backup}`),
+            );
+          } catch (error) {
+            console.error(
+              colorize.error(`Failed to execute: ${command.backup}`),
+            );
           }
-          console.log(`✅ Restored: ${src} → ${dest}`);
         }
-      }
-
-      // Restore folders
-      for (const folder of config.folders) {
-        const dest = toPosixPath(folder);
-        const src = path.join(backupDir, path.basename(dest));
-        if (await exists(src)) {
-          if (!dryRun) {
-            await fs.cp(src, dest, { recursive: true });
-          }
-          console.log(`✅ Restored: ${src} → ${dest}`);
-        }
-      }
-
-      // Execute shell restore scripts
-      for (const shellTask of config.shell) {
-        const script = shellTask["restore-script"].replace("$USER", homeDir);
-
-        if (!dryRun) {
-          await executeShellCommand(script, null); // No file output on restore
-        }
-        console.log(`✅ Executed restore script: ${script}`);
-      }
+      });
     }
+
+    if (process.argv[2] === RESTORE) {
+      config[platform].paths.forEach((pathname) => {
+        const normalizedPath = path.normalize(pathname);
+        const resolvedPath = path.resolve(normalizedPath);
+
+        const backupPath = path.join(backupDir, path.basename(resolvedPath));
+
+        if (!fs.existsSync(backupPath)) {
+          console.error(
+            colorize.error(`Backup does not exist for: ${resolvedPath}`),
+          );
+          return; // Skip to the next path
+        }
+
+        const stats = fs.statSync(backupPath);
+        if (stats.isDirectory()) {
+          if (isDryRun) {
+            console.log(
+              colorize.info(
+                `[Dry-run] Directory would be restored to: ${resolvedPath}`,
+              ),
+            );
+          } else {
+            fs.rmSync(resolvedPath, { recursive: true, force: true }); // Remove existing directory
+            fs.cpSync(backupPath, resolvedPath, { recursive: true });
+            console.log(
+              colorize.success(`Directory restored to: ${resolvedPath}`),
+            );
+          }
+        } else {
+          if (isDryRun) {
+            console.log(
+              colorize.info(
+                `[Dry-run] File would be restored to: ${resolvedPath}`,
+              ),
+            );
+          } else {
+            fs.rmSync(resolvedPath, { force: true }); // Remove existing file
+            fs.copyFileSync(backupPath, resolvedPath);
+            console.log(colorize.success(`File restored to: ${resolvedPath}`));
+          }
+        }
+      });
+
+      config[platform].commands.forEach((command) => {
+        if (isDryRun) {
+          console.log(
+            colorize.info(
+              `[Dry-run] Command would be executed: ${command.restore}`,
+            ),
+          );
+        } else {
+          try {
+            execSync(command.restore, {
+              stdio: "inherit",
+              shell: platform === "win32" ? "powershell.exe" : undefined,
+            });
+            console.log(
+              colorize.success(`Command executed: ${command.restore}`),
+            );
+          } catch (error) {
+            console.error(
+              colorize.error(`Failed to execute: ${command.restore}`),
+            );
+          }
+        }
+      });
+    }
+
+    throw new Error(
+      colorize.warning(
+        `Provide a valid argument: npm start <backup | restore> [dry-run]`,
+      ),
+    );
   } catch (error) {
-    console.error("❌ Error:", error.message);
+    console.error(colorize.error(error.message));
   }
 })();

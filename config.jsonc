@@ -1,0 +1,39 @@
+// Configuration file for managing paths and commands across Windows and Linux environments.
+{
+    "win32": {
+        // Paths to important configuration files and directories on Windows.
+        "paths": [
+            "C:\\Users\\angu\\.bashrc", // Bash configuration file
+            "C:\\Users\\angu\\.zshrc", // Zsh configuration file
+            "C:\\Users\\angu\\.vimrc", // Vim configuration file
+            "C:\\Users\\angu\\.config", // General configuration directory
+            "C:\\Users\\angu\\AppData\\Roaming\\Hyper\\.hyper.js", // Hyper terminal configuration
+            "C:\\Users\\angu\\AppData\\Roaming\\Code\\User\\keybindings.json", // VS Code keybindings
+            "C:\\Users\\angu\\AppData\\Roaming\\Code\\User\\settings.json", // VS Code settings
+            "C:\\Users\\angu\\AppData\\Roaming\\Code\\User\\snippets" // VS Code snippets directory
+        ],
+        // Commands for backing up and restoring VS Code extensions on Windows.
+        "commands": [
+            {
+                "backup": "code --list-extensions > .\\backup\\vscode-extensions-list", // Backup installed extensions
+                "restore": "$extensions = Get-Content \".\\backup\\vscode-extensions-list\"; foreach ($ext in $extensions) { if (-not [string]::IsNullOrWhiteSpace($ext)) { Write-Host \"Installing $ext...\"; code --install-extension $ext; } };" // Restore extensions by ID
+            }
+        ]
+    },
+    "linux": {
+        // Paths to important configuration files and directories on Linux.
+        "paths": [
+            "~/.bashrc", // Bash configuration file
+            "~/.zshrc", // Zsh configuration file
+            "~/.vimrc", // Vim configuration file
+            "~/.config" // General configuration directory
+        ],
+        // Commands for backing up and restoring VS Code extensions on Linux.
+        "commands": [
+            {
+                "backup": "code --list-extensions > backup/vscode-extensions-list", // Backup installed extensions
+                "restore": "code --install-extension <ext-id>" // Restore extensions by ID
+            }
+        ]
+    }
+}

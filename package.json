@@ -25,7 +25,9 @@
   "type": "module",
   "main": "src/main.js",
   "scripts": {
-    "backup": "node src/index.js backup",
-    "restore": "node src/index.js restore"
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
   }
 }
