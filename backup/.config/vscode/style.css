@@ -1,0 +1,54 @@
+div.title.show-file-icons.title-border-bottom {
+  display: none;
+}
+
+.letterpress {
+  visibility: hidden;
+}
+
+.window-title {
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container.empty
+  .editor-group-letterpress {
+  background-image: none;
+}
+
+/* Only show the scrollbar on hover. */
+.editor .scrollbar .slider {
+  visibility: hidden;
+}
+
+.editor .scrollbar:hover .slider {
+  visibility: initial;
+}
+
+.monaco-workbench
+  .part.titlebar
+  > .titlebar-container
+  > .titlebar-left
+  > .window-appicon:not(.codicon) {
+  display: none !important;
+}
+
+/* Change cursor color. */
+.monaco-editor .cursor {
+  background: linear-gradient(to bottom, #7f00ff, #e100ff) !important;
+  color: #dcf3e5 !important;
+  border-radius: 1.8px;
+}
+
+.titlebar-right {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.titlebar-right:hover {
+  opacity: 1;
+}

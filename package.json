@@ -1,0 +1,33 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "A simple way to keep all my custom settings for Bash, ZSH, VSCode, and my terminal in sync across devices.",
+  "keywords": [
+    "rc",
+    "settings",
+    "configuration",
+    "vscode",
+    "code",
+    "hyper",
+    "bash",
+    "zsh"
+  ],
+  "homepage": "https://github.com/HeyProtagonist/dotfiles#readme",
+  "bugs": {
+    "url": "https://github.com/HeyProtagonist/dotfiles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeyProtagonist/dotfiles.git"
+  },
+  "license": "MIT",
+  "author": "HeyProtagonist",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
+  }
+}

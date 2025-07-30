@@ -1,0 +1,39 @@
+// Configuration file for managing paths and commands across Windows and Linux environments.
+{
+    "win32": {
+        // Paths to important configuration files and directories on Windows.
+        "paths": [
+            "C:\\Users\\anguram\\.bashrc",
+            "C:\\Users\\anguram\\.zshrc",
+            "C:\\Users\\anguram\\.vimrc",
+            "C:\\Users\\anguram\\.wezterm.lua",
+            "C:\\Users\\anguram\\.config", // General configuration directory
+            "C:\\Users\\anguram\\AppData\\Roaming\\Code\\User\\keybindings.json",
+            "C:\\Users\\anguram\\AppData\\Roaming\\Code\\User\\settings.json",
+            "C:\\Users\\anguram\\AppData\\Roaming\\Code\\User\\snippets"
+        ],
+        // Commands for backing up and restoring VS Code extensions on Windows.
+        "commands": [
+            {
+                "backup": "code --list-extensions > .\\backup\\vscode-extensions-list", // Backup installed extensions
+                "restore": "$extensions = Get-Content \".\\backup\\vscode-extensions-list\"; foreach ($ext in $extensions) { if (-not [string]::IsNullOrWhiteSpace($ext)) { Write-Host \"Installing $ext...\"; code --install-extension $ext; } };" // Restore extensions by ID
+            }
+        ]
+    },
+    "linux": {
+        // Paths to important configuration files and directories on Linux.
+        "paths": [
+            "~/.bashrc", // Bash configuration file
+            "~/.zshrc", // Zsh configuration file
+            "~/.vimrc", // Vim configuration file
+            "~/.config" // General configuration directory
+        ],
+        // Commands for backing up and restoring VS Code extensions on Linux.
+        "commands": [
+            {
+                "backup": "code --list-extensions > backup/vscode-extensions-list", // Backup installed extensions
+                "restore": "code --install-extension <ext-id>" // Restore extensions by ID
+            }
+        ]
+    }
+}

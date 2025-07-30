@@ -1,0 +1,350 @@
+{
+    /* -------------------------------------------------------------------------- */
+    /*                                 Trackers                                   */
+    /* -------------------------------------------------------------------------- */
+    "gitlens.telemetry.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "editor.experimental.treeSitterTelemetry": false,
+    "update.enableWindowsBackgroundUpdates": true,
+    "update.mode": "manual",
+    "update.showReleaseNotes": true,
+    /* -------------------------------------------------------------------------- */
+    /*                               Editor Defaults                              */
+    /* -------------------------------------------------------------------------- */
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.detectIndentation": false,
+    "editor.emptySelectionClipboard": false,
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.excludeGitIgnore": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.hotExit": "onExitAndWindowClose",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.emptyWindow": false,
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.startupPrompt": "never",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.linux": "Bash",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "window.newWindowDimensions": "inherit",
+    "window.title": "🌿 ${activeRepositoryBranchName} 📂 ${activeRepositoryName} ${separator} ${activeEditorMedium}${dirty}",
+    "window.titleBarStyle": "custom",
+    "window.titleSeparator": " 📄 ",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showTabs": "none",
+    "workbench.sideBar.location": "right",
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.showTabs": "none",
+    "zenMode.silentNotifications": false,
+    "zenMode.centerLayout": true,
+    "emmet.includeLanguages": {
+        "blade": "html",
+        "vue-html": "html",
+        "vue": "html",
+    },
+    "files.associations": {
+        ".env*": "dotenv",
+        "*.css": "tailwindcss",
+        ".prettierrc.json": "jsonc"
+    },
+    /* -------------------------------------------------------------------------- */
+    /*                               Lo-Fi Ambience                               */
+    /* -------------------------------------------------------------------------- */
+    "breadcrumbs.enabled": false,
+    "editor.colorDecorators": false,
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.lightbulb.enabled": "off",
+    "editor.matchBrackets": "never",
+    "editor.occurrencesHighlight": "off",
+    "editor.overviewRulerBorder": false,
+    "editor.parameterHints.enabled": false,
+    "editor.renderControlCharacters": false,
+    "editor.renderLineHighlight": "none",
+    "editor.selectionHighlight": false,
+    "git.decorations.enabled": false,
+    "problems.decorations.enabled": false,
+    "scm.diffDecorations": "none",
+    "terminal.integrated.env.windows": {},
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "workbench.colorTheme": "Night Owl",
+    "workbench.activityBar.location": "hidden",
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "window.commandCenter": false,
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                }
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        },
+        "textMateRules": [
+            {
+                "scope": "keyword.other.dotenv",
+                "settings": {
+                    "foreground": "#FF000000"
+                }
+            }
+        ]
+    },
+    /* -------------------------------------------------------------------------- */
+    /*                                 Prettify                                   */
+    /* -------------------------------------------------------------------------- */
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontFamily": "Dank Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 28,
+    "editor.quickSuggestions": {
+        "strings": "on",
+    },
+    "editor.snippetSuggestions": "inline",
+    "editor.suggestFontSize": 15,
+    "editor.suggestLineHeight": 24,
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "prettier.requireConfig": false,
+    "prettier.useEditorConfig": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.fastScrollSensitivity": 4,
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.lineHeight": 1.3,
+    "workbench.colorCustomizations": {},
+    /* -------------------------------------------------------------------------- */
+    /*                                   Find                                     */
+    /* -------------------------------------------------------------------------- */
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        ".phpunit.result.cache": true,
+        "**/_ide_helper.php": true,
+        "**/build": true,
+        "**/composer.lock": true,
+        "**/dist": true,
+        "**/node_modules": true,
+        "**/package-lock.json": true,
+        "**/vendor/{[^l],?[^ai]}*": true,
+        "storage": true,
+    },
+    /* -------------------------------------------------------------------------- */
+    /*                             Language Defaults                              */
+    /* -------------------------------------------------------------------------- */
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    /* -------------------------------------------------------------------------- */
+    /*                                    Git                                     */
+    /* -------------------------------------------------------------------------- */
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "never",
+    /* -------------------------------------------------------------------------- */
+    /*                                  Gitlens                                   */
+    /* -------------------------------------------------------------------------- */
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "switch:command",
+        "stash-push:command"
+    ],
+    /* -------------------------------------------------------------------------- */
+    /*                                  Dotfiles                                  */
+    /* -------------------------------------------------------------------------- */
+    "dotenv.enableAutocloaking": true,
+    "dotenv.enableSecretpeeking": true,
+    /* -------------------------------------------------------------------------- */
+    /*                              Better Comments                               */
+    /* -------------------------------------------------------------------------- */
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "--",
+            "color": "#1857a4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    /* -------------------------------------------------------------------------- */
+    /*                             Custom Configuration                           */
+    /* -------------------------------------------------------------------------- */
+    "vscode_custom_css.imports": [
+        "file://${userHome}/.config/vscode/style.css",
+        "file://${userHome}/.config/vscode/script.js"
+    ],
+    /* -------------------------------------------------------------------------- */
+    /*                                    VIM                                     */
+    /* -------------------------------------------------------------------------- */
+    "vim.cursorStylePerMode.insert": "block-outline",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "line",
+    "vim.cursorStylePerMode.visual": "line-thin",
+    "vim.cursorStylePerMode.visualblock": "block-outline",
+    "vim.cursorStylePerMode.visualline": "underline",
+    "vim.disableExtension": false,
+    "vim.statusBarColorControl": false,
+    "vim.statusBarColors.commandlineinprogress": "#007acc",
+    "vim.statusBarColors.easymotioninputmode": "#007acc",
+    "vim.statusBarColors.easymotionmode": "#007acc",
+    "vim.statusBarColors.insert": "#DC143C",
+    "vim.statusBarColors.normal": "#005f5f",
+    "vim.statusBarColors.replace": "#00000",
+    "vim.statusBarColors.searchinprogressmode": "#007acc",
+    "vim.statusBarColors.surroundinputmode": "#007acc",
+    "vim.statusBarColors.visual": "#5f00af",
+    "vim.statusBarColors.visualblock": "#86592d",
+    "vim.statusBarColors.visualline": "#005f5f",
+    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.vimrc",
+    /* -------------------------------------------------------------------------- */
+    /*                                     AI                                     */
+    /* -------------------------------------------------------------------------- */
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    /*--------------------------------------------------------------------------- */
+    /*                              Miscellanous                                  */
+    /* -------------------------------------------------------------------------- */
+    "color-highlight.markerType": "dot-after",
+    "color-highlight.markRuler": false,
+    "conventionalCommits.lineBreak": "#n",
+    "explorer.confirmPasteNative": false,
+    "workbench.editor.editorActionsLocation": "hidden",
+    "[properties]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    /* -------------------------------------------------------------------------- */
+    /*                                  MarkDown                                  */
+    /* -------------------------------------------------------------------------- */
+    "[markdown]": {
+        "editor.wordWrap": "off"
+    },
+    "[dotenv]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "remote.SSH.remotePlatform": {
+        "invisinet-vm-console": "linux",
+        "bagleypi": "linux"
+    },
+    "chat.commandCenter.enabled": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:claude-3.5-sonnet",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.iconTheme": "vscode-icons",
+    "[plaintext]": {
+        "editor.defaultFormatter": "lkrms.inifmt"
+    },
+    "[lua]": {
+        "editor.defaultFormatter": "yinfei.luahelper"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[powershell]": {
+        "editor.defaultFormatter": "ms-vscode.powershell"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "[terraform-vars]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    }
+}
