@@ -1,12 +1,25 @@
+" Vim Plugins for `vim-plug`
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+Plug 'haishanh/night-owl.vim'
+
+call plug#end()
+
 " Enable relative line numbers
 set relativenumber
 
+" enable 24bit true color
+"" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+    set termguicolors
+endif
 
 " Enable syntax highlighting
-syntax on
+syntax enable
 
 " Set color scheme to a Night Owl friendly theme
-colorscheme default
+colorscheme night-owl
 
 " Enable line numbers
 set number
@@ -44,7 +57,7 @@ set wrap
 set showmatch
 
 " Enable persistent undo
-set undofile
+" set undofile
 
 " Set status line
 set laststatus=2
@@ -62,3 +75,4 @@ let mapleader=" "
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>h :nohlsearch<CR>
+

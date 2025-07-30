@@ -3,32 +3,53 @@ local wezterm = require 'wezterm'
 local mux = wezterm.mux
 local act = wezterm.action
 local gpus = wezterm.gui.enumerate_gpus()
+local io = require 'io'
+local os = require 'os'
+
+-- StartUp Tasks
+wezterm.on('gui-startup', function(cmd)
+    -- Get Info
+    -- local log_path = os.getenv('USERPROFILE') .. '\\wezterm-startup.log'
+    -- local f = io.open(log_path, 'a')
+    -- if f then
+    --     f:write('WezTerm started at: ' .. os.date() .. '\n')
+    --     f:close()
+    -- end
+
+    -- Window Positioning
+    local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+    window:gui_window():set_position(130, 16)
+end)
 
 -- Build the default config
 local config = wezterm.config_builder()
 
+-- ## 11. Window Size
+config.initial_cols = 121
+config.initial_rows = 30
+
 -- Event Handlers
 wezterm.on('update-right-status', function(window, pane)
     -- Format: Battery + Date/Time
-    local date = wezterm.strftime '%a %b %-d %H:%M '
+    local date = wezterm.strftime '%a, %b %-d %H:%M %p'
 
     -- Battery status
     local bat_text = ''
     for _, b in ipairs(wezterm.battery_info()) do
-        bat_text = string.format('🔋 %.0f%%', b.state_of_charge * 100)
+        bat_text = string.format('। 🔋%.0f%%', b.state_of_charge * 100)
     end
 
     -- Combined status
     window:set_right_status(wezterm.format {{
-        Text = bat_text .. '   ' .. date
+        Text = bat_text .. ' । ' .. date .. ' । '
     }})
 end)
 
 -- GPU Selection
-config.webgpu_preferred_adapter = gpus[2]
+config.webgpu_preferred_adapter = gpus[1]
 
 -- Rendering & Performance
-config.front_end = 'OpenGL'
+config.front_end = 'WebGpu'
 config.prefer_egl = true
 config.max_fps = 144
 config.animation_fps = 144
@@ -41,7 +62,7 @@ config.term = 'xterm-256color'
 config.font = wezterm.font {
     family = 'JetBrains Mono',
     stretch = 'Expanded',
-    weight = 'DemiBold'
+    weight = 'Medium'
 }
 config.font_size = 12
 config.cell_width = 0.9
@@ -58,7 +79,8 @@ config.colors = {
 }
 
 -- ## 7. Window Frame & Decorations
-config.window_decorations = 'INTEGRATED_BUTTONS | RESIZE'
+-- config.win32_system_backdrop = "Acrylic"
+config.window_decorations = 'NONE | RESIZE'
 config.window_background_opacity = 0.85
 config.window_padding = {
     left = 10,
@@ -85,11 +107,12 @@ config.window_frame = {
 
     font_size = 11,
     font = wezterm.font('JetBrains Mono', {
-        weight = 'DemiBold'
+        weight = 'Regular'
     })
 }
 
 -- ## 8. Tab Bar
+config.tab_and_split_indices_are_zero_based = false
 config.hide_tab_bar_if_only_one_tab = false
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
@@ -130,7 +153,7 @@ config.inactive_pane_hsb = {
 
 -- ## 10. Default Shell (Cross-Platform)
 if wezterm.target_triple:find('windows') then
-    config.default_prog = {'powershell.exe', '-NoLogo'}
+    config.default_prog = {'pwsh.exe', '-NoLogo'}
 else
     local shell = os.getenv('SHELL') or '/bin/bash'
     if shell:match('zsh$') then
@@ -139,15 +162,6 @@ else
         config.default_prog = {'bash', '-l'}
     end
 end
-
--- ## 11. Window Size
-config.initial_cols = 121
-config.initial_rows = 31
-wezterm.on("gui-startup", function(cmd)
-    -- spawn your normal window/tabs/panes…
-    mux.spawn_window(cmd or {})
-    -- Window centering logic removed due to unavailable APIs
-end)
 
 -- ## 12. Return config
 return config
