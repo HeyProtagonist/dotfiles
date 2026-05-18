@@ -114,14 +114,7 @@
                 }
             ]
         },
-        "textMateRules": [
-            {
-                "scope": "keyword.other.dotenv",
-                "settings": {
-                    "foreground": "#FF000000"
-                }
-            }
-        ]
+        "textMateRules": []
     },
     /* -------------------------------------------------------------------------- */
     /*                                 Prettify                                   */
@@ -189,7 +182,7 @@
     /* -------------------------------------------------------------------------- */
     /*                                  Dotfiles                                  */
     /* -------------------------------------------------------------------------- */
-    "dotenv.enableAutocloaking": true,
+    "dotenv.enableAutocloaking": false,
     "dotenv.enableSecretpeeking": true,
     /* -------------------------------------------------------------------------- */
     /*                              Better Comments                               */
@@ -346,5 +339,63 @@
     },
     "[terraform-vars]": {
         "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "[bat]": {
+        "editor.defaultFormatter": "wwnao.bat-formatter"
+    },
+    "editor.largeFileOptimizations": false,
+    "workbench.secondarySideBar.defaultVisibility": "visible",
+    "[sql]": {
+        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    },
+    "chat.tools.terminal.autoApprove": {
+        "npm run build": true,
+        "console.log(\"Original:\\n\"+s+\"\\n\")": true,
+        "console.log(\"Base64:\\n\"+Buffer.from(s).toString(\"base64\")+\"\\n\")": true,
+        "console.log(\"URI": true,
+        "console.log(\"Hex": true,
+        "function": true,
+        "return": true,
+        "/g,'": true,
+        "amp": true,
+        "').replace(/\"/g,'": true,
+        "quot": true,
+        "').replace(/'/g,'": true,
+        "#39": true,
+        "').replace(/": true,
+        "lt": true,
+        "gt": true,
+        "')": true,
+        "}": true,
+        "var": true,
+        "='Z')?65:97": true,
+        "})": true,
+        "'": true,
+        "npx": true,
+        "npm run dev": true,
+        "cd frontend && npm install @angular/material @angular/cdk @angular/animations --save": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "npm ci": true,
+        "sed": true
+    },
+    "[svg]": {
+        "editor.defaultFormatter": "jock.svg"
+    },
+    "geminicodeassist.project": "cryptic-source-lzmw2",
+    "chat.editing.confirmEditRequestRemoval": false,
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "chat.viewSessions.orientation": "stacked",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

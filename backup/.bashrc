@@ -21,3 +21,7 @@ alias ports="netstat -tuln" # List all listening ports
 alias cpu="lscpu"        # Display CPU architecture info
 alias mem="free -h"      # Display memory usage in human-readable format
 alias uptime="uptime -p" # Display system uptime
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

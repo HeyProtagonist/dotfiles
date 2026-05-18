@@ -291,5 +291,25 @@
 {
     "key": "ctrl+numpad0",
     "command": "-workbench.action.zoomReset"
+},
+{
+    "key": "ctrl+shift+x",
+    "command": "workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
+},
+{
+    "key": "ctrl+alt+i",
+    "command": "-workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
+},
+{
+    "key": "ctrl+k ctrl+x",
+    "command": "workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+},
+{
+    "key": "ctrl+shift+x",
+    "command": "-workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
 }
 ]

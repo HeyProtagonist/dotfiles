@@ -3,14 +3,14 @@
     "win32": {
         // Paths to important configuration files and directories on Windows.
         "paths": [
-            "C:\\Users\\anguram\\.bashrc",
-            "C:\\Users\\anguram\\.zshrc",
-            "C:\\Users\\anguram\\.vimrc",
-            "C:\\Users\\anguram\\.wezterm.lua",
-            "C:\\Users\\anguram\\.config", // General configuration directory
-            "C:\\Users\\anguram\\AppData\\Roaming\\Code\\User\\keybindings.json",
-            "C:\\Users\\anguram\\AppData\\Roaming\\Code\\User\\settings.json",
-            "C:\\Users\\anguram\\AppData\\Roaming\\Code\\User\\snippets"
+            "C:\\Users\\angu\\.bashrc",
+            "C:\\Users\\angu\\.zshrc",
+            "C:\\Users\\angu\\.vimrc",
+            "C:\\Users\\angu\\.wezterm.lua",
+            "C:\\Users\\angu\\.config", // General configuration directory
+            "C:\\Users\\angu\\AppData\\Roaming\\Code\\User\\keybindings.json",
+            "C:\\Users\\angu\\AppData\\Roaming\\Code\\User\\settings.json",
+            "C:\\Users\\angu\\AppData\\Roaming\\Code\\User\\snippets"
         ],
         // Commands for backing up and restoring VS Code extensions on Windows.
         "commands": [
