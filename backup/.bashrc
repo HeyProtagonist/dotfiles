@@ -1,3 +1,20 @@
+SEP="\[\e[36m\] • "
+CURRENT_USERNAME="\[\e[32m\]\u@"
+
+parse_git_branch() {
+  branch=$(git branch --show-current 2>/dev/null)
+
+  if [ -n "$branch" ]; then
+    echo "${SEP}\[\e[33m\][git: $branch]\[\e[0m\]"
+  fi
+}
+
+set_prompt(){
+  PS1="\h${SEP}\[\e[34m\]\W$(parse_git_branch)\n\$ "
+}
+
+PROMPT_COMMAND=set_prompt
+
 # Functions
 watch () {
   local interval=1
