@@ -163,7 +163,7 @@ config.inactive_pane_hsb = {
 -- ## 10. Default Shell (Cross-Platform)
 if wezterm.target_triple:find('windows') then
     -- config.default_prog = {'pwsh.exe', '-NoLogo'}
-    config.default_prog = {'bash.exe', '-nologin'}
+    config.default_prog = {'C:\\Program Files\\Git\\bin\\bash.exe', '--cd-to-home'}
 else
     local shell = os.getenv('SHELL') or '/bin/bash'
     if shell:match('zsh$') then
